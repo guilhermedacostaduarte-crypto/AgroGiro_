@@ -221,14 +221,14 @@
         }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
-        /* ============================================================ */
-        /* ATUALIZAÇÃO CAROUSEL (RESPONSIVIDADE E AJUSTE DE IMAGEM)     */
-        /* ============================================================ */
+        /* ========================================================== */
+        /* SOLUÇÃO DEFINITIVA DO CARROSSEL E IMAGENS                  */
+        /* ========================================================== */
         .carousel {
             position: relative;
             width: 100%;
-            aspect-ratio: 4 / 3; /* Proporção ideal para exibir sem distorcer */
-            background: #eef2f0; /* Fundo neutro e suave para não agredir a visão */
+            aspect-ratio: 4 / 3;
+            background: #000; /* Fundo preto destaca e preenche o que sobrar de fotos finas */
             overflow: hidden;
             user-select: none;
             touch-action: pan-y;
@@ -242,16 +242,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #000;
         }
         .carousel-slide img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* A MÁGICA ACONTECE AQUI: A imagem inteira sempre aparece, sem cortar */
+            object-fit: contain; /* NUNCA DEIXA CORTAR A IMAGEM */
             object-position: center;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
-        /* ============================================================ */
+        /* ========================================================== */
 
         .carousel-btn {
             position: absolute; top: 50%; transform: translateY(-50%);
@@ -274,10 +275,10 @@
         }
         .carousel-dot {
             width: 7px; height: 7px; border-radius: 50%;
-            border: none; background: rgba(0,0,0,0.3); /* Ajustado cor dos pontos para visibilidade com fundos mais claros */
+            border: none; background: rgba(255,255,255,0.5);
             cursor: pointer; padding: 0; transition: var(--transition);
         }
-        .carousel-dot.ativo { background: var(--green-dark); width: 20px; border-radius: 4px; }
+        .carousel-dot.ativo { background: #fff; width: 20px; border-radius: 4px; }
         .carousel-counter {
             position: absolute; top: 10px; right: 10px;
             background: rgba(0,0,0,0.55); color: #fff;
@@ -493,9 +494,15 @@
             .maquinas { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0)); }
             .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
             
+            /* ========================================================== */
+            /* CORREÇÃO DO CELULAR: PROPORÇÃO QUADRADA E SEM MIN-HEIGHT   */
+            /* ========================================================== */
             .carousel {
-                aspect-ratio: 4 / 3; /* Padronizado para evitar cortes bruscos no mobile */
+                aspect-ratio: 1 / 1; /* Formato quadrado, perfeito para o celular */
+                min-height: unset; /* Zera os limites antigos que causavam bugs */
+                height: auto;
             }
+            /* ========================================================== */
             
             .carousel-btn { opacity: 1; width: 44px; height: 44px; }
             .card .info h3 { font-size: 1rem; line-height: 1.35; }
@@ -971,7 +978,7 @@
     function criarCarousel(id, imagens, nome, tipo) {
         var slides = imagens.map(function(src, i) {
             var caminho = urlImagem(src);
-            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.objectFit=\'contain\';this.style.padding=\'20px\';this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23e9f5ef\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%232d6a4f\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.objectFit=\'contain\';this.style.padding=\'20px\';this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23000\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%23fff\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
         }).join('');
 
         var dots = imagens.length > 1
