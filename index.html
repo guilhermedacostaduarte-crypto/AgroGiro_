@@ -227,10 +227,10 @@
         .carousel {
             position: relative;
             width: 100% !important;
-            aspect-ratio: 4 / 3 !important; /* Força proporção exata sempre */
-            min-height: unset !important; /* Remove qualquer trava de altura */
+            aspect-ratio: 4 / 3 !important;
+            min-height: unset !important;
             height: auto !important;
-            background-color: #f3f4f6 !important; /* Fundo cinza claro unificado */
+            background-color: #f3f4f6 !important;
             overflow: hidden;
             user-select: none;
             touch-action: pan-y;
@@ -256,7 +256,7 @@
             width: 100% !important;
             height: 100% !important;
             max-height: 100% !important;
-            object-fit: contain !important; /* NUNCA DEIXA CORTAR A IMAGEM */
+            object-fit: contain !important;
             object-position: center !important;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -285,7 +285,7 @@
         }
         .carousel-dot {
             width: 7px; height: 7px; border-radius: 50%;
-            border: none; background: rgba(0,0,0,0.3); /* Mais visível */
+            border: none; background: rgba(0,0,0,0.3);
             cursor: pointer; padding: 0; transition: var(--transition);
         }
         .carousel-dot.ativo { background: var(--green-dark); width: 20px; border-radius: 4px; }
@@ -308,8 +308,13 @@
             font-size: 1.05rem; color: var(--green-dark);
             margin-bottom: 10px; line-height: 1.3;
         }
+        
+        /* ========================================================== */
+        /* ATUALIZAÇÃO DO GRID DE INFORMAÇÕES (AGORA COM 4 ITENS 2x2) */
+        /* ========================================================== */
         .card-meta {
-            display: grid; grid-template-columns: repeat(3, 1fr);
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); /* 2 colunas para caberem 4 itens bonitos */
             gap: 8px; margin-bottom: 12px;
         }
         .card-meta span {
@@ -318,7 +323,10 @@
         }
         .card-meta span strong {
             display: block; color: var(--green-dark); font-size: 0.85rem;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; /* Evita quebrar layout se o nome da cidade for longo */
         }
+        /* ========================================================== */
+
         .card .info .preco { font-size: 1.45rem; font-weight: 800; color: var(--gold); }
         .card .info .preco small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
         .card-footer { padding: 0 15px 15px; }
@@ -504,19 +512,18 @@
             .maquinas { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0)); }
             .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
             
-            /* ========================================================== */
-            /* ZERANDO QUALQUER REGRA VELHA NO CELULAR                    */
-            /* ========================================================== */
             .carousel {
-                aspect-ratio: 4 / 3 !important; /* Mantém a janela estável */
-                min-height: unset !important;   /* Mata aquele min-height antigo */
+                aspect-ratio: 4 / 3 !important;
+                min-height: unset !important;
                 height: auto !important;
             }
-            /* ========================================================== */
             
             .carousel-btn { opacity: 1; width: 44px; height: 44px; }
             .card .info h3 { font-size: 1rem; line-height: 1.35; }
-            .card-meta { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+            
+            /* Ajuste Mobile: Garante a matriz 2x2 no celular também */
+            .card-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+            
             .card-meta span { font-size: 0.72rem; padding: 5px 6px; }
             .card .info .preco { font-size: 1.35rem; }
             .card-footer { padding: 0 15px 18px; }
@@ -832,10 +839,11 @@
 
     const maquinas = [
         {
-            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão) - Região de Marília",
+            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão)",
             marca: "Piccin",
             ano: 2022,
             preco: 115000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/distribuidor-piccin-1.jpg.jpeg",
                 "imagens/distribuidor-piccin-2.jpg.jpeg",
@@ -844,11 +852,12 @@
             tipo: "Implementos"
         },
         {
-            nome: "Trator Valtra BM110 - Região de Marília",
+            nome: "Trator Valtra BM110",
             marca: "Valtra",
             ano: 2004,
             horas: 10900,
             preco: 110000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/Valtra-BM-01.jpg.jpeg",
                 "imagens/Valtra-BM-02.jpg.jpeg",
@@ -857,11 +866,12 @@
             tipo: "Trator"
         },
         {
-            nome: "Trator New Holland TS6020 - Região de Marília",
+            nome: "Trator New Holland TS6020",
             marca: "New Holland",
             ano: 2010,
             horas: 3402,
             preco: 135000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/tratornh.jpg.jpeg",
                 "imagens/tratornh1.jpg.jpeg",
@@ -870,11 +880,12 @@
             tipo: "Trator"
         },
         {
-            nome: "Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono) - Região de Marília",
+            nome: "Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono)",
             marca: "Massey Ferguson",
             ano: 2020,
             horas: 4400,
             preco: 140000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/MF4707-2020-1.jpg.jpeg",
                 "imagens/MF4707-2020-2.jpg.jpeg",
@@ -883,11 +894,12 @@
             tipo: "Trator"
         },
         {
-            nome: "Trator Massey Ferguson 4283 - 85CV - Região de Marília",
+            nome: "Trator Massey Ferguson 4283 - 85CV",
             marca: "Massey Ferguson",
             ano: 2012,
             horas: 4832,
             preco: 125000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/massey4283-1.jpg.jpeg",
                 "imagens/massey4283-2.jpg.jpeg",
@@ -896,11 +908,12 @@
             tipo: "Trator"
         },
         {
-            nome: "Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor) - Região de Marília",
+            nome: "Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor)",
             marca: "Massey Ferguson",
             ano: 2018,
             horas: 5450,
             preco: 125000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/MF4707-1.jpg.jpeg",
                 "imagens/MF4707-2.jpg.jpeg",
@@ -909,11 +922,12 @@
             tipo: "Trator"
         },
         {
-            nome: "Trator New Holland TL5.90 (Único Dono) - Região de Marília",
+            nome: "Trator New Holland TL5.90 (Único Dono)",
             marca: "New Holland",
             ano: 2019,         
             horas: 7850,
             preco: 165000,
+            local: "Região de Marília-SP", // ADICIONADO AQUI
             imagens: [
                 "imagens/NH-1.jpg.jpeg",
                 "imagens/NH-2.jpg.jpeg",
@@ -972,10 +986,15 @@
     function labelHoras(m) {
         return m.observacao ? 'Estado' : 'Horas';
     }
+    
+    function textoLocal(m) {
+        return m.local ? m.local : 'Consulte';
+    }
 
     function detalheWhatsapp(m) {
         var extra = m.observacao ? m.observacao : (m.horas !== undefined && m.horas !== null ? m.horas + 'h' : 'consulte');
-        return m.ano + ', ' + extra;
+        var loc = m.local ? ' - ' + m.local : '';
+        return m.ano + ', ' + extra + loc;
     }
 
     function urlImagem(src) {
@@ -988,7 +1007,6 @@
     function criarCarousel(id, imagens, nome, tipo) {
         var slides = imagens.map(function(src, i) {
             var caminho = urlImagem(src);
-            // INJETANDO O ESTILO DIRETAMENTE NA TAG DA IMAGEM PARA SOBRESCREVER QUALQUER BUG
             return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f3f4f6;" onerror="this.onerror=null;this.style.objectFit=\'contain\';this.style.padding=\'20px\';this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
         }).join('');
 
@@ -1078,6 +1096,7 @@
                         '<span><strong>' + m.marca + '</strong>Marca</span>' +
                         '<span><strong>' + m.ano + '</strong>Ano</span>' +
                         '<span><strong>' + textoHoras(m) + '</strong>' + labelHoras(m) + '</span>' +
+                        '<span><strong>' + textoLocal(m) + '</strong>Local</span>' + // NOVO BLOCO AQUI
                     '</div>' +
                     '<p class="preco">R$ ' + m.preco.toLocaleString('pt-BR') + ' <small>· negocie condições</small></p>' +
                 '</div>' +
