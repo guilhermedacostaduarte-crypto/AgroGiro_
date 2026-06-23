@@ -221,12 +221,14 @@
         }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
+        /* ============================================================ */
+        /* ATUALIZAÇÃO CAROUSEL (RESPONSIVIDADE E AJUSTE DE IMAGEM)     */
+        /* ============================================================ */
         .carousel {
             position: relative;
             width: 100%;
-            aspect-ratio: 4 / 3;
-            min-height: 240px;
-            background: linear-gradient(180deg, #e8ece9 0%, #f3f4f6 100%);
+            aspect-ratio: 4 / 3; /* Proporção ideal para exibir sem distorcer */
+            background: #eef2f0; /* Fundo neutro e suave para não agredir a visão */
             overflow: hidden;
             user-select: none;
             touch-action: pan-y;
@@ -240,16 +242,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f3f4f6;
         }
         .carousel-slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* A MÁGICA ACONTECE AQUI: A imagem inteira sempre aparece, sem cortar */
             object-position: center;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
+        /* ============================================================ */
+
         .carousel-btn {
             position: absolute; top: 50%; transform: translateY(-50%);
             width: 44px; height: 44px; border: none; border-radius: 50%;
@@ -271,10 +274,10 @@
         }
         .carousel-dot {
             width: 7px; height: 7px; border-radius: 50%;
-            border: none; background: rgba(255,255,255,0.5);
+            border: none; background: rgba(0,0,0,0.3); /* Ajustado cor dos pontos para visibilidade com fundos mais claros */
             cursor: pointer; padding: 0; transition: var(--transition);
         }
-        .carousel-dot.ativo { background: #fff; width: 20px; border-radius: 4px; }
+        .carousel-dot.ativo { background: var(--green-dark); width: 20px; border-radius: 4px; }
         .carousel-counter {
             position: absolute; top: 10px; right: 10px;
             background: rgba(0,0,0,0.55); color: #fff;
@@ -467,11 +470,6 @@
         }
         .whatsapp-float-btn:hover { transform: scale(1.08); background: var(--whatsapp-dark); }
 
-        /* Desktop grande */
-        @media (min-width: 1200px) {
-            .carousel { min-height: 280px; }
-        }
-
         /* Tablet */
         @media (max-width: 1024px) {
             .maquinas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -494,10 +492,11 @@
             .container { padding: 0 14px; }
             .maquinas { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0)); }
             .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
+            
             .carousel {
-                aspect-ratio: 16 / 11;
-                min-height: 260px;
+                aspect-ratio: 4 / 3; /* Padronizado para evitar cortes bruscos no mobile */
             }
+            
             .carousel-btn { opacity: 1; width: 44px; height: 44px; }
             .card .info h3 { font-size: 1rem; line-height: 1.35; }
             .card-meta { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
@@ -919,7 +918,6 @@
     const filtroBotoes = document.querySelectorAll('.filtro-btn');
     const PLACEHOLDER_ANGLES = ['Vista frontal', 'Vista lateral', 'Detalhe'];
 
-    // Resolve caminho das imagens (funciona no PC, GitHub Pages e celular)
     function baseUrl() {
         var path = window.location.pathname;
         if (path.endsWith('.html')) {
