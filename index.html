@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>AgroGiro – Máquinas Agrícolas com Garantia e Negociação Segura</title>
-    <meta name="description" content="Compre e venda máquinas agrícolas usadas com procedência verificada. Tratores, colhedoras, plantadeiras e pulverizadores. Atendimento direto pelo WhatsApp.">
+    <meta name="description" content="Compre e venda máquinas agrícolas usadas com procedência verificada. Tratores, colhedoras e Implementos. Atendimento direto pelo WhatsApp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -34,7 +34,7 @@
             line-height: 1.6;
         }
         a { text-decoration: none; color: inherit; }
-        img { display: block; max-width: 100%; }
+        img { display: block; max-width: 100%; height: auto; -webkit-user-drag: none; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         .top-bar {
@@ -201,7 +201,7 @@
         .maquinas { padding: 40px 0 20px; }
         .maquinas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 24px;
         }
         .card {
@@ -214,15 +214,36 @@
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
         .carousel {
-            position: relative; width: 100%; height: 220px;
-            background: #e5e7eb; overflow: hidden; user-select: none;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            min-height: 200px;
+            max-height: 320px;
+            background: #eef2f0;
+            overflow: hidden;
+            user-select: none;
+            touch-action: pan-y pinch-zoom;
+            -webkit-tap-highlight-color: transparent;
         }
         .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; }
-        .carousel-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
-        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f4f6;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
         .carousel-btn {
             position: absolute; top: 50%; transform: translateY(-50%);
-            width: 34px; height: 34px; border: none; border-radius: 50%;
+            width: 40px; height: 40px; border: none; border-radius: 50%;
             background: rgba(255,255,255,0.92); color: var(--green-dark);
             cursor: pointer; display: flex; align-items: center; justify-content: center;
             font-size: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -400,7 +421,10 @@
         }
 
         .whatsapp-float {
-            position: fixed; bottom: 24px; right: 24px; z-index: 200;
+            position: fixed;
+            bottom: max(20px, env(safe-area-inset-bottom, 20px));
+            right: max(20px, env(safe-area-inset-right, 20px));
+            z-index: 200;
             display: flex; flex-direction: column;
             align-items: flex-end; gap: 8px;
         }
@@ -425,6 +449,14 @@
         }
         .whatsapp-float-btn:hover { transform: scale(1.08); background: var(--whatsapp-dark); }
 
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .maquinas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+            .carousel { max-height: 280px; }
+            .hero { padding: 56px 0 64px; }
+        }
+
+        /* Mobile */
         @media (max-width: 900px) {
             .hero-grid { grid-template-columns: 1fr; }
             .hero-card { display: none; }
@@ -433,10 +465,33 @@
             .footer-grid { grid-template-columns: 1fr; }
             .header-cta span { display: none; }
         }
-        @media (max-width: 600px) {
-            .top-bar .container { justify-content: center; }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 14px; }
+            .maquinas-grid { grid-template-columns: 1fr; gap: 18px; }
+            .carousel {
+                aspect-ratio: 3 / 2;
+                min-height: 220px;
+                max-height: none;
+            }
+            .carousel-btn { opacity: 1; width: 44px; height: 44px; }
+            .card .info h3 { font-size: 1rem; }
+            .card-meta { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+            .card-meta span { font-size: 0.72rem; padding: 5px 6px; }
+            .card .info .preco { font-size: 1.3rem; }
+            .filtros { top: 68px; padding: 18px 0; }
+            .filtro-btn { padding: 9px 16px; font-size: 0.84rem; }
+            .top-bar .container { justify-content: center; text-align: center; }
+            .top-bar span { font-size: 0.76rem; }
+            .whatsapp-float-tooltip { display: none; }
+            .btn-whatsapp, .btn-anuncie { width: 100%; justify-content: center; }
+            .hero-actions { flex-direction: column; }
+            .hero-actions a { width: 100%; justify-content: center; text-align: center; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
             .carousel-btn { opacity: 1; }
-            .filtros { top: 68px; }
+            .card:hover { transform: none; }
         }
     </style>
 </head>
@@ -690,8 +745,7 @@
                 <ul>
                     <li>Tratores</li>
                     <li>Colhedoras</li>
-                    <li>Plantadeiras</li>
-                    <li>Pulverizadores</li>
+                    <li>Implementos</li>
                 </ul>
             </div>
         </div>
@@ -716,7 +770,7 @@
 
     const maquinas = [
         {
-            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão) ",
+            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão)",
             marca: "Piccin",
             ano: 2022,
             preco: 115000,
@@ -727,7 +781,7 @@
             ],
             tipo: "Implementos"
         },
-	{
+        {
             nome: "Trator Valtra BM110",
             marca: "Valtra",
             ano: 2004,
@@ -735,8 +789,8 @@
             preco: 110000,
             imagens: [
                 "imagens/Valtra-BM-01.jpg.jpeg",
-				"imagens/Valtra-BM-02.jpg.jpeg",
-				"imagens/Valtra-BM-03.jpg.jpeg"
+                "imagens/Valtra-BM-02.jpg.jpeg",
+                "imagens/Valtra-BM-03.jpg.jpeg"
             ],
             tipo: "Trator"
         },
@@ -749,46 +803,46 @@
             imagens: [
                 "imagens/tratornh.jpg.jpeg",
                 "imagens/tratornh1.jpg.jpeg",
-				"imagens/tratornh2.jpg.jpeg"
+                "imagens/tratornh2.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-	{
-            nome: "Trator Massey Fergunson 4707 (Com Redutor/79CV/ Único Dono)",
-            marca: "Massey Fergunson",
+        {
+            nome: "Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono)",
+            marca: "Massey Ferguson",
             ano: 2020,
             horas: 4400,
             preco: 140000,
             imagens: [
                 "imagens/MF4707-2020-1.jpg.jpeg",
-				"imagens/MF4707-2020-2.jpg.jpeg",
-				"imagens/MF4707-2020-3.jpg.jpeg"
+                "imagens/MF4707-2020-2.jpg.jpeg",
+                "imagens/MF4707-2020-3.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-	{
-            nome: "Trator Massey Fergunson 4283 - 85CV",
-            marca: "Massey Fergunson",
+        {
+            nome: "Trator Massey Ferguson 4283 - 85CV",
+            marca: "Massey Ferguson",
             ano: 2012,
             horas: 4832,
             preco: 125000,
             imagens: [
                 "imagens/massey4283-1.jpg.jpeg",
                 "imagens/massey4283-2.jpg.jpeg",
-				"imagens/massey4283-3.jpg.jpeg"
+                "imagens/massey4283-3.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-	{
-            nome: "Trator Massey Fergunson 4707 - 79CV (Tração Central / Sem Redutor)",
-            marca: "Massey Fergunson",
+        {
+            nome: "Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor)",
+            marca: "Massey Ferguson",
             ano: 2018,
             horas: 5450,
             preco: 125000,
             imagens: [
                 "imagens/MF4707-1.jpg.jpeg",
                 "imagens/MF4707-2.jpg.jpeg",
-				"imagens/MF4707-3.jpg.jpeg"
+                "imagens/MF4707-3.jpg.jpeg"
             ],
             tipo: "Trator"
         },
@@ -800,12 +854,11 @@
             preco: 165000,
             imagens: [
                 "imagens/NH-1.jpg.jpeg",
-				"imagens/NH-2.jpg.jpeg",
-				"imagens/NH-3.jpg.jpeg"
+                "imagens/NH-2.jpg.jpeg",
+                "imagens/NH-3.jpg.jpeg"
             ],
             tipo: "Trator"
         }
-	
     ];
     // ============================================================
     // NÃO PRECISA MEXER DAQUI PARA BAIXO
@@ -850,13 +903,18 @@
     }
 
     function detalheWhatsapp(m) {
-        var extra = m.observacao ? m.observacao : m.horas + 'h';
+        var extra = m.observacao ? m.observacao : (m.horas !== undefined && m.horas !== null ? m.horas + 'h' : 'consulte');
         return m.ano + ', ' + extra;
+    }
+
+    function urlImagem(src) {
+        return encodeURI(src).replace(/#/g, '%23');
     }
 
     function criarCarousel(id, imagens, nome, tipo) {
         var slides = imagens.map(function(src, i) {
-            return '<div class="carousel-slide"><img src="' + src + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=Foto+indisponivel\'"></div>';
+            var caminho = urlImagem(src);
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" onerror="this.src=\'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=Foto+nao+encontrada\'"></div>';
         }).join('');
 
         var dots = imagens.length > 1
