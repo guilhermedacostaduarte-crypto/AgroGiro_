@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGiro – Máquinas Agrícolas com Garantia e Negociação Segura</title>
+    <meta name="description" content="Compre e venda máquinas agrícolas usadas com procedência verificada. Tratores, colhedoras, plantadeiras e pulverizadores. Atendimento direto pelo WhatsApp.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --green: #2d6a4f;
+            --green-dark: #1b4332;
+            --green-light: #e9f5ef;
+            --gold: #d4a017;
+            --gold-dark: #b88a12;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #1ebe5b;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --bg: #f8faf9;
+            --white: #fff;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --radius: 16px;
+            --transition: 0.25s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { display: block; max-width: 100%; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .top-bar {
+            background: var(--green-dark);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.82rem;
+            padding: 8px 0;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar span { display: inline-flex; align-items: center; gap: 6px; }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1.4rem;
+        }
+        .logo-text h1 { font-size: 1.5rem; color: var(--green-dark); line-height: 1.1; }
+        .logo-text small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+        .header-cta {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--whatsapp); color: #fff;
+            padding: 10px 20px; border-radius: 50px;
+            font-weight: 600; font-size: 0.92rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+        }
+        .header-cta:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(27,67,50,0.92) 0%, rgba(45,106,79,0.85) 100%),
+                url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=80') center/cover no-repeat;
+            color: #fff; padding: 72px 0 80px;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1.2fr 1fr;
+            gap: 40px; align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 14px; border-radius: 50px;
+            font-size: 0.82rem; margin-bottom: 18px;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; background: #4ade80;
+            border-radius: 50%; box-shadow: 0 0 8px #4ade80;
+        }
+        .hero h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.15; margin-bottom: 16px;
+        }
+        .hero h2 span { color: #fde68a; }
+        .hero-sub {
+            font-size: 1.08rem; opacity: 0.92;
+            margin-bottom: 28px; max-width: 520px;
+        }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+        .btn-whatsapp {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--whatsapp); color: #fff;
+            padding: 15px 28px; border-radius: 50px;
+            font-size: 1.05rem; font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+        }
+        .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-2px); }
+        .btn-outline {
+            display: inline-flex; align-items: center; gap: 8px;
+            border: 2px solid rgba(255,255,255,0.5); color: #fff;
+            padding: 13px 24px; border-radius: 50px;
+            font-weight: 600; transition: var(--transition);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+        .trust-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .trust-pill {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 14px; border-radius: 10px; font-size: 0.82rem;
+        }
+        .trust-pill i { color: #fde68a; }
+        .hero-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius); padding: 24px;
+        }
+        .hero-card h3 { font-size: 1.1rem; margin-bottom: 16px; }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .hero-stat {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px; padding: 16px; text-align: center;
+        }
+        .hero-stat strong {
+            display: block; font-size: 1.6rem;
+            color: #fde68a; line-height: 1.2;
+        }
+        .hero-stat span { font-size: 0.8rem; opacity: 0.85; }
+
+        .trust-strip {
+            background: var(--white); padding: 28px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .trust-strip-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+        }
+        .trust-item { text-align: center; padding: 10px; }
+        .trust-item i { font-size: 1.8rem; color: var(--green); margin-bottom: 8px; }
+        .trust-item h4 { font-size: 0.95rem; color: var(--green-dark); margin-bottom: 4px; }
+        .trust-item p { font-size: 0.82rem; color: var(--muted); }
+
+        .section-header { text-align: center; margin-bottom: 32px; }
+        .section-header .eyebrow {
+            font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 0.12em; color: var(--green);
+            font-weight: 700; margin-bottom: 6px;
+        }
+        .section-header h2 { font-size: 1.8rem; color: var(--green-dark); margin-bottom: 8px; }
+        .section-header p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+
+        .filtros {
+            background: var(--white); padding: 28px 0;
+            position: sticky; top: 76px; z-index: 90;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .filtro-container {
+            display: flex; gap: 10px;
+            justify-content: center; flex-wrap: wrap;
+        }
+        .filtro-btn {
+            padding: 10px 22px; border: 2px solid #e5e7eb;
+            background: var(--white); color: var(--text);
+            border-radius: 50px; cursor: pointer;
+            font-weight: 600; font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .filtro-btn:hover { border-color: var(--green); color: var(--green); }
+        .filtro-btn.ativo { background: var(--green); border-color: var(--green); color: #fff; }
+
+        .maquinas { padding: 40px 0 20px; }
+        .maquinas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--white); border-radius: var(--radius);
+            overflow: hidden; box-shadow: var(--shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid #eef2f0;
+            display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+        .carousel {
+            position: relative; width: 100%; height: 220px;
+            background: #e5e7eb; overflow: hidden; user-select: none;
+        }
+        .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; }
+        .carousel-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 34px; height: 34px; border: none; border-radius: 50%;
+            background: rgba(255,255,255,0.92); color: var(--green-dark);
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            opacity: 0; transition: opacity var(--transition), background var(--transition);
+            z-index: 2;
+        }
+        .card:hover .carousel-btn,
+        .carousel:focus-within .carousel-btn { opacity: 1; }
+        .carousel-btn:hover { background: #fff; }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        .carousel-dots {
+            position: absolute; bottom: 10px; left: 50%;
+            transform: translateX(-50%);
+            display: flex; gap: 6px; z-index: 2;
+        }
+        .carousel-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            border: none; background: rgba(255,255,255,0.5);
+            cursor: pointer; padding: 0; transition: var(--transition);
+        }
+        .carousel-dot.ativo { background: #fff; width: 20px; border-radius: 4px; }
+        .carousel-counter {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,0.55); color: #fff;
+            font-size: 0.72rem; padding: 3px 8px;
+            border-radius: 20px; z-index: 2;
+        }
+        .card-badge {
+            position: absolute; top: 10px; left: 10px;
+            background: var(--green); color: #fff;
+            font-size: 0.72rem; font-weight: 700;
+            padding: 4px 10px; border-radius: 20px; z-index: 2;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+
+        .card .info { padding: 18px 18px 12px; flex: 1; }
+        .card .info h3 {
+            font-size: 1.05rem; color: var(--green-dark);
+            margin-bottom: 10px; line-height: 1.3;
+        }
+        .card-meta {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 8px; margin-bottom: 12px;
+        }
+        .card-meta span {
+            background: var(--green-light); border-radius: 8px;
+            padding: 6px 8px; font-size: 0.78rem; text-align: center;
+        }
+        .card-meta span strong {
+            display: block; color: var(--green-dark); font-size: 0.85rem;
+        }
+        .card .info .preco { font-size: 1.45rem; font-weight: 800; color: var(--gold); }
+        .card .info .preco small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+        .card-footer { padding: 0 15px 15px; }
+        .card .btn-negocie {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: var(--whatsapp); color: #fff;
+            text-align: center; padding: 13px; border-radius: 12px;
+            font-weight: 700; font-size: 0.95rem;
+            transition: var(--transition); width: 100%;
+        }
+        .card .btn-negocie:hover { background: var(--whatsapp-dark); }
+        .card .btn-negocie small {
+            display: block; font-size: 0.7rem;
+            font-weight: 500; opacity: 0.9;
+        }
+
+        .paginacao {
+            display: flex; justify-content: center;
+            gap: 8px; margin: 32px 0; flex-wrap: wrap;
+        }
+        .paginacao button {
+            min-width: 40px; height: 40px;
+            border: 2px solid #e5e7eb; background: var(--white);
+            color: var(--text); border-radius: 10px;
+            cursor: pointer; font-weight: 600; transition: var(--transition);
+        }
+        .paginacao button:hover,
+        .paginacao button.ativo { background: var(--green); border-color: var(--green); color: #fff; }
+
+        .why-us { background: var(--green-light); padding: 64px 0; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .why-card {
+            background: var(--white); border-radius: var(--radius);
+            padding: 28px 24px; box-shadow: var(--shadow);
+        }
+        .why-card .icon-wrap {
+            width: 52px; height: 52px; background: var(--green-light);
+            border-radius: 14px; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.3rem; color: var(--green); margin-bottom: 14px;
+        }
+        .why-card h3 { color: var(--green-dark); margin-bottom: 8px; font-size: 1.05rem; }
+        .why-card p { color: var(--muted); font-size: 0.92rem; }
+
+        .depoimentos { padding: 64px 0; background: var(--white); }
+        .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .depoimento {
+            background: var(--bg); padding: 28px;
+            border-radius: var(--radius); border: 1px solid #eef2f0;
+            position: relative;
+        }
+        .depoimento .stars { color: var(--gold); margin-bottom: 12px; font-size: 0.9rem; }
+        .depoimento i.quote {
+            color: var(--green); opacity: 0.3;
+            font-size: 2rem; position: absolute; top: 16px; right: 20px;
+        }
+        .depoimento p { font-style: italic; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+        .depoimento .autor { font-weight: 700; color: var(--green-dark); font-size: 0.9rem; }
+        .depoimento .autor span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
+
+        .anuncie {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            color: #fff; text-align: center; padding: 64px 20px;
+        }
+        .anuncie h2 { font-size: 2rem; margin-bottom: 12px; }
+        .anuncie p {
+            font-size: 1.05rem; opacity: 0.9; margin-bottom: 28px;
+            max-width: 520px; margin-left: auto; margin-right: auto;
+        }
+        .btn-anuncie {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gold); color: #fff;
+            padding: 15px 36px; border-radius: 50px;
+            font-weight: 700; font-size: 1.05rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        .btn-anuncie:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+        .faq { padding: 64px 0; }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white); margin-bottom: 12px;
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid #eef2f0;
+        }
+        .faq-pergunta {
+            padding: 18px 20px; cursor: pointer; font-weight: 600;
+            display: flex; justify-content: space-between;
+            align-items: center; gap: 12px; color: var(--green-dark);
+        }
+        .faq-pergunta i { transition: var(--transition); color: var(--green); }
+        .faq-resposta {
+            padding: 0 20px; max-height: 0; overflow: hidden;
+            transition: 0.35s ease; color: var(--muted); font-size: 0.95rem;
+        }
+        .faq-item.ativo .faq-resposta { padding: 0 20px 18px; max-height: 300px; }
+        .faq-item.ativo .faq-pergunta i { transform: rotate(180deg); }
+
+        footer {
+            background: var(--green-dark);
+            color: rgba(255,255,255,0.85);
+            padding: 40px 0 30px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 32px; margin-bottom: 28px;
+        }
+        footer h4 { color: #fff; margin-bottom: 12px; font-size: 1rem; }
+        footer p, footer li { font-size: 0.9rem; line-height: 1.8; }
+        footer ul { list-style: none; }
+        footer .social { display: flex; gap: 12px; margin-top: 12px; }
+        footer .social a {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        footer .social a:hover { background: var(--whatsapp); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px; text-align: center; font-size: 0.82rem;
+        }
+
+        .whatsapp-float {
+            position: fixed; bottom: 24px; right: 24px; z-index: 200;
+            display: flex; flex-direction: column;
+            align-items: flex-end; gap: 8px;
+        }
+        .whatsapp-float-tooltip {
+            background: var(--white); color: var(--text);
+            padding: 10px 14px; border-radius: 12px;
+            font-size: 0.82rem; font-weight: 600;
+            box-shadow: var(--shadow-lg); max-width: 200px;
+            animation: pulse-tooltip 3s ease-in-out infinite;
+        }
+        @keyframes pulse-tooltip {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.75; }
+        }
+        .whatsapp-float-btn {
+            width: 58px; height: 58px; background: var(--whatsapp);
+            color: #fff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+            transition: var(--transition);
+        }
+        .whatsapp-float-btn:hover { transform: scale(1.08); background: var(--whatsapp-dark); }
+
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-card { display: none; }
+            .trust-strip-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .header-cta span { display: none; }
+        }
+        @media (max-width: 600px) {
+            .top-bar .container { justify-content: center; }
+            .carousel-btn { opacity: 1; }
+            .filtros { top: 68px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-shield-alt"></i> Máquinas Usadas com procedência verificada</span>
+        <span><i class="fab fa-whatsapp"></i> Resposta em até 30 minutos</span>
+    </div>
+</div>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <div class="logo-icon"><i class="fas fa-tractor"></i></div>
+            <div class="logo-text">
+                <h1>AgroGiro</h1>
+                <small>Máquinas agrícolas de confiança</small>
+            </div>
+        </a>
+        <a href="#" class="header-cta" id="headerWhatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Falar com especialista</span>
+        </a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>+10 equipamentos disponíveis agora</span>
+                </div>
+                <h2>O equipamento certo para o seu campo, com <span>negociação segura</span></h2>
+                <p class="hero-sub">Tratores, colhedoras e Implementos revisados. Fale direto com nossa equipe pelo WhatsApp e receba fotos, vídeos e condições reais — sem intermediários confusos.</p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-whatsapp" id="heroWhatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Quero ver as máquinas
+                    </a>
+                    <a href="#maquinas" class="btn-outline">
+                        <i class="fas fa-search"></i> Explorar catálogo
+                    </a>
+                </div>
+                <div class="trust-pills">
+                    <span class="trust-pill"><i class="fas fa-check-circle"></i> Garantia mínima 3 meses</span>
+                    <span class="trust-pill"><i class="fas fa-file-contract"></i> Documentação regularizada</span>
+                    <span class="trust-pill"><i class="fas fa-handshake"></i> Negociação transparente</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3><i class="fas fa-chart-line"></i> Por que produtores escolhem a AgroGiro</h3>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>Clareza</strong>
+                        <span>Realizar vendas de maneira Honesta e Segura</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>3 meses</strong>
+                        <span>Garantia mínima</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>100%</strong>
+                        <span>Atendimento via WhatsApp</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>0%</strong>
+                        <span>Taxa para anunciar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust-strip">
+    <div class="container trust-strip-grid">
+        <div class="trust-item">
+            <i class="fas fa-camera"></i>
+            <h4>Fotos reais</h4>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-user-shield"></i>
+            <h4>Vendedores verificados</h4>
+            <p>Cada anúncio passa por checagem de procedência</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-comments"></i>
+            <h4>Atendimento humano</h4>
+            <p>Sem robôs — você fala com quem entende do campo</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-truck"></i>
+            <h4>Entrega combinada</h4>
+            <p>Logística alinhada direto no WhatsApp</p>
+        </div>
+    </div>
+</section>
+
+<section class="filtros">
+    <div class="container">
+        <div class="filtro-container" id="filtroContainer">
+            <button class="filtro-btn ativo" data-tipo="todos">Todos</button>
+            <button class="filtro-btn" data-tipo="Trator">Tratores</button>
+            <button class="filtro-btn" data-tipo="Colhedora">Colhedoras</button>
+            <button class="filtro-btn" data-tipo="Implementos">Implementos</button>
+        </div>
+    </div>
+</section>
+
+<section class="maquinas container" id="maquinas">
+    <div class="section-header" style="margin-top: 8px;">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Encontre sua próxima máquina</h2>
+        <p>Clique nas setas das fotos para ver mais ângulos. Interessou? Negocie em um clique pelo WhatsApp.</p>
+    </div>
+    <div class="maquinas-grid" id="maquinasGrid"></div>
+    <div class="paginacao" id="paginacao"></div>
+</section>
+
+<section class="why-us">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Segurança na compra</p>
+            <h2>Compre com tranquilidade</h2>
+            <p>Sabemos que investir em maquinário é decisão séria. Por isso, cada etapa foi pensada para você se sentir seguro.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Inspeção antes do anúncio</h3>
+                <p>Verificamos horas, estado geral antes de publicar qualquer equipamento na plataforma.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-lock"></i></div>
+                <h3>Negociação direta e clara</h3>
+                <p>Você conversa com nossa equipe pelo WhatsApp, tira dúvidas, pede mais fotos e combina visita na "Propriedade" sem pressão.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-medal"></i></div>
+                <h3>Garantia que protege você</h3>
+                <p>Todas as máquinas contam com garantia mínima de 3 meses. Transparência do primeiro contato à entrega.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="depoimentos">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Quem já confiou</p>
+            <h2>Depoimentos de clientes</h2>
+        </div>
+        <div class="depoimentos-grid">
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Comprei um trator pelo AgroGiro e fui super bem atendido. Recebi fotos e vídeo antes de fechar. Máquina em ótimo estado!"</p>
+                <div class="autor">João Carlos<span>Fazenda Boa Vista — SP</span></div>
+            </div>
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Ótima plataforma para vender minhas máquinas usadas. Publicaram rápido e a negociação foi toda pelo WhatsApp, bem prático."</p>
+                <div class="autor">Maria Aparecida<span>Sítio Esperança — MG</span></div>
+            </div>
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Negociação transparente, documentação em dia e entrega no prazo. Já indiquei para dois vizinhos do campo."</p>
+                <div class="autor">Pedro Alves<span>Agropecuária Rio Verde — GO</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="anuncie">
+    <div class="container">
+        <h2>Venda sua máquina sem complicação - Se Afilie a AgroGiro</h2>
+        <p>Cadastro gratuito, alcance de compradores qualificados e acompanhamento da negociação do início ao fim.</p>
+        <a href="#" class="btn-anuncie" id="anuncieWhatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Quero anunciar grátis
+        </a>
+    </div>
+</section>
+
+<section class="faq container">
+    <div class="section-header">
+        <p class="eyebrow">Tire suas dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Como faço para comprar uma máquina? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Navegue pelo catálogo, veja as fotos no carrossel e clique em "Negocie no WhatsApp". Nossa equipe responde com detalhes, condições e pode agendar visita para você ver o equipamento pessoalmente.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                As máquinas têm garantia? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Sim. Todas passam por verificação de procedência e oferecem garantia mínima de 3 meses. Os detalhes específicos são informados no WhatsApp para cada equipamento.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Posso pedir mais fotos ou vídeos? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Claro! O carrossel mostra as fotos principais, mas pelo WhatsApp enviamos ângulos adicionais, vídeo do motor funcionando e qualquer detalhe que você precisar ver antes de decidir.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Como funciona o anúncio? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                É gratuito. Envie as informações e fotos da máquina pelo WhatsApp e publicamos na plataforma. Você acompanha os contatos e negocia com nosso suporte.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>AgroGiro</h4>
+                <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> (16) 99785-4876</li>
+                    <li><i class="fas fa-clock"></i> Seg–Sáb, 8h às 18h</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Equipamentos</h4>
+                <ul>
+                    <li>Tratores</li>
+                    <li>Colhedoras</li>
+                    <li>Plantadeiras</li>
+                    <li>Pulverizadores</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="ano"></span> AgroGiro. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp-float">
+    <div class="whatsapp-float-tooltip">Dúvidas? Fale conosco agora!</div>
+    <a href="#" class="whatsapp-float-btn" id="floatWhatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script>
+    // ============================================================
+    // EDITE SOMENTE ESTA PARTE — suas máquinas e WhatsApp
+    // ============================================================
+    const WHATSAPP = '5516997854876';
+
+    const maquinas = [
+        {
+            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão) ",
+            marca: "Piccin",
+            ano: 2022,
+            preco: 115000,
+            imagens: [
+                "imagens/distribuidor-piccin-1.jpg.jpeg",
+                "imagens/distribuidor-piccin-2.jpg.jpeg",
+                "imagens/distribuidor-piccin-3.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+	{
+            nome: "Trator Valtra BM110",
+            marca: "Valtra",
+            ano: 2004,
+            horas: 10900,
+            preco: 110000,
+            imagens: [
+                "imagens/Valtra-BM-01.jpg.jpeg.",
+		"imagens/Valtra-BM-02.jpg.jpeg.",
+		"imagens/Valtra-BM-03.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator New Holland TS6020",
+            marca: "New Holland",
+            ano: 2010,
+            horas: 3402,
+            preco: 135000,
+            imagens: [
+                "imagens/tratornh.jpg.jpeg.",
+                "imagens/tratornh1.jpg.jpeg.",
+		"imagens/tratornh2.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        },
+	{
+            nome: "Trator Massey Fergunson 4707 (Com Redutor/79CV/ Único Dono)",
+            marca: "Massey Fergunson",
+            ano: 2020,
+            horas: 4400,
+            preco: 140000,
+            imagens: [
+                "imagens/MF4707-2020-1.jpg.jpeg.",
+		"imagens/MF4707-2020-2.jpg.jpeg.",
+		"imagens/MF4707-2020-3.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        },
+	{
+            nome: "Trator Massey Fergunson 4283 - 85CV",
+            marca: "Massey Fergunson",
+            ano: 2012,
+            horas: 4832,
+            preco: 125000,
+            imagens: [
+                "imagens/massey4283-1.jpg.jpeg.",
+                "imagens/massey4283-2.jpg.jpeg.",
+		"imagens/massey4283-3.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        },
+	{
+            nome: "Trator Massey Fergunson 4707 - 79CV (Tração Central / Sem Redutor)",
+            marca: "Massey Fergunson",
+            ano: 2018,
+            horas: 5450,
+            preco: 125000,
+            imagens: [
+                "imagens/MF4707-1.jpg.jpeg.",
+                "imagens/MF4707-2.jpg.jpeg.",
+		"imagens/MF4707-3.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator New Holland TL5.90 (Único Dono)",
+            marca: "New Holland",
+            ano: 2019,
+            horas: 7850,
+            preco: 165000,
+            imagens: [
+                "imagens/NH-1.jpg.jpeg.",
+		"imagens/NH-2.jpg.jpeg.",
+		"imagens/NH-3.jpg.jpeg."
+            ],
+            tipo: "Trator"
+        }
+	
+    ];
+    // ============================================================
+    // NÃO PRECISA MEXER DAQUI PARA BAIXO
+    // ============================================================
+
+    const ITENS_POR_PAGINA = 15;
+    let paginaAtual = 1;
+    let filtroAtivo = 'todos';
+
+    const grid = document.getElementById('maquinasGrid');
+    const paginacaoContainer = document.getElementById('paginacao');
+    const filtroBotoes = document.querySelectorAll('.filtro-btn');
+    const PLACEHOLDER_ANGLES = ['Vista frontal', 'Vista lateral', 'Detalhe'];
+
+    function waLink(texto) {
+        return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto);
+    }
+
+    function configurarWhatsappLinks() {
+        document.getElementById('headerWhatsapp').href = waLink('Olá! Gostaria de falar com um especialista da AgroGiro sobre máquinas agrícolas.');
+        document.getElementById('heroWhatsapp').href = waLink('Olá! Vi o site da AgroGiro e gostaria de conhecer as máquinas disponíveis.');
+        document.getElementById('anuncieWhatsapp').href = waLink('Olá! Quero anunciar minha máquina agrícola na AgroGiro.');
+        document.getElementById('floatWhatsapp').href = waLink('Olá! Tenho uma dúvida sobre as máquinas da AgroGiro.');
+    }
+
+    function obterImagens(m) {
+        if (Array.isArray(m.imagens) && m.imagens.length > 0) return m.imagens;
+        if (m.imagem) return [m.imagem];
+        return PLACEHOLDER_ANGLES.map(function(angulo) {
+            return 'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=' + encodeURIComponent(angulo);
+        });
+    }
+
+    function textoHoras(m) {
+        if (m.observacao) return m.observacao;
+        if (m.horas !== undefined && m.horas !== null) return m.horas + 'h';
+        return '—';
+    }
+
+    function labelHoras(m) {
+        return m.observacao ? 'Estado' : 'Horas';
+    }
+
+    function detalheWhatsapp(m) {
+        var extra = m.observacao ? m.observacao : m.horas + 'h';
+        return m.ano + ', ' + extra;
+    }
+
+    function criarCarousel(id, imagens, nome, tipo) {
+        var slides = imagens.map(function(src, i) {
+            return '<div class="carousel-slide"><img src="' + src + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=Foto+indisponivel\'"></div>';
+        }).join('');
+
+        var dots = imagens.length > 1
+            ? '<div class="carousel-dots">' + imagens.map(function(_, i) {
+                return '<button class="carousel-dot' + (i === 0 ? ' ativo' : '') + '" data-index="' + i + '" aria-label="Foto ' + (i + 1) + '"></button>';
+            }).join('') + '</div>'
+            : '';
+
+        var nav = imagens.length > 1
+            ? '<button class="carousel-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>' +
+              '<button class="carousel-btn next" aria-label="Próxima foto"><i class="fas fa-chevron-right"></i></button>' +
+              '<span class="carousel-counter">1 / ' + imagens.length + '</span>'
+            : '';
+
+        return '<div class="carousel" data-carousel="' + id + '" tabindex="0">' +
+            '<span class="card-badge">' + tipo + '</span>' +
+            '<div class="carousel-track">' + slides + '</div>' +
+            nav + dots +
+            '</div>';
+    }
+
+    function initCarousel(el) {
+        if (!el) return;
+        var track = el.querySelector('.carousel-track');
+        var slides = el.querySelectorAll('.carousel-slide');
+        var dots = el.querySelectorAll('.carousel-dot');
+        var counter = el.querySelector('.carousel-counter');
+        var prev = el.querySelector('.carousel-btn.prev');
+        var next = el.querySelector('.carousel-btn.next');
+        if (!slides.length || slides.length === 1 || !prev || !next) return;
+
+        var index = 0;
+        var startX = 0;
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            dots.forEach(function(d, j) { d.classList.toggle('ativo', j === index); });
+            if (counter) counter.textContent = (index + 1) + ' / ' + slides.length;
+        }
+
+        prev.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index - 1); });
+        next.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index + 1); });
+        dots.forEach(function(d) {
+            d.addEventListener('click', function(e) {
+                e.preventDefault(); e.stopPropagation();
+                goTo(parseInt(d.dataset.index, 10));
+            });
+        });
+
+        el.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+        el.addEventListener('touchend', function(e) {
+            var diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(index + (diff > 0 ? 1 : -1));
+        }, { passive: true });
+    }
+
+    filtroBotoes.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filtroBotoes.forEach(function(b) { b.classList.remove('ativo'); });
+            this.classList.add('ativo');
+            filtroAtivo = this.dataset.tipo;
+            paginaAtual = 1;
+            renderizar();
+        });
+    });
+
+    function renderizar() {
+        var filtradas = filtrarMaquinas();
+        var totalPaginas = Math.ceil(filtradas.length / ITENS_POR_PAGINA) || 1;
+        var inicio = (paginaAtual - 1) * ITENS_POR_PAGINA;
+        var paginaItens = filtradas.slice(inicio, inicio + ITENS_POR_PAGINA);
+
+        grid.innerHTML = '';
+        paginaItens.forEach(function(m, idx) {
+            var imagens = obterImagens(m);
+            var carouselId = 'c-' + paginaAtual + '-' + idx;
+            var msgWhatsapp = 'Olá! Tenho interesse na máquina: ' + m.nome + ' (' + detalheWhatsapp(m) + '). Pode me enviar mais fotos e informações?';
+            var card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML =
+                criarCarousel(carouselId, imagens, m.nome, m.tipo) +
+                '<div class="info">' +
+                    '<h3>' + m.nome + '</h3>' +
+                    '<div class="card-meta">' +
+                        '<span><strong>' + m.marca + '</strong>Marca</span>' +
+                        '<span><strong>' + m.ano + '</strong>Ano</span>' +
+                        '<span><strong>' + textoHoras(m) + '</strong>' + labelHoras(m) + '</span>' +
+                    '</div>' +
+                    '<p class="preco">R$ ' + m.preco.toLocaleString('pt-BR') + ' <small>· negocie condições</small></p>' +
+                '</div>' +
+                '<div class="card-footer">' +
+                    '<a href="' + waLink(msgWhatsapp) + '" class="btn-negocie" target="_blank">' +
+                        '<i class="fab fa-whatsapp"></i>' +
+                        '<span>Negocie no WhatsApp<small>Resposta rápida · sem compromisso</small></span>' +
+                    '</a>' +
+                '</div>';
+            grid.appendChild(card);
+            initCarousel(card.querySelector('.carousel'));
+        });
+
+        renderizarPaginacao(totalPaginas);
+    }
+
+    function filtrarMaquinas() {
+        if (filtroAtivo === 'todos') return maquinas;
+        return maquinas.filter(function(m) { return m.tipo === filtroAtivo; });
+    }
+
+    function renderizarPaginacao(totalPaginas) {
+        paginacaoContainer.innerHTML = '';
+        for (var i = 1; i <= totalPaginas; i++) {
+            var btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === paginaAtual) btn.classList.add('ativo');
+            (function(pagina) {
+                btn.addEventListener('click', function() {
+                    paginaAtual = pagina;
+                    renderizar();
+                });
+            })(i);
+            paginacaoContainer.appendChild(btn);
+        }
+    }
+
+    document.querySelectorAll('.faq-pergunta').forEach(function(item) {
+        item.addEventListener('click', function() {
+            this.parentElement.classList.toggle('ativo');
+        });
+    });
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    configurarWhatsappLinks();
+    renderizar();
+</script>
+
+</body>
+</html>
