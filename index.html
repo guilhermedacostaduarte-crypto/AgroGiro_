@@ -1321,6 +1321,13 @@
                 btn.addEventListener('click', function() {
                     paginaAtual = pagina;
                     renderizar();
+                    // --- MODIFICAÇÃO SOLICITADA COMEÇA AQUI ---
+                    // Redireciona a página suavemente para o início do catálogo
+                    var catalogoHeader = document.getElementById('maquinas');
+                    if (catalogoHeader) {
+                        catalogoHeader.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // --- MODIFICAÇÃO SOLICITADA TERMINA AQUI ---
                 });
             })(i);
             paginacaoContainer.appendChild(btn);
