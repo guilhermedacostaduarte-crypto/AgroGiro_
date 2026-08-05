@@ -7,6 +7,26 @@
 
   gtag('config', 'AW-17745500934');
 </script>
+<!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17745500934/Lmn2CKz_9cobEIa2241C',
+      'value': 1.0,
+      'currency': 'BRL',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -586,7 +606,7 @@
                 <small>Máquinas agrícolas de confiança</small>
             </div>
         </a>
-        <a href="#" class="header-cta" id="headerWhatsapp" target="_blank">
+        <a href="#" class="header-cta" id="headerWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
             <i class="fab fa-whatsapp"></i>
             <span>Falar com especialista</span>
         </a>
@@ -604,7 +624,7 @@
                 <h2>O equipamento certo para o seu campo, com <span>negociação segura</span></h2>
                 <p class="hero-sub">Tratores, colhedoras e Implementos revisados. Fale direto com nossa equipe pelo WhatsApp e receba fotos, vídeos e condições reais — sem intermediários confusos.</p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-whatsapp" id="heroWhatsapp" target="_blank">
+                    <a href="#" class="btn-whatsapp" id="heroWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
                         <i class="fab fa-whatsapp"></i> Quero ver as máquinas
                     </a>
                     <a href="#maquinas" class="btn-outline">
@@ -747,7 +767,7 @@
     <div class="container">
         <h2>Venda sua máquina sem complicação - Se Afilie a AgroGiro</h2>
         <p>Cadastro gratuito, alcance de compradores qualificados e acompanhamento da negociação do início ao fim.</p>
-        <a href="#" class="btn-anuncie" id="anuncieWhatsapp" target="_blank">
+        <a href="#" class="btn-anuncie" id="anuncieWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
             <i class="fab fa-whatsapp"></i> Quero anunciar grátis
         </a>
     </div>
@@ -804,10 +824,10 @@
             <div>
                 <h4>Contato</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> (14) 99697-7890</li>
+                    <li><i class="fab fa-whatsapp"></i> (16) 99697-7890</li>
                     <li><i class="fas fa-envelope"></i> contato.agrogiro@gmail.com</li>
                     <li><i class="fas fa-clock"></i> Seg–Sext, 8h às 17h</li>
-		    <li><i class="fas fa-clock"></i> Sáb, 8h às 13h</li>
+            <li><i class="fas fa-clock"></i> Sáb, 8h às 13h</li>
                 </ul>
             </div>
             <div>
@@ -827,7 +847,7 @@
 
 <div class="whatsapp-float">
     <div class="whatsapp-float-tooltip">Dúvidas? Fale conosco agora!</div>
-    <a href="#" class="whatsapp-float-btn" id="floatWhatsapp" target="_blank" aria-label="WhatsApp">
+    <a href="#" class="whatsapp-float-btn" id="floatWhatsapp" target="_blank" aria-label="WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
         <i class="fab fa-whatsapp"></i>
     </a>
 </div>
@@ -836,7 +856,7 @@
     const WHATSAPP = '5514996977890';
 
     const maquinas = [
-	 	{
+        {
             nome: "Colheitadeira New Holland TC 5070 - Tração 4x4, Filipada Plataforma 20 pés (Único dono, máquina de galpão)",
             marca: "New Holland",
             ano: 2014,
@@ -846,12 +866,12 @@
             imagens: [
                 "imagens/New Holland TC 5070-1.jpg.jpeg",
                 "imagens/New Holland TC 5070-2.jpg.jpeg",
-				"imagens/New Holland TC 5070-3.jpg.jpeg",
+                "imagens/New Holland TC 5070-3.jpg.jpeg",
                 "imagens/New Holland TC 5070-4.jpg.jpeg"
             ],
             tipo: "Colhedoras"
         },
-		{
+        {
             nome: "Colheitadeira New Holland CR 5.85 - Tração 4x4, Plataforma 30 pés (caracol)",
             marca: "New Holland",
             ano: 2019,
@@ -861,13 +881,13 @@
             imagens: [
                 "imagens/New Holland CR 5.85-1.jpg.jpeg",
                 "imagens/New Holland CR 5.85-2.jpg.jpeg",
-				"imagens/New Holland CR 5.85-3.jpg.jpeg",
-				"imagens/New Holland CR 5.85-4.jpg.jpeg",
+                "imagens/New Holland CR 5.85-3.jpg.jpeg",
+                "imagens/New Holland CR 5.85-4.jpg.jpeg",
                 "imagens/New Holland CR 5.85-5.jpg.jpeg"
             ],
             tipo: "Colhedoras"
         },
-		{
+        {
             nome: "Colheitadeira Case 4150 AFS - Plataforma 25 pés (caracol)",
             marca: "Case",
             ano: 2021,
@@ -877,7 +897,7 @@
             imagens: [
                 "imagens/Case 4150 AFS-2.jpg.jpeg",
                 "imagens/Case 4150 AFS-1.jpg.jpeg",
-				"imagens/Case 4150 AFS-3.jpg.jpeg",
+                "imagens/Case 4150 AFS-3.jpg.jpeg",
                 "imagens/Case 4150 AFS-4.jpg.jpeg"
             ],
             tipo: "Colhedoras"
@@ -895,22 +915,22 @@
             ],
             tipo: "Implementos"
         },
-		{
+        {
             nome: "Pulverizador John Deere 4630 (Tração 4x4 - Barra 28 metros / GPS / Piloto Automático)",
             marca: "John Deere",
             ano: 2013,
-			horas: 7335,
+            horas: 7335,
             preco: 320000,
             local: "Peixe-TO",
             imagens: [
                 "imagens/John Deere 4630-2.jpg.jpeg",
                 "imagens/John Deere 4630-4.jpg.jpeg",
-				"imagens/John Deere 4630-1.jpg.jpeg",
+                "imagens/John Deere 4630-1.jpg.jpeg",
                 "imagens/John Deere 4630-3.jpg.jpeg"
             ],
             tipo: "Implementos"
         },
-		{
+        {
             nome: "Pulverizador STARA Imperador 2650 (Tração 4x4 - Barra 30 metros / Piloto Automático)",
             marca: "STARA",
             ano: 2013,
@@ -919,27 +939,27 @@
             imagens: [
                 "imagens/STARA IMPERADOR 2650-2.jpg.jpeg",
                 "imagens/STARA IMPERADOR 2650-3.jpg.jpeg",
-				"imagens/STARA IMPERADOR 2650-4.jpg.jpeg",
+                "imagens/STARA IMPERADOR 2650-4.jpg.jpeg",
                 "imagens/STARA IMPERADOR 2650-1.jpg.jpeg"
             ],
             tipo: "Implementos"
         },
-		{
+        {
             nome: "Pulverizador Autopropelido 4x4 Massey Ferguson 9030 (30 metros de barras / Piloto GPS / Monitor AG3000 decimétrico)",
             marca: "Massey Fergunson",
             ano: 2015,
-			horas: 4000,
+            horas: 4000,
             preco: 450000,
             local: "Jaboticabal-SP",
             imagens: [
                 "imagens/Autopropelido 4x4 Massey Ferguson 9030-2.jpg.jpeg",
                 "imagens/Autopropelido 4x4 Massey Ferguson 9030-3.jpg.jpeg",
-				"imagens/Autopropelido 4x4 Massey Ferguson 9030-4.jpg.jpeg",
+                "imagens/Autopropelido 4x4 Massey Ferguson 9030-4.jpg.jpeg",
                 "imagens/Autopropelido 4x4 Massey Ferguson 9030-1.jpg.jpeg"
             ],
             tipo: "Implementos"
         },
-		{
+        {
             nome: "Trator Case Puma 140",
             marca: "Case",
             ano: 2022,
@@ -949,13 +969,13 @@
             imagens: [
                 "imagens/Case Puma 140-1.jpg.jpeg",
                 "imagens/Case Puma 140-2.jpg.jpeg",
-				"imagens/Case Puma 140-3.jpg.jpeg",
-				"imagens/Case Puma 140-4.jpg.jpeg",
+                "imagens/Case Puma 140-3.jpg.jpeg",
+                "imagens/Case Puma 140-4.jpg.jpeg",
                 "imagens/Case Puma 140-5.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator Massey Fergunson 8690 - 370CV (Piloto e GPS / 6 pneus novos)",
             marca: "Massey Fergunson",
             ano: 2014,
@@ -965,12 +985,12 @@
             imagens: [
                 "imagens/Massey Fergunson 8690-4.jpg.jpeg",
                 "imagens/Massey Fergunson 8690-3.jpg.jpeg",
-				"imagens/Massey Fergunson 8690-2.jpg.jpeg",
+                "imagens/Massey Fergunson 8690-2.jpg.jpeg",
                 "imagens/Massey Fergunson 8690-1.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator New Holland T7 260 - 234 Cv (Gps/Piloto automático)",
             marca: "New Holland",
             ano: 2022,
@@ -980,12 +1000,12 @@
             imagens: [
                 "imagens/New Holland T7 260-1.jpg.jpeg",
                 "imagens/New Holland T7 260-2.jpg.jpeg",
-				"imagens/New Holland T7 260-3.jpg.jpeg",
+                "imagens/New Holland T7 260-3.jpg.jpeg",
                 "imagens/New Holland T7 260-4.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator John Deere 6210J - Filipado (Pneus radiais novos) ",
             marca: "John Deere",
             ano: 2021,
@@ -995,12 +1015,12 @@
             imagens: [
                 "imagens/John Deere 6210J-1.jpg.jpeg",
                 "imagens/John Deere 6210J-2.jpg.jpeg",
-				"imagens/John Deere 6210J-3.jpg.jpeg",
+                "imagens/John Deere 6210J-3.jpg.jpeg",
                 "imagens/John Deere 6210J-4.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator John Deere 7230J ",
             marca: "John Deere",
             ano: 2022,
@@ -1010,12 +1030,12 @@
             imagens: [
                 "imagens/John Deere 7230J-2.jpg.jpeg",
                 "imagens/John Deere 7230J-3.jpg.jpeg",
-				"imagens/John Deere 7230J-4.jpg.jpeg",
+                "imagens/John Deere 7230J-4.jpg.jpeg",
                 "imagens/John Deere 7230J-1.jpg.jpeg"
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator John Deere 7210J ",
             marca: "John Deere",
             ano: 2013,
@@ -1025,7 +1045,7 @@
             imagens: [
                 "imagens/John Deere 7210J-2.jpg.jpeg",
                 "imagens/John Deere 7210J-3.jpg.jpeg",
-				"imagens/John Deere 7210J-4.jpg.jpeg",
+                "imagens/John Deere 7210J-4.jpg.jpeg",
                 "imagens/John Deere 7210J-1.jpg.jpeg"
             ],
             tipo: "Trator"
@@ -1100,7 +1120,7 @@
             ],
             tipo: "Trator"
         },
-		{
+        {
             nome: "Trator Massey Ferguson 4408 - Cabinado (Único Dono / Com Redutor)",
             marca: "Massey Ferguson",
             ano: 2021,
@@ -1165,6 +1185,7 @@
     }
 
     function configurarWhatsappLinks() {
+        // Updated to include onclick for conversions if needed here, but handled inline in HTML
         document.getElementById('headerWhatsapp').href = waLink('Olá! Gostaria de falar com um especialista da AgroGiro sobre máquinas agrícolas.');
         document.getElementById('heroWhatsapp').href = waLink('Olá! Vi o site da AgroGiro e gostaria de conhecer as máquinas disponíveis.');
         document.getElementById('anuncieWhatsapp').href = waLink('Olá! Quero anunciar minha máquina agrícola na AgroGiro.');
@@ -1288,6 +1309,7 @@
             var imagens = obterImagens(m);
             var carouselId = 'c-' + paginaAtual + '-' + idx;
             var msgWhatsapp = 'Olá! Tenho interesse na máquina: ' + m.nome + ' (' + detalheWhatsapp(m) + '). Pode me enviar mais fotos e informações?';
+            var linkWhats = waLink(msgWhatsapp);
             var card = document.createElement('article');
             card.className = 'card';
             card.innerHTML =
@@ -1303,7 +1325,7 @@
                     '<p class="preco">R$ ' + m.preco.toLocaleString('pt-BR') + ' <small>· negocie condições</small></p>' +
                 '</div>' +
                 '<div class="card-footer">' +
-                    '<a href="' + waLink(msgWhatsapp) + '" class="btn-negocie" target="_blank">' +
+                    '<a href="' + linkWhats + '" class="btn-negocie" target="_blank" onclick="return gtag_report_conversion(\'' + linkWhats + '\');">' +
                         '<i class="fab fa-whatsapp"></i>' +
                         '<span>Negocie no WhatsApp<small>Resposta rápida · sem compromisso</small></span>' +
                     '</a>' +
@@ -1330,13 +1352,10 @@
                 btn.addEventListener('click', function() {
                     paginaAtual = pagina;
                     renderizar();
-                    // --- MODIFICAÇÃO SOLICITADA COMEÇA AQUI ---
-                    // Redireciona a página suavemente para o início do catálogo
                     var catalogoHeader = document.getElementById('maquinas');
                     if (catalogoHeader) {
                         catalogoHeader.scrollIntoView({ behavior: 'smooth' });
                     }
-                    // --- MODIFICAÇÃO SOLICITADA TERMINA AQUI ---
                 });
             })(i);
             paginacaoContainer.appendChild(btn);
