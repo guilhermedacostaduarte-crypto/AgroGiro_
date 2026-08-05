@@ -251,33 +251,37 @@ function gtag_report_conversion(url) {
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
         /* ========================================================== */
-        /* CARROSSEL - SOLUÇÃO CORRETA E ORIGINAL (PROPORÇÃO E FIT)   */
+        /* CARROSSEL - SOLUÇÃO LINEA MILANO (ALTURA FIXA E MOLDURA)   */
         /* ========================================================== */
         .carousel {
             position: relative;
             width: 100%;
-            aspect-ratio: 4 / 3;
-            min-height: 240px;
-            background: linear-gradient(180deg, #e8ece9 0%, #f3f4f6 100%);
+            height: 240px; /* Altura fixa garantindo alinhamento de todos os cards */
+            background-color: #f4f4f4; /* Fundo neutro como solicitado */
             overflow: hidden;
             user-select: none;
             touch-action: pan-y;
             -webkit-tap-highlight-color: transparent;
         }
-        .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; will-change: transform; }
+        .carousel-track { 
+            display: flex; 
+            height: 100%; 
+            transition: transform 0.35s ease; 
+            will-change: transform; 
+        }
         .carousel-slide {
             min-width: 100%;
+            width: 100%;
             height: 100%;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f3f4f6;
         }
         .carousel-slide img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Mantém a imagem inteira sem cortes e sem esticar */
+            object-fit: contain; /* Garante que NENHUMA imagem seja cortada */
             object-position: center;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -530,11 +534,10 @@ function gtag_report_conversion(url) {
             .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
             
             /* ========================================================== */
-            /* PROPORÇÃO RESTAURADA CORRETAMENTE PARA O MOBILE            */
+            /* AQUI REAPLICA A SOLUÇÃO LINEA MILANO PARA O CELULAR        */
             /* ========================================================== */
             .carousel {
-                aspect-ratio: 16 / 11;
-                min-height: 260px;
+                height: 200px; /* Mantém a altura exata definida anteriormente */
             }
             /* ========================================================== */
             
@@ -1181,7 +1184,6 @@ function gtag_report_conversion(url) {
     }
 
     function configurarWhatsappLinks() {
-        // Updated to include onclick for conversions if needed here, but handled inline in HTML
         document.getElementById('headerWhatsapp').href = waLink('Olá! Gostaria de falar com um especialista da AgroGiro sobre máquinas agrícolas.');
         document.getElementById('heroWhatsapp').href = waLink('Olá! Vi o site da AgroGiro e gostaria de conhecer as máquinas disponíveis.');
         document.getElementById('anuncieWhatsapp').href = waLink('Olá! Quero anunciar minha máquina agrícola na AgroGiro.');
@@ -1226,7 +1228,7 @@ function gtag_report_conversion(url) {
     function criarCarousel(id, imagens, nome, tipo) {
         var slides = imagens.map(function(src, i) {
             var caminho = urlImagem(src);
-            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; background-color: #f3f4f6;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
         }).join('');
 
         var dots = imagens.length > 1
