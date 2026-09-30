@@ -35,9 +35,11 @@ function gtag_report_conversion(url) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <title>AgroGiro – Máquinas Agrícolas Usadas com Negociação Segura</title>
+    <!-- TITULO OTIMIZADO PARA SEO -->
+    <title>Comprar Tratores e Máquinas Agrícolas Usadas | Negociação Segura - AgroGiro</title>
     <link rel="icon" href="imagens/logo.png.png">
-    <meta name="description" content="Compre e venda máquinas agrícolas usadas com procedência verificada. Tratores, colhedoras e Implementos. Atendimento direto pelo WhatsApp.">
+    <!-- META DESCRIÇÃO OTIMIZADA PARA SEO -->
+    <meta name="description" content="Encontre Tratores (John Deere, Case, Massey Ferguson), Colhedoras e Implementos usados e revisados. Procedência verificada, garantia de 3 meses e 0% taxa de corretagem. Negocie direto no WhatsApp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -1449,7 +1451,8 @@ function gtag_report_conversion(url) {
         var slides = imagens.map(function(src, i) {
             var caminho = urlImagem(src);
             var lazyAttr = i === 0 ? '' : ' loading="lazy" decoding="async"';
-            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '"' + lazyAttr + ' style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+            /* TAG ALT OTIMIZADA PARA SEO */
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' Usado à Venda AgroGiro — foto ' + (i + 1) + '"' + lazyAttr + ' style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
         }).join('');
 
         var dots = imagens.length > 1
