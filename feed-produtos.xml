@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>AgroGiro - Estoque de Máquinas</title>
+    <link>https://agrogiro-multmarcas.com.br</link>
+    <description>Catálogo de máquinas agrícolas e tratores usados revisados.</description>
+    
+    <!-- INÍCIO DO PRIMEIRO PRODUTO -->
+    <item>
+      <g:id>1</g:id>
+      <g:title>Trator John Deere 8270R Ano 2018</g:title>
+      <g:description>Trator John Deere 8270R usado com 18967 horas. Transmissão e motor revisados em 2026. Excelente estado de conservação em Botucatu-SP.</g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link> 
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/JD%208270r-01.jpg.jpg</g:image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>650000.00 BRL</g:price>
+      <g:brand>John Deere</g:brand>
+      <g:google_product_category>1083</g:google_product_category> <!-- Código do Google para Tratores -->
+    </item>
+    <!-- FIM DO PRIMEIRO PRODUTO -->
+    
+  </channel>
+</rss>
