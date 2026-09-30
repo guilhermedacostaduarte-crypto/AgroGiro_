@@ -36,7 +36,7 @@ function gtag_report_conversion(url) {
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
     <title>AgroGiro – Máquinas Agrícolas Usadas com Negociação Segura</title>
-	<link rel="icon" href="imagens/logo.png.png">
+    <link rel="icon" href="imagens/logo.png.png">
     <meta name="description" content="Compre e venda máquinas agrícolas usadas com procedência verificada. Tratores, colhedoras e Implementos. Atendimento direto pelo WhatsApp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -48,7 +48,7 @@ function gtag_report_conversion(url) {
             --gold-dark: #b88a12;
             --whatsapp: #25D366;
             --whatsapp-dark: #1ebe5b;
-            --ademicon: #002b5c;     /* Cor azul mantida para o botão de consórcio */
+            --ademicon: #002b5c;      /* Cor azul mantida para o botão de consórcio */
             --ademicon-dark: #001836; 
             --text: #1f2937;
             --muted: #6b7280;
@@ -428,6 +428,9 @@ function gtag_report_conversion(url) {
         .depoimento .autor { font-weight: 700; color: var(--green-dark); font-size: 0.9rem; }
         .depoimento .autor span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
 
+        /* ======================================================= */
+        /* NOVA SEÇÃO: CONSÓRCIO (CROSS-SELLING)                   */
+        /* ======================================================= */
         .consorcio {
             background: var(--green-dark);
             color: #fff; padding: 70px 20px;
@@ -818,7 +821,7 @@ function gtag_report_conversion(url) {
 </section>
 
 <!-- ======================================================= -->
-<!-- NOVA SEÇÃO: CONSÓRCIO (CROSS-SELLING)                    -->
+<!-- NOVA SEÇÃO: CONSÓRCIO (CROSS-SELLING)                   -->
 <!-- ======================================================= -->
 <section class="consorcio" id="consorcio">
     <div class="consorcio-inner">
@@ -915,7 +918,7 @@ function gtag_report_conversion(url) {
         <div class="footer-grid">
             <div>
                 <h4>AgroGiro</h4>
-                <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>    
+                <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>        
             </div>
             <div>
                 <h4>Contato</h4>
@@ -1192,9 +1195,9 @@ function gtag_report_conversion(url) {
                 "imagens/Valtra A52s.01.jpg.jpg",
                 "imagens/Valtra A52s.02.jpg.jpg",
                 "imagens/Valtra A52s.03.jpg.jpg",
-		"imagens/Valtra A52s.04.jpg.jpg",
-		"imagens/Valtra A52s.05.jpg.jpg",
-		"imagens/Valtra A52s.06.jpg.jpg"
+        "imagens/Valtra A52s.04.jpg.jpg",
+        "imagens/Valtra A52s.05.jpg.jpg",
+        "imagens/Valtra A52s.06.jpg.jpg"
             ],
             tipo: "Trator"
         },
@@ -1209,7 +1212,7 @@ function gtag_report_conversion(url) {
                 "imagens/MF4283.01.jpg.jpg",
                 "imagens/MF4283.02.jpg.jpg",
                 "imagens/MF4283.03.jpg.jpg",
-		"imagens/MF4283.04.jpg.jpg"
+        "imagens/MF4283.04.jpg.jpg"
             ],
             tipo: "Trator"
         },
@@ -1224,8 +1227,8 @@ function gtag_report_conversion(url) {
                 "imagens/MF6713.01.jpg.jpeg",
                 "imagens/MF6713.02.jpg.jpeg",
                 "imagens/MF6713.03.jpg.jpeg",
-		"imagens/MF6713.04.jpg.jpeg",
-		"imagens/MF6713.05.jpg.jpeg"
+        "imagens/MF6713.04.jpg.jpeg",
+        "imagens/MF6713.05.jpg.jpeg"
             ],
             tipo: "Trator"
         },
@@ -1239,7 +1242,7 @@ function gtag_report_conversion(url) {
                 "imagens/MF 290-01.jpg.jpg",
                 "imagens/MF 290-02.jpg.jpg",
                 "imagens/MF 290-03.jpg.jpg",
-		"imagens/MF 290-04.jpg.jpg"
+        "imagens/MF 290-04.jpg.jpg"
             ],
             tipo: "Trator"
         },
@@ -1254,10 +1257,10 @@ function gtag_report_conversion(url) {
                 "imagens/MF 4408-2022-01.jpg.jpg",
                 "imagens/MF 4408-2022-02.jpg.jpg",
                 "imagens/MF 4408-2022-03.jpg.jpg",
-		"imagens/MF 4408-2022-04.jpg.jpg",
-		"imagens/MF 4408-2022-05.jpg.jpg",
-		"imagens/MF 4408-2022-06.jpg.jpg",
-		"imagens/MF 4408-2022-07.jpg.jpg"
+        "imagens/MF 4408-2022-04.jpg.jpg",
+        "imagens/MF 4408-2022-05.jpg.jpg",
+        "imagens/MF 4408-2022-06.jpg.jpg",
+        "imagens/MF 4408-2022-07.jpg.jpg"
             ],
             tipo: "Trator"
         },
@@ -1354,7 +1357,7 @@ function gtag_report_conversion(url) {
         {
             nome: "Trator New Holland TL5.90 (Único Dono)",
             marca: "New Holland",
-            ano: 2019,   
+            ano: 2019,          
             horas: 7850,
             preco: 165000,
             local: "Região de Marília-SP",
@@ -1445,7 +1448,8 @@ function gtag_report_conversion(url) {
     function criarCarousel(id, imagens, nome, tipo) {
         var slides = imagens.map(function(src, i) {
             var caminho = urlImagem(src);
-            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '" loading="lazy" decoding="async" style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+            var lazyAttr = i === 0 ? '' : ' loading="lazy" decoding="async"';
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' — foto ' + (i + 1) + '"' + lazyAttr + ' style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
         }).join('');
 
         var dots = imagens.length > 1
