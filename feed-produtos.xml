@@ -25,7 +25,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>650000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Plantadeira Valtra Hitech -->
@@ -41,7 +41,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>110000.00 BRL</g:price>
       <g:brand>Valtra</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Colheitadeira New Holland CR 5.85 -->
@@ -59,7 +59,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>880000.00 BRL</g:price>
       <g:brand>New Holland</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Colheitadeira Case 4150 AFS -->
@@ -76,7 +76,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>720000.00 BRL</g:price>
       <g:brand>Case</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Distribuidor Piccin Master 12.000 -->
@@ -92,7 +92,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>115000.00 BRL</g:price>
       <g:brand>Piccin</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Pulverizador John Deere 4630 -->
@@ -109,7 +109,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>320000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Pulverizador STARA Imperador 2650 -->
@@ -126,7 +126,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>250000.00 BRL</g:price>
       <g:brand>STARA</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Pulverizador Massey Ferguson 9030 -->
@@ -143,7 +143,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>450000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Case Puma 140 -->
@@ -161,7 +161,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>420000.00 BRL</g:price>
       <g:brand>Case</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Fergunson 8690 -->
@@ -178,7 +178,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>500000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator New Holland T7 260 -->
@@ -195,7 +195,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>570000.00 BRL</g:price>
       <g:brand>New Holland</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator John Deere 6210J -->
@@ -212,7 +212,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>430000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator John Deere 7230J -->
@@ -229,7 +229,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>620000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator John Deere 7210J -->
@@ -246,7 +246,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>320000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator John Deere 6100J -->
@@ -263,7 +263,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>155000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Valtra A52s -->
@@ -282,7 +282,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>124000.00 BRL</g:price>
       <g:brand>Valtra</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Fergunson 4283 -->
@@ -299,7 +299,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>115000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Fergunson 6713 -->
@@ -317,7 +317,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>235000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Fergunson 290 -->
@@ -334,7 +334,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>90000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Fergunson 4408 -->
@@ -354,7 +354,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>160000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator John Deere 6190M -->
@@ -377,7 +377,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>450000.00 BRL</g:price>
       <g:brand>John Deere</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Valtra BM110 -->
@@ -393,7 +393,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>110000.00 BRL</g:price>
       <g:brand>Valtra</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator New Holland TS6020 -->
@@ -409,7 +409,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>135000.00 BRL</g:price>
       <g:brand>New Holland</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Ferguson 4707 (Com Redutor) -->
@@ -425,7 +425,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>140000.00 BRL</g:price>
       <g:brand>Massey Ferguson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Massey Ferguson 4707 (Sem Redutor) -->
@@ -441,7 +441,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>125000.00 BRL</g:price>
       <g:brand>Massey Ferguson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator MF 4275 -->
@@ -457,7 +457,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>155000.00 BRL</g:price>
       <g:brand>Massey Fergunson</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator New Holland TL5.90 -->
@@ -473,7 +473,7 @@
       <g:availability>in_stock</g:availability>
       <g:price>165000.00 BRL</g:price>
       <g:brand>New Holland</g:brand>
-      <g:google_product_category>Empresas e Indústria > Agricultura > Maquinário Agrícola</g:google_product_category>
+      <g:google_product_category>112</g:google_product_category>
     </item>
 
   </channel>
