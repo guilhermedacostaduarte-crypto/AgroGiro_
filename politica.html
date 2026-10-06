@@ -1,182 +1,1662 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17745500934"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17745500934');
+</script>
+<!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17745500934/Lmn2CKz_9cobEIa2241C',
+      'value': 1.0,
+      'currency': 'BRL',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Intermediação e Condições de Venda — AgroGiro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1b4332">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <!-- TITULO OTIMIZADO PARA SEO -->
+    <title>Comprar e Anunciar Tratores, Colhedoras, Implementos Agrícolas (Plantadeiras/Pulverizadores/Adubadeiras/Calcariadeiras/Distribuidores de Sólidos) Máquinas Agrícolas Usadas | Negociação Segura - AgroGiro</title>
     <link rel="icon" href="imagens/logo.png.png">
+    <!-- META DESCRIÇÃO OTIMIZADA PARA SEO -->
+    <meta name="description" content="A plataforma segura para comprar ou anunciar máquinas agrícolas. Encontre Tratores (John Deere, Case, Massey Ferguson, Valtra, New Holland), Colhedoras e Implementos Agrícolas (Plantadeiras, Pulverizadores, Adubadeiras, Calcariadeiras, Distribuidores de Sólidos) usados e revisados. Negocie direto pelo WhatsApp na AgroGiro!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ... SEU CSS ATUAL (MANTIDO INTACTO) ... */
         :root {
             --green: #2d6a4f;
             --green-dark: #1b4332;
             --green-light: #e9f5ef;
             --gold: #d4a017;
+            --gold-dark: #b88a12;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #1ebe5b;
+            --ademicon: #002b5c;      /* Cor azul mantida para o botão de consórcio */
+            --ademicon-dark: #001836; 
             --text: #1f2937;
             --muted: #6b7280;
             --bg: #f8faf9;
             --white: #fff;
             --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
             --radius: 16px;
+            --transition: 0.25s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
             background: var(--bg);
-            line-height: 1.7;
+            line-height: 1.6;
+            padding-bottom: env(safe-area-inset-bottom, 0);
+            -webkit-text-size-adjust: 100%;
         }
         a { text-decoration: none; color: inherit; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        img { display: block; max-width: 100%; height: auto; -webkit-user-drag: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .top-bar {
+            background: var(--green-dark);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.82rem;
+            padding: 8px 0;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar span { display: inline-flex; align-items: center; gap: 6px; }
 
         header {
             background: var(--white);
             box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding-top: env(safe-area-inset-top, 0);
         }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+        .logo-area { display: flex; align-items: center; gap: 24px; }
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo-icon {
-            width: 42px; height: 42px;
+            width: 48px; height: 48px;
             background: linear-gradient(135deg, var(--green), var(--green-dark));
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 1.2rem;
+            color: #fff; font-size: 1.4rem;
         }
-        .logo-text h1 { font-size: 1.3rem; color: var(--green-dark); line-height: 1.1; }
+        .logo-text h1 { font-size: 1.5rem; color: var(--green-dark); line-height: 1.1; }
+        .logo-text small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+        
+        .header-menu { display: flex; gap: 20px; font-weight: 600; font-size: 0.95rem; color: var(--text); }
+        .header-menu a { transition: var(--transition); }
+        .header-menu a:hover { color: var(--green); }
 
-        .content-section {
-            background: var(--white);
-            padding: 48px 36px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            margin: 40px auto;
-            border: 1px solid #eef2f0;
-        }
+        .header-actions { display: flex; gap: 12px; align-items: center; }
 
-        .back-link {
+        .header-cta {
             display: inline-flex; align-items: center; gap: 8px;
-            color: var(--green); font-weight: 600; margin-bottom: 24px;
-            font-size: 0.95rem;
-            transition: 0.2s ease;
+            background: var(--whatsapp); color: #fff;
+            padding: 10px 20px; border-radius: 50px;
+            font-weight: 600; font-size: 0.92rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(37,211,102,0.35);
         }
-        .back-link:hover { color: var(--green-dark); }
-
-        h2 {
-            color: var(--green-dark);
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            line-height: 1.2;
+        .header-cta:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+        
+        .header-cta.ademicon-btn {
+            background: var(--ademicon);
+            box-shadow: 0 4px 16px rgba(0, 43, 92, 0.35);
+        }
+        .header-cta.ademicon-btn:hover {
+            background: var(--ademicon-dark);
         }
 
-        .update-date {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-bottom: 28px;
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(27,67,50,0.92) 0%, rgba(45,106,79,0.85) 100%),
+                url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=80') center/cover no-repeat;
+            color: #fff; padding: 72px 0 80px;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1.2fr 1fr;
+            gap: 40px; align-items: center;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 14px; border-radius: 50px;
+            font-size: 0.82rem; margin-bottom: 18px;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px; background: #4ade80;
+            border-radius: 50%; box-shadow: 0 0 8px #4ade80;
+        }
+        .hero h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.15; margin-bottom: 16px;
+        }
+        .hero h2 span { color: #fde68a; }
+        .hero-sub {
+            font-size: 1.08rem; opacity: 0.92;
+            margin-bottom: 28px; max-width: 520px;
+        }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+        .btn-whatsapp {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--whatsapp); color: #fff;
+            padding: 15px 28px; border-radius: 50px;
+            font-size: 1.05rem; font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+        }
+        .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-2px); }
+        .btn-outline {
+            display: inline-flex; align-items: center; gap: 8px;
+            border: 2px solid rgba(255,255,255,0.5); color: #fff;
+            padding: 13px 24px; border-radius: 50px;
+            font-weight: 600; transition: var(--transition);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+        .trust-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .trust-pill {
+            display: inline-flex; align-items: center; gap: 7px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 14px; border-radius: 10px; font-size: 0.82rem;
+        }
+        .trust-pill i { color: #fde68a; }
+        .hero-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius); padding: 24px;
+        }
+        .hero-card h3 { font-size: 1.1rem; margin-bottom: 16px; }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .hero-stat {
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px; padding: 16px; text-align: center;
+        }
+        .hero-stat strong {
+            display: block; font-size: 1.6rem;
+            color: #fde68a; line-height: 1.2;
+        }
+        .hero-stat span { font-size: 0.8rem; opacity: 0.85; }
+
+        .trust-strip {
+            background: var(--white); padding: 28px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .trust-strip-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+        }
+        .trust-item { text-align: center; padding: 10px; }
+        .trust-item i { font-size: 1.8rem; color: var(--green); margin-bottom: 8px; }
+        .trust-item h4 { font-size: 0.95rem; color: var(--green-dark); margin-bottom: 4px; }
+        .trust-item p { font-size: 0.82rem; color: var(--muted); }
+
+        .section-header { text-align: center; margin-bottom: 32px; }
+        .section-header .eyebrow {
+            font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 0.12em; color: var(--green);
+            font-weight: 700; margin-bottom: 6px;
+        }
+        .section-header h2 { font-size: 1.8rem; color: var(--green-dark); margin-bottom: 8px; }
+        .section-header p { color: var(--muted); max-width: 560px; margin: 0 auto; }
+
+        .filtros {
+            background: var(--white); padding: 28px 0;
+            position: sticky; top: 76px; z-index: 90;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .filtro-container {
+            display: flex; gap: 10px;
+            justify-content: center; flex-wrap: wrap;
+        }
+        .filtro-container::-webkit-scrollbar { display: none; }
+        .filtro-btn {
+            padding: 10px 22px; border: 2px solid #e5e7eb;
+            background: var(--white); color: var(--text);
+            border-radius: 50px; cursor: pointer;
+            font-weight: 600; font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .filtro-btn:hover { border-color: var(--green); color: var(--green); }
+        .filtro-btn.ativo { background: var(--green); border-color: var(--green); color: #fff; }
+
+        .maquinas { padding: 40px 0 100px; }
+        .maquinas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--white); border-radius: var(--radius);
+            overflow: hidden; box-shadow: var(--shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid #eef2f0;
+            display: flex; flex-direction: column;
+        }
+        .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 240px; 
+            background-color: #f4f4f4; 
+            overflow: hidden;
+            user-select: none;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .carousel-track { 
+            display: flex; 
+            height: 100%; 
+            transition: transform 0.35s ease; 
+            will-change: transform; 
+        }
+        .carousel-slide {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 44px; height: 44px; border: none; border-radius: 50%;
+            background: rgba(255,255,255,0.92); color: var(--green-dark);
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            opacity: 0; transition: opacity var(--transition), background var(--transition);
+            z-index: 2;
+        }
+        .card:hover .carousel-btn,
+        .carousel:focus-within .carousel-btn { opacity: 1; }
+        .carousel-btn:hover { background: #fff; }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        .carousel-dots {
+            position: absolute; bottom: 10px; left: 50%;
+            transform: translateX(-50%);
+            display: flex; gap: 6px; z-index: 2;
+        }
+        .carousel-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            border: none; background: rgba(0,0,0,0.3);
+            cursor: pointer; padding: 0; transition: var(--transition);
+        }
+        .carousel-dot.ativo { background: var(--green-dark); width: 20px; border-radius: 4px; }
+        .carousel-counter {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,0.55); color: #fff;
+            font-size: 0.72rem; padding: 3px 8px;
+            border-radius: 20px; z-index: 2;
+        }
+        .card-badge {
+            position: absolute; top: 10px; left: 10px;
+            background: var(--green); color: #fff;
+            font-size: 0.72rem; font-weight: 700;
+            padding: 4px 10px; border-radius: 20px; z-index: 2;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+
+        .card .info { padding: 18px 18px 12px; flex: 1; }
+        .card .info h3 {
+            font-size: 1.05rem; color: var(--green-dark);
+            margin-bottom: 10px; line-height: 1.3;
+        }
+        
+        .card-meta {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px; margin-bottom: 12px;
+        }
+        .card-meta span {
+            background: var(--green-light); border-radius: 8px;
+            padding: 6px 8px; font-size: 0.78rem; text-align: center;
+            display: flex; flex-direction: column; justify-content: center; min-height: 52px; align-items: center;
+        }
+        .card-meta span strong {
+            display: block; color: var(--green-dark); font-size: 0.85rem;
+            line-height: 1.25; word-wrap: break-word; white-space: normal; margin-bottom: 2px;
+        }
+
+        .card .info .preco { font-size: 1.45rem; font-weight: 800; color: var(--gold); }
+        .card .info .preco small { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+        .card-footer { padding: 0 15px 15px; }
+        .card .btn-negocie {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: var(--whatsapp); color: #fff;
+            text-align: center; padding: 14px 16px; border-radius: 12px;
+            font-weight: 700; font-size: 0.95rem;
+            transition: var(--transition); width: 100%;
+            min-height: 52px;
+        }
+        .card .btn-negocie > span {
+            display: flex; flex-direction: column; align-items: flex-start;
+            text-align: left; line-height: 1.25;
+        }
+        .card .btn-negocie i { font-size: 1.35rem; flex-shrink: 0; }
+        .card .btn-negocie:hover { background: var(--whatsapp-dark); }
+        .card .btn-negocie small {
+            display: block; font-size: 0.7rem;
+            font-weight: 500; opacity: 0.9;
+        }
+
+        .paginacao {
+            display: flex; justify-content: center;
+            gap: 8px; margin: 32px 0; flex-wrap: wrap;
+        }
+        .paginacao button {
+            min-width: 40px; height: 40px;
+            border: 2px solid #e5e7eb; background: var(--white);
+            color: var(--text); border-radius: 10px;
+            cursor: pointer; font-weight: 600; transition: var(--transition);
+        }
+        .paginacao button:hover,
+        .paginacao button.ativo { background: var(--green); border-color: var(--green); color: #fff; }
+
+        .why-us { background: var(--green-light); padding: 64px 0; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .why-card {
+            background: var(--white); border-radius: var(--radius);
+            padding: 28px 24px; box-shadow: var(--shadow);
+        }
+        .why-card .icon-wrap {
+            width: 52px; height: 52px; background: var(--green-light);
+            border-radius: 14px; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.3rem; color: var(--green); margin-bottom: 14px;
+        }
+        .why-card h3 { color: var(--green-dark); margin-bottom: 8px; font-size: 1.05rem; }
+        .why-card p { color: var(--muted); font-size: 0.92rem; }
+
+        .depoimentos { padding: 64px 0; background: var(--white); }
+        .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .depoimento {
+            background: var(--bg); padding: 28px;
+            border-radius: var(--radius); border: 1px solid #eef2f0;
+            position: relative;
+        }
+        .depoimento .stars { color: var(--gold); margin-bottom: 12px; font-size: 0.9rem; }
+        .depoimento i.quote {
+            color: var(--green); opacity: 0.3;
+            font-size: 2rem; position: absolute; top: 16px; right: 20px;
+        }
+        .depoimento p { font-style: italic; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+        .depoimento .autor { font-weight: 700; color: var(--green-dark); font-size: 0.9rem; }
+        .depoimento .autor span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
+
+        /* ======================================================= */
+        /* NOVA SEÇÃO: CONSÓRCIO (CROSS-SELLING)                   */
+        /* ======================================================= */
+        .consorcio {
+            background: var(--green-dark);
+            color: #fff; padding: 70px 20px;
+            position: relative; overflow: hidden;
+        }
+        .consorcio-inner {
+            max-width: 900px; margin: 0 auto; text-align: center;
+            position: relative; z-index: 2;
+        }
+        .consorcio .eyebrow {
+            color: var(--gold); font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 10px;
             display: block;
         }
-
-        h3 {
-            color: var(--green-dark);
-            font-size: 1.15rem;
-            margin-top: 28px;
-            margin-bottom: 10px;
+        .consorcio h2 { font-size: 2.2rem; margin-bottom: 20px; line-height: 1.2; }
+        .consorcio p {
+            font-size: 1.1rem; opacity: 0.9; margin-bottom: 35px;
+            line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;
         }
-
-        p, ul {
-            margin-bottom: 16px;
-            color: var(--muted);
-            font-size: 0.98rem;
+        .consorcio-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px;
         }
+        .consorcio-item {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            padding: 20px; border-radius: 12px;
+        }
+        .consorcio-item i { font-size: 2rem; color: var(--gold); margin-bottom: 10px; }
+        .consorcio-item h4 { font-size: 1rem; margin-bottom: 5px; }
+        .btn-consorcio {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gold); color: #fff;
+            padding: 16px 40px; border-radius: 50px;
+            font-weight: 700; font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(212, 160, 23, 0.3);
+        }
+        .btn-consorcio:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        .anuncie {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            color: #fff; text-align: center; padding: 64px 20px;
+        }
+        .anuncie h2 { font-size: 2rem; margin-bottom: 12px; }
+        .anuncie p {
+            font-size: 1.05rem; opacity: 0.9; margin-bottom: 28px;
+            max-width: 520px; margin-left: auto; margin-right: auto;
+        }
+        .btn-anuncie {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--gold); color: #fff;
+            padding: 15px 36px; border-radius: 50px;
+            font-weight: 700; font-size: 1.05rem;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        .btn-anuncie:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
-        strong { color: var(--text); }
+        .faq { padding: 64px 0; }
+        .faq-list { max-width: 760px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white); margin-bottom: 12px;
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid #eef2f0;
+        }
+        .faq-pergunta {
+            padding: 18px 20px; cursor: pointer; font-weight: 600;
+            display: flex; justify-content: space-between;
+            align-items: center; gap: 12px; color: var(--green-dark);
+        }
+        .faq-pergunta i { transition: var(--transition); color: var(--green); }
+        .faq-resposta {
+            padding: 0 20px; max-height: 0; overflow: hidden;
+            transition: 0.35s ease; color: var(--muted); font-size: 0.95rem;
+        }
+        .faq-item.ativo .faq-resposta { padding: 0 20px 18px; max-height: 300px; }
+        .faq-item.ativo .faq-pergunta i { transform: rotate(180deg); }
 
         footer {
             background: var(--green-dark);
             color: rgba(255,255,255,0.85);
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.85rem;
-            margin-top: 60px;
+            padding: 40px 0 30px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr;
+            gap: 32px; margin-bottom: 28px;
+        }
+        footer h4 { color: #fff; margin-bottom: 12px; font-size: 1rem; }
+        footer p, footer li { font-size: 0.9rem; line-height: 1.8; }
+        footer ul { list-style: none; }
+        footer .social { display: flex; gap: 12px; margin-top: 12px; }
+        footer .social a {
+            width: 40px; height: 40px; border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        footer .social a:hover { background: var(--whatsapp); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px; text-align: center; font-size: 0.82rem;
         }
 
+        .whatsapp-float {
+            position: fixed;
+            bottom: max(16px, env(safe-area-inset-bottom, 16px));
+            right: max(16px, env(safe-area-inset-right, 16px));
+            z-index: 150;
+            display: flex; flex-direction: column;
+            align-items: flex-end; gap: 8px;
+            pointer-events: none;
+        }
+        .whatsapp-float-tooltip {
+            background: var(--white); color: var(--text);
+            padding: 10px 14px; border-radius: 12px;
+            font-size: 0.82rem; font-weight: 600;
+            box-shadow: var(--shadow-lg); max-width: 200px;
+            animation: pulse-tooltip 3s ease-in-out infinite;
+            pointer-events: auto;
+        }
+        @keyframes pulse-tooltip {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.75; }
+        }
+        .whatsapp-float-btn {
+            width: 56px; height: 56px; background: var(--whatsapp);
+            color: #fff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0 6px 24px rgba(37,211,102,0.5);
+            transition: var(--transition);
+            pointer-events: auto;
+        }
+        .whatsapp-float-btn:hover { transform: scale(1.08); background: var(--whatsapp-dark); }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .maquinas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+            .hero { padding: 56px 0 64px; }
+            .trust-strip-grid { grid-template-columns: repeat(2, 1fr); }
+            .consorcio-grid { gap: 10px; }
+        }
+
+        /* Tablet pequeno */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-card { display: none; }
+            .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .header-menu { display: none; }
+        }
+
+        /* Celular — iOS e Android */
         @media (max-width: 640px) {
-            .content-section { padding: 24px 18px; margin: 20px 12px; }
-            h2 { font-size: 1.5rem; }
+            body { padding-bottom: calc(88px + env(safe-area-inset-bottom, 0)); }
+            .container { padding: 0 14px; }
+            .maquinas { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0)); }
+            .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
+            
+            .carousel {
+                height: 200px;
+                aspect-ratio: auto;
+            }
+            
+            .carousel-btn { opacity: 1; width: 44px; height: 44px; }
+            .card .info h3 { font-size: 1rem; line-height: 1.35; }
+            
+            .card-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+            
+            .card-meta span { font-size: 0.72rem; padding: 5px 6px; min-height: 48px; }
+            .card-meta span strong { font-size: 0.8rem; line-height: 1.3; }
+            .card .info .preco { font-size: 1.35rem; }
+            .card-footer { padding: 0 15px 18px; }
+            .filtros {
+                top: calc(68px + env(safe-area-inset-top, 0));
+                padding: 14px 0;
+            }
+            .filtro-container {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 4px 4px;
+                scrollbar-width: none;
+            }
+            .filtro-btn {
+                flex-shrink: 0;
+                padding: 10px 18px;
+                font-size: 0.84rem;
+                min-height: 44px;
+            }
+            .top-bar .container { justify-content: center; text-align: center; }
+            .top-bar span { font-size: 0.76rem; }
+            .whatsapp-float-tooltip { display: none; }
+            .whatsapp-float-btn { width: 52px; height: 52px; font-size: 1.6rem; }
+            .btn-whatsapp, .btn-anuncie, .btn-consorcio { width: 100%; justify-content: center; min-height: 48px; }
+            .hero-actions { flex-direction: column; }
+            .hero-actions a { width: 100%; justify-content: center; text-align: center; min-height: 48px; }
+            .hero { padding: 48px 0 56px; }
+            .section-header h2 { font-size: 1.5rem; }
+            
+            .consorcio-grid { grid-template-columns: 1fr; }
+            .consorcio h2 { font-size: 1.6rem; }
+
+            footer { padding-bottom: max(30px, env(safe-area-inset-bottom, 30px)); }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .carousel-btn { opacity: 1; }
+            .card:hover { transform: none; box-shadow: var(--shadow); }
+            .header-cta, .btn-negocie, .filtro-btn { min-height: 44px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-shield-alt"></i> Máquinas Usadas com procedência verificada</span>
+        <span><i class="fab fa-whatsapp"></i> Resposta em até 30 minutos</span>
+    </div>
+</div>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo-area">
+            <a href="#" class="logo">
                 <div class="logo-icon"><i class="fas fa-tractor"></i></div>
                 <div class="logo-text">
                     <h1>AgroGiro</h1>
+                    <small>Máquinas agrícolas de confiança</small>
                 </div>
             </a>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="content-section">
-            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Voltar para a página inicial</a>
-            
-            <h2>Política de Intermediação e Condições de Venda</h2>
-            <span class="update-date">Última atualização: Setembro de 2026</span>
-
-            <h3>1. Sobre a AgroGiro</h3>
-            <p>A <strong>AgroGiro</strong> atua estritamente como uma plataforma digital de <strong>intermediação de negócios</strong> no setor de máquinas e implementos agrícolas. Nosso objetivo é conectar produtores rurais proprietários de maquinários a potenciais compradores, facilitando a divulgação, o canal direto de comunicação e o suporte durante as tratativas.</p>
-
-            <h3>2. Origem dos Equipamentos</h3>
-            <p>Os maquinários anunciados na plataforma <strong>não integram estoque próprio da AgroGiro</strong>. Os equipamentos pertencem a produtores rurais, fazendas e parceiros anunciantes. A AgroGiro realiza uma curadoria prévia e checagem de procedência para assegurar a transparência dos anúncios exibidos.</p>
-
-            <h3>3. Inspeção, Testes e Vistoria Prévia</h3>
-            <p>Considerando a natureza técnica e o alto valor agregado dos ativos agrícolas comercializados:</p>
-            <ul>
-                <li><strong>Avaliação Presencial ou ao Vivo:</strong> Recomendamos que o comprador realize a inspeção física e o teste prático da máquina no local onde se encontra o equipamento, ou acompanhe demonstrações em vídeo ao vivo conduzidas antes do fechamento.</li>
-                <li><strong>Negociação Baseada no Estado Atual:</strong> Os equipamentos seminovos e usados são comercializados no estado em que se encontram, detalhado previamente via canal de atendimento.</li>
-            </ul>
-
-            <h3>4. Condições de Fechamento e Pagamento</h3>
-            <p>As condições finais da negociação, formas de pagamento, cronograma de retirada e termos específicos do negócio são alinhados diretamente entre o comprador e o proprietário da máquina, contando com o acompanhamento e suporte da equipe da AgroGiro para garantir a segurança operacional de ambas as partes.</p>
-
-            <h3>5. Política de Cancelamento e Garantia</h3>
-            <p>Por se tratar de um modelo de intermediação de maquinário pesado entre particulares/produtores com inspeção e teste prévio:</p>
-            <ul>
-                <li>Eventuais termos de garantia estendida (quando aplicável), prazos ou acordos de cancelamento pós-fechamento são definidos em contrato ou termo específico celebrado diretamente entre o comprador e o vendedor proprietário. <strong>A AgroGiro, na qualidade de plataforma intermediadora, não concede garantias mecânicas ou estruturais.</strong></li>
-                <li>Quaisquer dúvidas sobre taxas de serviço ou sinais de reserva devem ser alinhadas diretamente com o suporte da plataforma antes da efetivação do pagamento.</li>
-            </ul>
-
-            <!-- ESTA É A NOVA SEÇÃO NECESSÁRIA PARA O GOOGLE -->
-            <h3>6. Política de Devolução e Reembolso (Compras Online)</h3>
-            <p>Para satisfazer os requisitos legais aplicáveis às negociações iniciadas no ambiente digital e os padrões de plataformas de busca (como o Google), estabelecemos as seguintes regras de devolução aplicáveis exclusivamente às operações intermediadas em que não haja vistoria presencial:</p>
-            <ul>
-                <li><strong>Prazo para Devolução (Arrependimento):</strong> Exclusivamente para transações finalizadas de forma 100% remota (sem vistoria presencial ou retirada no local pelo comprador), o cliente tem o prazo de <strong>7 (sete) dias corridos</strong> após o recebimento para solicitar a devolução e reembolso integral do valor da máquina junto ao vendedor.</li>
-                <li><strong>Condição do Equipamento:</strong> Para que a devolução seja aceita, a máquina deve ser devolvida ao local de origem no exato estado em que foi entregue, sem marcas de uso prolongado ou danos adicionais não documentados.</li>
-                <li><strong>Custos de Devolução (Frete):</strong> Devido à logística complexa de transporte pesado, em caso de devolução por arrependimento, <strong>os custos de frete logístico de retorno do maquinário são de responsabilidade integral do comprador.</strong></li>
-                <li><strong>Processamento do Reembolso:</strong> Sendo a AgroGiro apenas intermediadora, o reembolso do valor do equipamento será efetuado diretamente pelo vendedor (proprietário atual) num prazo de até 15 dias úteis após a devolução e conferência física do maquinário.</li>
-            </ul>
-
-            <h3>7. Canais de Atendimento</h3>
-            <p>Para esclarecer dúvidas sobre os processos de anúncio, intermediação ou sobre os equipamentos do catálogo, fale com nossa equipe:</p>
-            <ul>
-                <li><strong>WhatsApp:</strong> (16) 99785-4876</li>
-                <li><strong>E-mail:</strong> contato.agrogiro@gmail.com</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© <span id="ano">2026</span> AgroGiro. Todos os direitos reservados.</p>
+        <div class="header-actions">
+            <a href="#" class="header-cta" id="headerWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
+                <i class="fab fa-whatsapp"></i>
+                <span>Falar com especialista</span>
+            </a>
         </div>
-    </footer>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>+10 equipamentos disponíveis agora!</span>
+                </div>
+                <h2>O equipamento certo para o seu campo, com <span>negociação segura</span></h2>
+                <p class="hero-sub">Tratores, colhedoras e Implementos revisados. Fale direto com nossa equipe pelo WhatsApp e receba fotos, vídeos e condições reais — sem intermediários confusos.</p>
+                <div class="hero-actions">
+                    <a href="#maquinas" class="btn-outline">
+                        <i class="fas fa-search"></i> Explorar catálogo
+                    </a>
+                </div>
+                <div class="trust-pills">
+                    <span class="trust-pill"><i class="fas fa-check-circle"></i> Garantia mínima 3 meses</span>
+                    <span class="trust-pill"><i class="fas fa-file-contract"></i> Documentação regularizada</span>
+                    <span class="trust-pill"><i class="fas fa-handshake"></i> Negociação transparente</span>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3><i class="fas fa-chart-line"></i> Por que produtores escolhem a AgroGiro</h3>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>Clareza</strong>
+                        <span>Realizar vendas de maneira Honesta e Segura</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>3 meses</strong>
+                        <span>Garantia mínima</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>100%</strong>
+                        <span>Atendimento via WhatsApp</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>0%</strong>
+                        <span>Taxa para anunciar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust-strip">
+    <div class="container trust-strip-grid">
+        <div class="trust-item">
+            <i class="fas fa-camera"></i>
+            <h4>Fotos reais</h4>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-user-shield"></i>
+            <h4>Vendedores verificados</h4>
+            <p>Cada anúncio passa por checagem de procedência</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-comments"></i>
+            <h4>Atendimento humano</h4>
+            <p>Sem robôs — você fala com quem entende do campo</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-truck"></i>
+            <h4>Entrega combinada</h4>
+            <p>Logística alinhada direto no WhatsApp</p>
+        </div>
+    </div>
+</section>
+
+<section class="filtros">
+    <div class="container">
+        <div class="filtro-container" id="filtroContainer">
+            <button class="filtro-btn ativo" data-tipo="todos">Todos</button>
+            <button class="filtro-btn" data-tipo="Trator">Tratores</button>
+            <button class="filtro-btn" data-tipo="Colhedoras">Colhedoras</button>
+            <button class="filtro-btn" data-tipo="Implementos">Implementos</button>
+        </div>
+    </div>
+</section>
+
+<section class="maquinas container" id="maquinas">
+    <div class="section-header" style="margin-top: 8px;">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Encontre sua próxima máquina</h2>
+        <p>Clique nas setas das fotos para ver mais ângulos. Interessou? Negocie em um clique pelo WhatsApp.</p>
+    </div>
+    <div class="maquinas-grid" id="maquinasGrid"></div>
+    <div class="paginacao" id="paginacao"></div>
+</section>
+
+<section class="why-us">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Segurança na compra</p>
+            <h2>Compre com tranquilidade</h2>
+            <p>Sabemos que investir em maquinário é decisão séria. Por isso, cada etapa foi pensada para você se sentir seguro.</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Inspeção antes do anúncio</h3>
+                <p>Verificamos horas, estado geral antes de publicar qualquer equipamento na plataforma.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-lock"></i></div>
+                <h3>Negociação direta e clara</h3>
+                <p>Você conversa com nossa equipe pelo WhatsApp, tira dúvidas, pede mais fotos e combina visita na "Propriedade" sem pressão.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-medal"></i></div>
+                <h3>Garantia que protege você</h3>
+                <p>Todas as máquinas contam com garantia mínima de 3 meses. Transparência do primeiro contato à entrega.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="depoimentos">
+    <div class="container">
+        <div class="section-header">
+            <p class="eyebrow">Quem já confiou</p>
+            <h2>Depoimentos de clientes</h2>
+        </div>
+        <div class="depoimentos-grid">
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Comprei um trator pelo AgroGiro e fui super bem atendido. Recebi fotos e vídeo antes de fechar. Máquina em ótimo estado!"</p>
+                <div class="autor">João Carlos<span>Fazenda Boa Vista — SP</span></div>
+            </div>
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Ótima plataforma para vender minhas máquinas usadas. Publicaram rápido e a negociação foi toda pelo WhatsApp, bem prático."</p>
+                <div class="autor">Maria Aparecida<span>Sítio Esperança — MG</span></div>
+            </div>
+            <div class="depoimento">
+                <i class="fas fa-quote-left quote"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Negociação transparente, documentação em dia e entrega no prazo. Já indiquei para dois vizinhos do campo."</p>
+                <div class="autor">Pedro Alves<span>Agropecuária Rio Verde — GO</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================================= -->
+<!-- NOVA SEÇÃO: CONSÓRCIO (CROSS-SELLING)                   -->
+<!-- ======================================================= -->
+<section class="consorcio" id="consorcio">
+    <div class="consorcio-inner">
+        <span class="eyebrow">Planeje seu Futuro sem Juros</span>
+        <h2>Pensando em maquinário 0Km, renovar a frota ou ampliar suas terras?</h2>
+        <p>A AgroGiro conta com uma <strong>marca parceira com mais de 35 anos de mercado</strong> em consórcios. Ajudamos você a planejar a compra de maquinários, veículos pesados ou imóveis rurais com parcelas que cabem na sua safra, sem pagar juros abusivos.</p>
+        
+        <div class="consorcio-grid">
+            <div class="consorcio-item">
+                <i class="fas fa-tractor"></i>
+                <h4>Maquinário 0Km</h4>
+                <small>Tratores, Colhedoras e Implementos</small>
+            </div>
+            <div class="consorcio-item">
+                <i class="fas fa-truck"></i>
+                <h4>Veículos Pesados</h4>
+                <small>Caminhões e Utilitários</small>
+            </div>
+            <div class="consorcio-item">
+                <i class="fas fa-home"></i>
+                <h4>Imóveis Rurais</h4>
+                <small>Expansão de Terras</small>
+            </div>
+        </div>
+
+        <a href="#" class="btn-consorcio" id="consorcioSectionWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
+            <i class="fab fa-whatsapp"></i> Falar com Consultor e Simular
+        </a>
+    </div>
+</section>
+<!-- ======================================================= -->
+
+<section class="anuncie">
+    <div class="container">
+        <h2>Venda sua máquina sem complicação - Se Afilie a AgroGiro</h2>
+        <p>Cadastro gratuito, alcance de compradores qualificados e acompanhamento da negociação do início ao fim.</p>
+        <a href="#" class="btn-anuncie" id="anuncieWhatsapp" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
+            <i class="fab fa-whatsapp"></i> Quero anunciar grátis
+        </a>
+    </div>
+</section>
+
+<section class="faq container">
+    <div class="section-header">
+        <p class="eyebrow">Tire suas dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Como faço para comprar uma máquina? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Navegue pelo catálogo, veja as fotos no carrossel e clique em "Negocie no WhatsApp". Nossa equipe responde com detalhes, condições e pode agendar visita para você ver o equipamento pessoalmente.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                As máquinas têm garantia? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Sim. Todas passam por verificação de procedência e oferecem garantia mínima de 3 meses. Os detalhes específicos são informados no WhatsApp para cada equipamento.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Posso pedir mais fotos ou vídeos? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Claro! O carrossel mostra as fotos principais, mas pelo WhatsApp enviamos ângulos adicionais, vídeo do motor funcionando e qualquer detalhe que você precisar ver antes de decidir.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                A AgroGiro trabalha com máquinas 0Km? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                Nosso estoque a pronta entrega é focado em seminovos de excelência. Porém, através de uma <strong>sólida marca parceira com mais de 35 anos de mercado</strong>, nós estruturamos o seu Consórcio para você adquirir maquinário 0Km ou ampliar suas terras sem pagar juros abusivos.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-pergunta">
+                Como funciona o anúncio? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-resposta">
+                É gratuito. Envie as informações e fotos da máquina pelo WhatsApp e publicamos na plataforma. Você acompanha os contatos e negocia com nosso suporte.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>AgroGiro</h4>
+                <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>        
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> (16) 99785-4876</li>
+                    <li><i class="fas fa-envelope"></i> contato.agrogiro@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Seg–Sext, 8h às 17h</li>
+            <li><i class="fas fa-clock"></i> Sáb, 8h às 13h</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Equipamentos</h4>
+                <ul>
+                    <li>Tratores</li>
+                    <li>Colhedoras</li>
+                    <li>Implementos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="margin-bottom: 8px;"><a href="politica.html" style="color: rgba(255,255,255,0.85); text-decoration: underline;">Política de Intermediação e Condições de Venda</a></p>
+            <p>© <span id="ano"></span> AgroGiro. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp-float">
+    <div class="whatsapp-float-tooltip">Dúvidas? Fale conosco agora!</div>
+    <a href="#" class="whatsapp-float-btn" id="floatWhatsapp" target="_blank" aria-label="WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5516997854876');">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script>
+    const WHATSAPP = '5516997854876';
+
+    const maquinas = [
+        {
+            nome: "Trator John Deere 8270R (Transmissão e motor revisados em 2026)",
+            marca: "John Deere",
+            ano: 2018,
+            horas: 18967,
+            preco: 610000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "imagens/JD 8270r-01.jpg.jpg",
+                "imagens/JD 8270r-02.jpg.jpg",
+                "imagens/JD 8270r-03.jpg.jpg",
+                "imagens/JD 8270r-04.jpg.jpg",
+                "imagens/JD 8270r-05.jpg.jpg",
+                "imagens/JD 8270r-06.jpg.jpg",
+                "imagens/JD 8270r-07.jpg.jpg",
+                "imagens/JD 8270r-08.jpg.jpg",
+                "imagens/JD 8270r-09.jpg.jpg",
+                "imagens/JD 8270r-10.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Colheitadeira John Deere S440 (Único dono)",
+            marca: "John Deere",
+            ano: 2017,
+            horas: 3186,
+            preco: 425000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/ColhedoraS440_05.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_01.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_02.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_03.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_04.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_06.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_07.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_08.jpg.jpeg"
+            ],
+            tipo: "Colhedoras"
+        },
+        {
+            nome: "Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono",
+            marca: "John Deere",
+            ano: 2017,
+            preco: 115000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/Plataforma625F_1.jpg.jpeg",
+                "Cliente Raphael/Plataforma625F_1.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Quadriciclo Honda TRX/420 - Herbicida",
+            marca: "Honda",
+            ano: 2010,
+	        horas: 6439,
+            preco: 37000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/Quadriciclo TRX_420_1.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_2.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_3.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_4.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Trator New Holland TM 7040 (Único dono)",
+            marca: "New Holland",
+            ano: 2012,
+            horas: 23883,
+            preco: 100000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/TratorNH7040_3.jpg.jpeg",
+                "Cliente Raphael/TratorNH7040_2.jpg.jpeg",
+                "Cliente Raphael/TratorNH7040_1.jpg.jpeg",
+                "Cliente Raphael/TratorNH7040_4.jpg.jpeg",
+                "Cliente Raphael/TratorNH7040_5.jpg.jpeg",
+                "Cliente Raphael/TratorNH7040_6.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm) ",
+            marca: "Valtra",
+            ano: 2012,
+            preco: 110000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/Plantadeira-Valtra-01.jpg.jpg",
+                "imagens/Plantadeira-Valtra-02.jpg.jpg",
+                "imagens/Plantadeira-Valtra-03.jpg.jpg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Colheitadeira New Holland CR 5.85 - Tração 4x4, Plataforma 30 pés (caracol)",
+            marca: "New Holland",
+            ano: 2019,
+            horas: 2591,
+            preco: 880000,
+            local: "Região de Maringá-PR",
+            imagens: [
+                "imagens/New Holland CR 5.85-1.jpg.jpeg",
+                "imagens/New Holland CR 5.85-2.jpg.jpeg",
+                "imagens/New Holland CR 5.85-3.jpg.jpeg",
+                "imagens/New Holland CR 5.85-4.jpg.jpeg",
+                "imagens/New Holland CR 5.85-5.jpg.jpeg"
+            ],
+            tipo: "Colhedoras"
+        },
+        {
+            nome: "Colheitadeira Case 4150 AFS - Plataforma 25 pés (caracol)",
+            marca: "Case",
+            ano: 2021,
+            horas: 1521,
+            preco: 720000,
+            local: "Região de Maringá-PR",
+            imagens: [
+                "imagens/Case 4150 AFS-2.jpg.jpeg",
+                "imagens/Case 4150 AFS-1.jpg.jpeg",
+                "imagens/Case 4150 AFS-3.jpg.jpeg",
+                "imagens/Case 4150 AFS-4.jpg.jpeg"
+            ],
+            tipo: "Colhedoras"
+        },
+        {
+            nome: "Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão)",
+            marca: "Piccin",
+            ano: 2022,
+            preco: 115000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/distribuidor-piccin-1.jpg.jpeg",
+                "imagens/distribuidor-piccin-2.jpg.jpeg",
+                "imagens/distribuidor-piccin-3.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Pulverizador John Deere 4630 (Tração 4x4 - Barra 28 metros / GPS / Piloto Automático)",
+            marca: "John Deere",
+            ano: 2013,
+            horas: 7335,
+            preco: 320000,
+            local: "Região de Peixe-TO",
+            imagens: [
+                "imagens/John Deere 4630-2.jpg.jpeg",
+                "imagens/John Deere 4630-4.jpg.jpeg",
+                "imagens/John Deere 4630-1.jpg.jpeg",
+                "imagens/John Deere 4630-3.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Pulverizador STARA Imperador 2650 (Tração 4x4 - Barra 30 metros / Piloto Automático)",
+            marca: "STARA",
+            ano: 2013,
+            preco: 250000,
+            local: "Região de Primavera do Leste-MT",
+            imagens: [
+                "imagens/STARA IMPERADOR 2650-2.jpg.jpeg",
+                "imagens/STARA IMPERADOR 2650-3.jpg.jpeg",
+                "imagens/STARA IMPERADOR 2650-4.jpg.jpeg",
+                "imagens/STARA IMPERADOR 2650-1.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Pulverizador Autopropelido 4x4 Massey Ferguson 9030 (30 metros de barras / Piloto GPS / Monitor AG3000 decimétrico)",
+            marca: "Massey Fergunson",
+            ano: 2015,
+            horas: 4000,
+            preco: 450000,
+            local: "Região de Jaboticabal-SP",
+            imagens: [
+                "imagens/Autopropelido 4x4 Massey Ferguson 9030-2.jpg.jpeg",
+                "imagens/Autopropelido 4x4 Massey Ferguson 9030-3.jpg.jpeg",
+                "imagens/Autopropelido 4x4 Massey Ferguson 9030-4.jpg.jpeg",
+                "imagens/Autopropelido 4x4 Massey Ferguson 9030-1.jpg.jpeg"
+            ],
+            tipo: "Implementos"
+        },
+        {
+            nome: "Trator Case Puma 140",
+            marca: "Case",
+            ano: 2022,
+            horas: 2100,
+            preco: 420000,
+            local: "Região de Torrinha-SP",
+            imagens: [
+                "imagens/Case Puma 140-1.jpg.jpeg",
+                "imagens/Case Puma 140-2.jpg.jpeg",
+                "imagens/Case Puma 140-3.jpg.jpeg",
+                "imagens/Case Puma 140-4.jpg.jpeg",
+                "imagens/Case Puma 140-5.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Fergunson 8690 - 370CV (Piloto e GPS / 6 pneus novos)",
+            marca: "Massey Fergunson",
+            ano: 2014,
+            horas: 7300,
+            preco: 500000,
+            local: "Região de Primavera do Leste-MT",
+            imagens: [
+                "imagens/Massey Fergunson 8690-4.jpg.jpeg",
+                "imagens/Massey Fergunson 8690-3.jpg.jpeg",
+                "imagens/Massey Fergunson 8690-2.jpg.jpeg",
+                "imagens/Massey Fergunson 8690-1.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator New Holland T7 260 - 234 Cv (Gps/Piloto automático)",
+            marca: "New Holland",
+            ano: 2022,
+            horas: 1840,
+            preco: 570000,
+            local: "Região de Maringá-PR",
+            imagens: [
+                "imagens/New Holland T7 260-1.jpg.jpeg",
+                "imagens/New Holland T7 260-2.jpg.jpeg",
+                "imagens/New Holland T7 260-3.jpg.jpeg",
+                "imagens/New Holland T7 260-4.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator John Deere 6210J - Filipado (Pneus radiais novos) ",
+            marca: "John Deere",
+            ano: 2021,
+            horas: 5300,
+            preco: 430000,
+            local: "Região de Pato Branco-PR",
+            imagens: [
+                "imagens/John Deere 6210J-1.jpg.jpeg",
+                "imagens/John Deere 6210J-2.jpg.jpeg",
+                "imagens/John Deere 6210J-3.jpg.jpeg",
+                "imagens/John Deere 6210J-4.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator John Deere 7230J ",
+            marca: "John Deere",
+            ano: 2022,
+            horas: 3071,
+            preco: 620000,
+            local: "Região de Itaberaí-GO",
+            imagens: [
+                "imagens/John Deere 7230J-2.jpg.jpeg",
+                "imagens/John Deere 7230J-3.jpg.jpeg",
+                "imagens/John Deere 7230J-4.jpg.jpeg",
+                "imagens/John Deere 7230J-1.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator John Deere 7210J ",
+            marca: "John Deere",
+            ano: 2013,
+            horas: 9000,
+            preco: 320000,
+            local: "Região de Casa Grande-MG",
+            imagens: [
+                "imagens/John Deere 7210J-2.jpg.jpeg",
+                "imagens/John Deere 7210J-3.jpg.jpeg",
+                "imagens/John Deere 7210J-4.jpg.jpeg",
+                "imagens/John Deere 7210J-1.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator John Deere 6100J ",
+            marca: "John Deere",
+            ano: 2017,
+            horas: 7400,
+            preco: 155000,
+            local: "Região de Itaporanga-SP",
+            imagens: [
+                "imagens/JD6100j.01.jpg.jpg",
+                "imagens/JD6100j.02.jpg.jpg",
+                "imagens/JD6100j.03.jpg.jpg",
+                "imagens/JD6100j.04.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Valtra A52s (57cv)",
+            marca: "Valtra",
+            ano: 2022,
+            horas: 898,
+            preco: 124000,
+            local: "Região de Itaporanga-SP",
+            imagens: [
+                "imagens/Valtra A52s.01.jpg.jpg",
+                "imagens/Valtra A52s.02.jpg.jpg",
+                "imagens/Valtra A52s.03.jpg.jpg",
+        	"imagens/Valtra A52s.04.jpg.jpg",
+        	"imagens/Valtra A52s.05.jpg.jpg",
+        	"imagens/Valtra A52s.06.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Fergunson 4283",
+            marca: "Massey Fergunson",
+            ano: 2012,
+            horas: 8300,
+            preco: 115000,
+            local: "Região de Itaporanga-SP",
+            imagens: [
+                "imagens/MF4283.01.jpg.jpg",
+                "imagens/MF4283.02.jpg.jpg",
+                "imagens/MF4283.03.jpg.jpg",
+        	"imagens/MF4283.04.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Fergunson 6713",
+            marca: "Massey Fergunson",
+            ano: 2020,
+            horas: 6000,
+            preco: 235000,
+            local: "Região de Ibiúna-SP",
+            imagens: [
+                "imagens/MF6713.01.jpg.jpeg",
+                "imagens/MF6713.02.jpg.jpeg",
+                "imagens/MF6713.03.jpg.jpeg",
+        	"imagens/MF6713.04.jpg.jpeg",
+        	"imagens/MF6713.05.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Fergunson 290 (Original/3 Alavancas)",
+            marca: "Massey Fergunson",
+            ano: 1994,
+            preco: 90000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF 290-01.jpg.jpg",
+                "imagens/MF 290-02.jpg.jpg",
+                "imagens/MF 290-03.jpg.jpg",
+        	"imagens/MF 290-04.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Fergunson 4408 (Único Dono/Com Redutor)",
+            marca: "Massey Fergunson",
+            ano: 2022,
+            horas: 2598,
+            preco: 160000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF 4408-2022-01.jpg.jpg",
+                "imagens/MF 4408-2022-02.jpg.jpg",
+                "imagens/MF 4408-2022-03.jpg.jpg",
+        	"imagens/MF 4408-2022-04.jpg.jpg",
+        	"imagens/MF 4408-2022-05.jpg.jpg",
+        	"imagens/MF 4408-2022-06.jpg.jpg",
+        	"imagens/MF 4408-2022-07.jpg.jpg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator John Deere 6190M",
+            marca: "John Deere",
+            ano: 2022,
+            horas: 4200,
+            preco: 450000,
+            local: "Região de Andradina-SP",
+            imagens: [
+                "imagens/JD 6190M-01.jpg.jpeg",
+                "imagens/JD 6190M-02.jpg.jpeg",
+                "imagens/JD 6190M-03.jpg.jpeg",
+                "imagens/JD 6190M-04.jpg.jpeg",
+                "imagens/JD 6190M-05.jpg.jpeg",
+                "imagens/JD 6190M-06.jpg.jpeg",
+                "imagens/JD 6190M-07.jpg.jpeg",
+                "imagens/JD 6190M-08.jpg.jpeg",
+                "imagens/JD 6190M-09.jpg.jpeg",
+                "imagens/JD 6190M-10.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Valtra BM110",
+            marca: "Valtra",
+            ano: 2004,
+            horas: 10900,
+            preco: 110000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/Valtra-BM-01.jpg.jpeg",
+                "imagens/Valtra-BM-02.jpg.jpeg",
+                "imagens/Valtra-BM-03.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator New Holland TS6020",
+            marca: "New Holland",
+            ano: 2010,
+            horas: 3402,
+            preco: 135000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/tratornh.jpg.jpeg",
+                "imagens/tratornh1.jpg.jpeg",
+                "imagens/tratornh2.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono)",
+            marca: "Massey Ferguson",
+            ano: 2020,
+            horas: 4400,
+            preco: 140000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF4707-2020-1.jpg.jpeg",
+                "imagens/MF4707-2020-2.jpg.jpeg",
+                "imagens/MF4707-2020-3.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor)",
+            marca: "Massey Ferguson",
+            ano: 2018,
+            horas: 5450,
+            preco: 125000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF4707-1.jpg.jpeg",
+                "imagens/MF4707-2.jpg.jpeg",
+                "imagens/MF4707-3.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono)",
+            marca: "Massey Fergunson",
+            ano: 2013,
+            preco: 155000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF 4275-1.jpg.jpeg",
+                "imagens/MF 4275-2.jpg.jpeg",
+                "imagens/MF 4275-3.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        },
+        {
+            nome: "Trator New Holland TL5.90 (Único Dono)",
+            marca: "New Holland",
+            ano: 2019,          
+            horas: 7850,
+            preco: 165000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/NH-1.jpg.jpeg",
+                "imagens/NH-2.jpg.jpeg",
+                "imagens/NH-3.jpg.jpeg"
+            ],
+            tipo: "Trator"
+        }
+    ];
+
+    const ITENS_POR_PAGINA = 15;
+    let paginaAtual = 1;
+    let filtroAtivo = 'todos';
+
+    const grid = document.getElementById('maquinasGrid');
+    const paginacaoContainer = document.getElementById('paginacao');
+    const filtroBotoes = document.querySelectorAll('.filtro-btn');
+    const PLACEHOLDER_ANGLES = ['Vista frontal', 'Vista lateral', 'Detalhe'];
+
+    function baseUrl() {
+        var path = window.location.pathname;
+        if (path.endsWith('.html')) {
+            return window.location.origin + path.substring(0, path.lastIndexOf('/') + 1);
+        }
+        if (!path.endsWith('/')) path += '/';
+        return window.location.origin + path;
+    }
+
+    function waLink(texto) {
+        return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto);
+    }
+
+    function configurarWhatsappLinks() {
+        // Função auxiliar para injetar a URL diretamente na tag do Google e manter o href
+        function setBtnLink(id, texto) {
+            var btn = document.getElementById(id);
+            if (btn) {
+                var link = waLink(texto);
+                btn.href = link;
+                btn.setAttribute('onclick', "return gtag_report_conversion('" + link + "');");
+            }
+        }
+
+        // Configurando todos os botões estáticos para que a mensagem vá para o WhatsApp corretamente
+        setBtnLink('headerWhatsapp', 'Olá! Gostaria de falar com um especialista da AgroGiro sobre máquinas agrícolas.');
+        setBtnLink('anuncieWhatsapp', 'Olá! Quero anunciar minha máquina agrícola na AgroGiro.');
+        setBtnLink('consorcioSectionWhatsapp', 'Olá! Gostaria de simular um Consórcio e entender as melhores condições para mim.');
+        setBtnLink('floatWhatsapp', 'Olá! Tenho uma dúvida sobre as máquinas da AgroGiro.');
+    }
+
+    function obterImagens(m) {
+        if (Array.isArray(m.imagens) && m.imagens.length > 0) return m.imagens;
+        if (m.imagem) return [m.imagem];
+        return PLACEHOLDER_ANGLES.map(function(angulo) {
+            return 'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=' + encodeURIComponent(angulo);
+        });
+    }
+
+    function textoHoras(m) {
+        if (m.observacao) return m.observacao;
+        if (m.horas !== undefined && m.horas !== null) return m.horas + 'h';
+        return '—';
+    }
+
+    function labelHoras(m) {
+        return m.observacao ? 'Estado' : 'Horas';
+    }
+    
+    function textoLocal(m) {
+        return m.local ? m.local : 'Consulte';
+    }
+
+    function detalheWhatsapp(m) {
+        var extra = m.observacao ? m.observacao : (m.horas !== undefined && m.horas !== null ? m.horas + 'h' : 'consulte');
+        var loc = m.local ? ' - ' + m.local : '';
+        return m.ano + ', ' + extra + loc;
+    }
+
+    function urlImagem(src) {
+        if (!src) return '';
+        if (src.indexOf('http://') === 0 || src.indexOf('https://') === 0) return src;
+        var limpo = src.replace(/^\.\//, '');
+        return encodeURI(baseUrl() + limpo).replace(/#/g, '%23');
+    }
+
+    function criarCarousel(id, imagens, nome, tipo) {
+        var slides = imagens.map(function(src, i) {
+            var caminho = urlImagem(src);
+            var lazyAttr = i === 0 ? '' : ' loading="lazy" decoding="async"';
+            /* TAG ALT OTIMIZADA PARA SEO */
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' Usado à Venda AgroGiro — foto ' + (i + 1) + '"' + lazyAttr + ' style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+        }).join('');
+
+        var dots = imagens.length > 1
+            ? '<div class="carousel-dots">' + imagens.map(function(_, i) {
+                return '<button class="carousel-dot' + (i === 0 ? ' ativo' : '') + '" data-index="' + i + '" aria-label="Foto ' + (i + 1) + '"></button>';
+            }).join('') + '</div>'
+            : '';
+
+        var nav = imagens.length > 1
+            ? '<button class="carousel-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>' +
+              '<button class="carousel-btn next" aria-label="Próxima foto"><i class="fas fa-chevron-right"></i></button>' +
+              '<span class="carousel-counter">1 / ' + imagens.length + '</span>'
+            : '';
+
+        return '<div class="carousel" data-carousel="' + id + '" tabindex="0">' +
+            '<span class="card-badge">' + tipo + '</span>' +
+            '<div class="carousel-track">' + slides + '</div>' +
+            nav + dots +
+            '</div>';
+    }
+
+    function initCarousel(el) {
+        if (!el) return;
+        var track = el.querySelector('.carousel-track');
+        var slides = el.querySelectorAll('.carousel-slide');
+        var dots = el.querySelectorAll('.carousel-dot');
+        var counter = el.querySelector('.carousel-counter');
+        var prev = el.querySelector('.carousel-btn.prev');
+        var next = el.querySelector('.carousel-btn.next');
+        if (!slides.length || slides.length === 1 || !prev || !next) return;
+
+        var index = 0;
+        var startX = 0;
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            dots.forEach(function(d, j) { d.classList.toggle('ativo', j === index); });
+            if (counter) counter.textContent = (index + 1) + ' / ' + slides.length;
+        }
+
+        prev.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index - 1); });
+        next.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index + 1); });
+        dots.forEach(function(d) {
+            d.addEventListener('click', function(e) {
+                e.preventDefault(); e.stopPropagation();
+                goTo(parseInt(d.dataset.index, 10));
+            });
+        });
+
+        el.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+        el.addEventListener('touchend', function(e) {
+            var diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(index + (diff > 0 ? 1 : -1));
+        }, { passive: true });
+    }
+
+    filtroBotoes.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filtroBotoes.forEach(function(b) { b.classList.remove('ativo'); });
+            this.classList.add('ativo');
+            filtroAtivo = this.dataset.tipo;
+            paginaAtual = 1;
+            renderizar();
+        });
+    });
+
+    function renderizar() {
+        var filtradas = filtrarMaquinas();
+        var totalPaginas = Math.ceil(filtradas.length / ITENS_POR_PAGINA) || 1;
+        var inicio = (paginaAtual - 1) * ITENS_POR_PAGINA;
+        var paginaItens = filtradas.slice(inicio, inicio + ITENS_POR_PAGINA);
+
+        grid.innerHTML = '';
+        paginaItens.forEach(function(m, idx) {
+            var imagens = obterImagens(m);
+            var carouselId = 'c-' + paginaAtual + '-' + idx;
+            var msgWhatsapp = 'Olá! Tenho interesse na máquina: ' + m.nome + ' (' + detalheWhatsapp(m) + '). Pode me enviar mais fotos e informações?';
+            var linkWhats = waLink(msgWhatsapp);
+            var card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML =
+                criarCarousel(carouselId, imagens, m.nome, m.tipo) +
+                '<div class="info">' +
+                    '<h3>' + m.nome + '</h3>' +
+                    '<div class="card-meta">' +
+                        '<span><strong>' + m.marca + '</strong>Marca</span>' +
+                        '<span><strong>' + m.ano + '</strong>Ano</span>' +
+                        '<span><strong>' + textoHoras(m) + '</strong>' + labelHoras(m) + '</span>' +
+                        '<span><strong>' + textoLocal(m) + '</strong>Local</span>' +
+                    '</div>' +
+                    '<p class="preco">R$ ' + m.preco.toLocaleString('pt-BR') + ' <small>· negocie condições</small></p>' +
+                '</div>' +
+                '<div class="card-footer">' +
+                    '<a href="' + linkWhats + '" class="btn-negocie" target="_blank" onclick="return gtag_report_conversion(\'' + linkWhats + '\');">' +
+                        '<i class="fab fa-whatsapp"></i>' +
+                        '<span>Negocie no WhatsApp<small>Resposta rápida · sem compromisso</small></span>' +
+                    '</a>' +
+                '</div>';
+            grid.appendChild(card);
+            initCarousel(card.querySelector('.carousel'));
+        });
+
+        renderizarPaginacao(totalPaginas);
+    }
+
+    function filtrarMaquinas() {
+        if (filtroAtivo === 'todos') return maquinas;
+        return maquinas.filter(function(m) { return m.tipo === filtroAtivo; });
+    }
+
+    function renderizarPaginacao(totalPaginas) {
+        paginacaoContainer.innerHTML = '';
+        for (var i = 1; i <= totalPaginas; i++) {
+            var btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === paginaAtual) btn.classList.add('ativo');
+            (function(pagina) {
+                btn.addEventListener('click', function() {
+                    paginaAtual = pagina;
+                    renderizar();
+                    var catalogoHeader = document.getElementById('maquinas');
+                    if (catalogoHeader) {
+                        catalogoHeader.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            })(i);
+            paginacaoContainer.appendChild(btn);
+        }
+    }
+
+    document.querySelectorAll('.faq-pergunta').forEach(function(item) {
+        item.addEventListener('click', function() {
+            this.parentElement.classList.toggle('ativo');
+        });
+    });
+
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    configurarWhatsappLinks();
+    renderizar();
+</script>
 
 </body>
 </html>
