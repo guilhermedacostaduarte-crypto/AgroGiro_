@@ -28,9 +28,39 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
-    <!-- Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono -->
+    <!-- Trator Ford 7610 (Transmissão e motor revisados) -->
     <item>
       <g:id>002</g:id>
+      <g:title><![CDATA[Trator Ford 7610 (Transmissão e motor revisados)]]></g:title>
+      <g:description><![CDATA[Trator Ford 7610 (Transmissão e motor revisados) usado. Ano 1990. Localizado em Região de Marília-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Ford7610.jpg.jpeg</g:image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>95000.00 BRL</g:price>
+      <g:brand><![CDATA[Ford]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
+    <!-- Trator TS 110  - New Holland (Com Reversor) -->
+    <item>
+      <g:id>003</g:id>
+      <g:title><![CDATA[Trator TS 110  - New Holland (Com Reversor)]]></g:title>
+      <g:description><![CDATA[Trator TS 110  - New Holland (Com Reversor) usado. Ano 2004. 11400 horas. Localizado em Região de Santa Cruz do Rio Pardo-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-1.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-2.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-3.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>100000.00 BRL</g:price>
+      <g:brand><![CDATA[New Holland]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
+    <!-- Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono -->
+    <item>
+      <g:id>004</g:id>
       <g:title><![CDATA[Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono]]></g:title>
       <g:description><![CDATA[Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono usado. Ano 2017. 3186 horas. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -43,7 +73,6 @@
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/ColhedoraS440_07.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/ColhedoraS440_08.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/Plataforma625F_1.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/Plataforma625F_1.jpg.jpeg</g:additional_image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>540000.00 BRL</g:price>
@@ -53,7 +82,7 @@
 
     <!-- Quadriciclo Honda TRX/420 - Herbicida -->
     <item>
-      <g:id>003</g:id>
+      <g:id>005</g:id>
       <g:title><![CDATA[Quadriciclo Honda TRX/420 - Herbicida]]></g:title>
       <g:description><![CDATA[Quadriciclo Honda TRX/420 - Herbicida usado. Ano 2010. 6439 horas. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -68,28 +97,9 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
-    <!-- Trator New Holland TM 7040 (Único dono) -->
-    <item>
-      <g:id>004</g:id>
-      <g:title><![CDATA[Trator New Holland TM 7040 (Único dono)]]></g:title>
-      <g:description><![CDATA[Trator New Holland TM 7040 (Único dono) usado. Ano 2012. 23883 horas. Localizado em Região de Botucatu-SP.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_3.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_2.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_1.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_4.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_5.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/TratorNH7040_6.jpg.jpeg</g:additional_image_link>
-      <g:condition>used</g:condition>
-      <g:availability>in_stock</g:availability>
-      <g:price>100000.00 BRL</g:price>
-      <g:brand><![CDATA[New Holland]]></g:brand>
-      <g:google_product_category>112</g:google_product_category>
-    </item>
-
     <!-- Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões) -->
     <item>
-      <g:id>005</g:id>
+      <g:id>006</g:id>
       <g:title><![CDATA[Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões)]]></g:title>
       <g:description><![CDATA[Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões) usado. Ano 2024. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -110,7 +120,7 @@
 
     <!-- Plantadora Adubadora de Soja COP CA 9/9 -->
     <item>
-      <g:id>006</g:id>
+      <g:id>007</g:id>
       <g:title><![CDATA[Plantadora Adubadora de Soja COP CA 9/9]]></g:title>
       <g:description><![CDATA[Plantadora Adubadora de Soja COP CA 9/9 usado. Ano 2019. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -125,9 +135,28 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
+    <!-- CARREGADEIRA CBT 8060 4X4 -->
+    <item>
+      <g:id>008</g:id>
+      <g:title><![CDATA[CARREGADEIRA CBT 8060 4X4]]></g:title>
+      <g:description><![CDATA[CARREGADEIRA CBT 8060 4X4 usado. Ano 1990. 2477 horas. Localizado em Região de Botucatu-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_1.jpg.jpg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_2.jpg.jpg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_3.jpg.jpg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_4.jpg.jpg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_5.jpg.jpg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_6.jpg.jpg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>110000.00 BRL</g:price>
+      <g:brand><![CDATA[CBT]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
     <!-- Plantadeira de Cana TT 8022BT (Automatizada) -->
     <item>
-      <g:id>007</g:id>
+      <g:id>009</g:id>
       <g:title><![CDATA[Plantadeira de Cana TT 8022BT (Automatizada)]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana TT 8022BT (Automatizada) usado. Ano 2023. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -144,7 +173,7 @@
 
     <!-- Plantadeira de Cana TT 8022 (Automatizada) -->
     <item>
-      <g:id>008</g:id>
+      <g:id>010</g:id>
       <g:title><![CDATA[Plantadeira de Cana TT 8022 (Automatizada)]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana TT 8022 (Automatizada) usado. Ano 2020. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -161,7 +190,7 @@
 
     <!-- Plantadeira de Cana DMB -->
     <item>
-      <g:id>009</g:id>
+      <g:id>011</g:id>
       <g:title><![CDATA[Plantadeira de Cana DMB]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana DMB usado. Ano 2009. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -176,9 +205,43 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
+    <!-- TRANSBORDO SE 10500 -->
+    <item>
+      <g:id>012</g:id>
+      <g:title><![CDATA[TRANSBORDO SE 10500]]></g:title>
+      <g:description><![CDATA[TRANSBORDO SE 10500 usado. Ano 2011. Localizado em Região de Botucatu-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%201.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%202.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%203.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%204.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>40000.00 BRL</g:price>
+      <g:brand><![CDATA[Sermag]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
+    <!-- CARRETA SULCADORA TORTA 150MM -->
+    <item>
+      <g:id>013</g:id>
+      <g:title><![CDATA[CARRETA SULCADORA TORTA 150MM]]></g:title>
+      <g:description><![CDATA[CARRETA SULCADORA TORTA 150MM usado. Ano 2023. Localizado em Região de Botucatu-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_1.jpg%20.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_2.jpg%20.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_3.jpg%20.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_4.jpg%20.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>130000.00 BRL</g:price>
+      <g:brand><![CDATA[CARDEROLI]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
     <!-- Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm)  -->
     <item>
-      <g:id>010</g:id>
+      <g:id>014</g:id>
       <g:title><![CDATA[Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm) ]]></g:title>
       <g:description><![CDATA[Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm)  usado. Ano 2012. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -192,41 +255,42 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
-    <!-- Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão) -->
+    <!-- DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300 -->
     <item>
-      <g:id>011</g:id>
-      <g:title><![CDATA[Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão)]]></g:title>
-      <g:description><![CDATA[Distribuidor Piccin Master 12.000 D H S Precision (Pouco uso e com pacote de agricultura de precisão) usado. Ano 2022. Localizado em Região de Marília-SP.]]></g:description>
+      <g:id>015</g:id>
+      <g:title><![CDATA[DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300]]></g:title>
+      <g:description><![CDATA[DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300 usado. Ano 2020. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/distribuidor-piccin-1.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/distribuidor-piccin-2.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/distribuidor-piccin-3.jpg.jpeg</g:additional_image_link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97313-DISTRIBUIDOR%20DE%20FERTILIZANTES%20IPACOL%20DFD%201300-1.jpg.jpeg</g:image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
-      <g:price>115000.00 BRL</g:price>
-      <g:brand><![CDATA[Piccin]]></g:brand>
+      <g:price>10000.00 BRL</g:price>
+      <g:brand><![CDATA[IPACOL]]></g:brand>
       <g:google_product_category>112</g:google_product_category>
     </item>
 
-    <!-- Trator New Holland TL5.90 (Único Dono) -->
+    <!-- DISTRIBUIDOR DE TORTA DAMASCENO -->
     <item>
-      <g:id>012</g:id>
-      <g:title><![CDATA[Trator New Holland TL5.90 (Único Dono)]]></g:title>
-      <g:description><![CDATA[Trator New Holland TL5.90 (Único Dono) usado. Ano 2019. 7850 horas. Localizado em Região de Marília-SP.]]></g:description>
+      <g:id>016</g:id>
+      <g:title><![CDATA[DISTRIBUIDOR DE TORTA DAMASCENO]]></g:title>
+      <g:description><![CDATA[DISTRIBUIDOR DE TORTA DAMASCENO usado. Ano 2005. Localizado em Região de Botucatu-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/NH-1.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/NH-2.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/NH-3.jpg.jpeg</g:additional_image_link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_1.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_2.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_3.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_4.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_5.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_6.jpg.jpeg</g:additional_image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
-      <g:price>165000.00 BRL</g:price>
-      <g:brand><![CDATA[New Holland]]></g:brand>
+      <g:price>28000.00 BRL</g:price>
+      <g:brand><![CDATA[DAMASCENO]]></g:brand>
       <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Arado Aiveca 4 bicos - Tatu Marchesan  -->
     <item>
-      <g:id>013</g:id>
+      <g:id>017</g:id>
       <g:title><![CDATA[Arado Aiveca 4 bicos - Tatu Marchesan ]]></g:title>
       <g:description><![CDATA[Arado Aiveca 4 bicos - Tatu Marchesan  usado. Ano 2023. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -244,7 +308,7 @@
 
     <!-- Arado Aiveca 3 bicos - Tatu Marchesan  -->
     <item>
-      <g:id>014</g:id>
+      <g:id>018</g:id>
       <g:title><![CDATA[Arado Aiveca 3 bicos - Tatu Marchesan ]]></g:title>
       <g:description><![CDATA[Arado Aiveca 3 bicos - Tatu Marchesan  usado. Ano 2023. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -260,7 +324,7 @@
 
     <!-- Arrancadeira de Mandioca e Batata  -->
     <item>
-      <g:id>015</g:id>
+      <g:id>019</g:id>
       <g:title><![CDATA[Arrancadeira de Mandioca e Batata ]]></g:title>
       <g:description><![CDATA[Arrancadeira de Mandioca e Batata  usado. Ano 2025. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -278,7 +342,7 @@
 
     <!-- Trator John Deere 6100J - Syncroplus (Único dono)  -->
     <item>
-      <g:id>016</g:id>
+      <g:id>020</g:id>
       <g:title><![CDATA[Trator John Deere 6100J - Syncroplus (Único dono) ]]></g:title>
       <g:description><![CDATA[Trator John Deere 6100J - Syncroplus (Único dono)  usado. Ano 2017. 7400 horas. Localizado em Região de Itaporanga-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -288,14 +352,14 @@
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/JD6100j.04.jpg.jpg</g:additional_image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
-      <g:price>155000.00 BRL</g:price>
+      <g:price>145000.00 BRL</g:price>
       <g:brand><![CDATA[John Deere]]></g:brand>
       <g:google_product_category>112</g:google_product_category>
     </item>
 
     <!-- Trator Valtra A52s (57cv) -->
     <item>
-      <g:id>017</g:id>
+      <g:id>021</g:id>
       <g:title><![CDATA[Trator Valtra A52s (57cv)]]></g:title>
       <g:description><![CDATA[Trator Valtra A52s (57cv) usado. Ano 2022. 898 horas. Localizado em Região de Itaporanga-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -312,9 +376,30 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
+    <!-- Trator Valtra BM 125 (Cabine Original)  -->
+    <item>
+      <g:id>022</g:id>
+      <g:title><![CDATA[Trator Valtra BM 125 (Cabine Original) ]]></g:title>
+      <g:description><![CDATA[Trator Valtra BM 125 (Cabine Original)  usado. Ano 2013. 9853 horas. Localizado em Região de Santa Cruz do Rio Pardo-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-1.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-2.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-3.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-4.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-5.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-6.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-7.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-8.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>150000.00 BRL</g:price>
+      <g:brand><![CDATA[Valtra]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
     <!-- Trator Massey Fergunson 6713 -->
     <item>
-      <g:id>018</g:id>
+      <g:id>023</g:id>
       <g:title><![CDATA[Trator Massey Fergunson 6713]]></g:title>
       <g:description><![CDATA[Trator Massey Fergunson 6713 usado. Ano 2020. 6000 horas. Localizado em Região de Ibiúna-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -332,7 +417,7 @@
 
     <!-- Trator Massey Fergunson 290 (Original/3 Alavancas) -->
     <item>
-      <g:id>019</g:id>
+      <g:id>024</g:id>
       <g:title><![CDATA[Trator Massey Fergunson 290 (Original/3 Alavancas)]]></g:title>
       <g:description><![CDATA[Trator Massey Fergunson 290 (Original/3 Alavancas) usado. Ano 1994. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -349,7 +434,7 @@
 
     <!-- Trator Massey Fergunson 4408 (Único Dono/Com Redutor) -->
     <item>
-      <g:id>020</g:id>
+      <g:id>025</g:id>
       <g:title><![CDATA[Trator Massey Fergunson 4408 (Único Dono/Com Redutor)]]></g:title>
       <g:description><![CDATA[Trator Massey Fergunson 4408 (Único Dono/Com Redutor) usado. Ano 2022. 2598 horas. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -367,9 +452,51 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
+    <!-- PÁ CARREGADEIRA VOLVO LF70 -->
+    <item>
+      <g:id>026</g:id>
+      <g:title><![CDATA[PÁ CARREGADEIRA VOLVO LF70]]></g:title>
+      <g:description><![CDATA[PÁ CARREGADEIRA VOLVO LF70 usado. Ano 2013. 20601 horas. Localizado em Região de Botucatu-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_7.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_6.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_5.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_4.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_3.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_2.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_1.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>305000.00 BRL</g:price>
+      <g:brand><![CDATA[Volvo]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
+    <!-- Bobcat E35 (Único Dono) -->
+    <item>
+      <g:id>027</g:id>
+      <g:title><![CDATA[Bobcat E35 (Único Dono)]]></g:title>
+      <g:description><![CDATA[Bobcat E35 (Único Dono) usado. Ano 2018. 3200 horas. Localizado em Região de Marília-SP.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-1.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-2.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-3.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-4.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-5.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-6.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-7.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-8.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-9.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>200000.00 BRL</g:price>
+      <g:brand><![CDATA[Bobcat]]></g:brand>
+      <g:google_product_category>112</g:google_product_category>
+    </item>
+
     <!-- Trator Valtra BM110 -->
     <item>
-      <g:id>021</g:id>
+      <g:id>028</g:id>
       <g:title><![CDATA[Trator Valtra BM110]]></g:title>
       <g:description><![CDATA[Trator Valtra BM110 usado. Ano 2004. 10900 horas. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
@@ -383,57 +510,9 @@
       <g:google_product_category>112</g:google_product_category>
     </item>
 
-    <!-- Trator New Holland TS6020 -->
-    <item>
-      <g:id>022</g:id>
-      <g:title><![CDATA[Trator New Holland TS6020]]></g:title>
-      <g:description><![CDATA[Trator New Holland TS6020 usado. Ano 2010. 3402 horas. Localizado em Região de Marília-SP.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/tratornh.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/tratornh1.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/tratornh2.jpg.jpeg</g:additional_image_link>
-      <g:condition>used</g:condition>
-      <g:availability>in_stock</g:availability>
-      <g:price>135000.00 BRL</g:price>
-      <g:brand><![CDATA[New Holland]]></g:brand>
-      <g:google_product_category>112</g:google_product_category>
-    </item>
-
-    <!-- Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono) -->
-    <item>
-      <g:id>023</g:id>
-      <g:title><![CDATA[Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono)]]></g:title>
-      <g:description><![CDATA[Trator Massey Ferguson 4707 (Com Redutor/79CV/ Único Dono) usado. Ano 2020. 4400 horas. Localizado em Região de Marília-SP.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-2020-1.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-2020-2.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-2020-3.jpg.jpeg</g:additional_image_link>
-      <g:condition>used</g:condition>
-      <g:availability>in_stock</g:availability>
-      <g:price>140000.00 BRL</g:price>
-      <g:brand><![CDATA[Massey Ferguson]]></g:brand>
-      <g:google_product_category>112</g:google_product_category>
-    </item>
-
-    <!-- Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor) -->
-    <item>
-      <g:id>024</g:id>
-      <g:title><![CDATA[Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor)]]></g:title>
-      <g:description><![CDATA[Trator Massey Ferguson 4707 - 79CV (Tração Central / Sem Redutor) usado. Ano 2018. 5450 horas. Localizado em Região de Marília-SP.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br</g:link>
-      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-1.jpg.jpeg</g:image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-2.jpg.jpeg</g:additional_image_link>
-      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF4707-3.jpg.jpeg</g:additional_image_link>
-      <g:condition>used</g:condition>
-      <g:availability>in_stock</g:availability>
-      <g:price>125000.00 BRL</g:price>
-      <g:brand><![CDATA[Massey Ferguson]]></g:brand>
-      <g:google_product_category>112</g:google_product_category>
-    </item>
-
     <!-- Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono) -->
     <item>
-      <g:id>025</g:id>
+      <g:id>029</g:id>
       <g:title><![CDATA[Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono)]]></g:title>
       <g:description><![CDATA[Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono) usado. Ano 2013. Localizado em Região de Marília-SP.]]></g:description>
       <g:link>https://agrogiro-multmarcas.com.br</g:link>
