@@ -32,8 +32,10 @@ function gtag_report_conversion(url) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
+    <!-- TITULO OTIMIZADO PARA SEO RESTAURADO -->
     <title>Máquinas Agrícolas Usadas - Tratores, Colhedoras e Implementos Agrícolas (Plantadeiras/Pulverizadores/Adubadeiras/Calcariadeiras/Distribuidores de Sólidos)| Negociação Segura - AgroGiro</title>
     <link rel="icon" href="imagens/logo.png.png">
+    <!-- META DESCRIÇÃO OTIMIZADA PARA SEO RESTAURADA -->
     <meta name="description" content="A plataforma segura para comprar ou anunciar máquinas agrícolas. Encontre Tratores (John Deere, Case, Massey Ferguson, Valtra, New Holland), Colhedoras e Implementos Agrícolas (Plantadeiras, Pulverizadores, Adubadeiras, Calcariadeiras, Distribuidores de Sólidos) usados e revisados. Negocie direto pelo WhatsApp na AgroGiro!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -116,11 +118,10 @@ function gtag_report_conversion(url) {
         .card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform var(--transition); border: 1px solid #eef2f0; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
-        /* CARROSSEL ORIGINAL RESTAURADO */
-        .carousel { position: relative; width: 100%; height: 240px; background-color: #f4f4f4; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
-        .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; }
-        .carousel-slide { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-        .carousel-slide img { width: 100%; height: 100%; object-fit: contain; object-position: center; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+        .carousel { position: relative; width: 100%; aspect-ratio: 4 / 3; background-color: #f3f4f6; overflow: hidden; }
+        .carousel-track { display: flex; height: 100%; }
+        .carousel-slide { min-width: 100%; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
         .card-badge { position: absolute; top: 10px; left: 10px; background: var(--green); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; z-index: 2; text-transform: uppercase; }
 
         .card .info { padding: 16px; flex: 1; display: flex; flex-direction: column; }
@@ -138,7 +139,7 @@ function gtag_report_conversion(url) {
         .paginacao button { min-width: 40px; height: 40px; border: 2px solid #e5e7eb; background: var(--white); border-radius: 8px; cursor: pointer; font-weight: 600; }
         .paginacao button.ativo { background: var(--green); border-color: var(--green); color: #fff; }
 
-        /* SEÇÃO DE SEGURANÇA */
+        /* SEÇÃO DE SEGURANÇA (WHY-US) RESTAURADA */
         .why-us { background: var(--green-light); padding: 64px 0; }
         .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .why-card { background: var(--white); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
@@ -146,7 +147,7 @@ function gtag_report_conversion(url) {
         .why-card h3 { color: var(--green-dark); margin-bottom: 8px; font-size: 1.05rem; }
         .why-card p { color: var(--muted); font-size: 0.92rem; }
 
-        /* SEÇÃO DE DEPOIMENTOS */
+        /* SEÇÃO DE DEPOIMENTOS RESTAURADA */
         .depoimentos { padding: 64px 0; background: var(--white); }
         .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
         .depoimento { background: var(--bg); padding: 28px; border-radius: var(--radius); border: 1px solid #eef2f0; position: relative; }
@@ -163,7 +164,7 @@ function gtag_report_conversion(url) {
         .btn-anuncie { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #fff; padding: 15px 36px; border-radius: 50px; font-weight: 700; font-size: 1.05rem; transition: var(--transition); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
         .btn-anuncie:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
-        /* SEÇÃO DE FAQ */
+        /* SEÇÃO DE FAQ RESTAURADA */
         .faq { padding: 64px 0; }
         .faq-list { max-width: 760px; margin: 0 auto; }
         .faq-item { background: var(--white); margin-bottom: 12px; border-radius: 12px; overflow: hidden; border: 1px solid #eef2f0; }
@@ -180,35 +181,23 @@ function gtag_report_conversion(url) {
         footer ul { list-style: none; }
         footer ul li { margin-bottom: 8px; }
 
-        /* AJUSTES RESPONSIVOS (CELULAR/TABLET) */
         @media (max-width: 1024px) {
             .maquinas-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-grid { grid-template-columns: 1fr; gap: 30px; }
         }
         @media (max-width: 768px) {
             .maquinas-grid { grid-template-columns: 1fr; }
-            .filtro-container { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px; justify-content: flex-start; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-            .filtro-container::-webkit-scrollbar { display: none; }
-            .filtro-btn { flex-shrink: 0; padding: 10px 18px; font-size: 0.85rem; }
+            .filtro-container { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
+            .filtro-btn { flex-shrink: 0; }
             .filtro-select { width: 100%; min-width: auto; }
             .top-bar { display: none; }
             .header-inner { padding: 10px 0; }
             .header-cta span { display: none; }
-            /* Círculo perfeito para o botão do WhatsApp no topo */
-            .header-cta { width: 44px; height: 44px; padding: 0 !important; display: flex; justify-content: center; align-items: center; border-radius: 50%; }
-            .header-cta i { margin: 0; font-size: 1.3rem; }
+            .header-cta { padding: 10px; border-radius: 50%; }
             .hero-actions { flex-direction: column; }
             .hero-actions a { width: 100%; justify-content: center; }
             .hero-card { margin-top: 10px; }
             .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 640px) {
-            .carousel { height: 200px; } /* Altura travada no celular como no original */
-            .card .info { padding: 16px 12px; }
-            .card-meta { gap: 6px; }
-            .card-meta span { padding: 6px; font-size: 0.72rem; }
-            .card-meta span strong { font-size: 0.8rem; }
-            .card-footer { padding: 0 12px 16px; }
         }
     </style>
 </head>
@@ -227,11 +216,11 @@ function gtag_report_conversion(url) {
             <div class="logo-icon"><i class="fas fa-tractor"></i></div>
             <div class="logo-text">
                 <h1>AgroGiro</h1>
-                <small>Máquinas de confiança</small>
+                <small>Máquinas agrícolas de confiança</small>
             </div>
         </a>
         <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas." class="header-cta" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas.');">
-            <i class="fab fa-whatsapp"></i> <span>Falar com especialista</span>
+            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> <span>Falar com especialista</span>
         </a>
     </div>
 </header>
@@ -249,9 +238,9 @@ function gtag_report_conversion(url) {
         </div>
         
         <div class="hero-card">
-            <h3><i class="fas fa-chart-line"></i> Por que produtores escolhem a AgroGiro</h3>
+            <h3><i class="fas fa-chart-line"></i>Por que produtores escolhem a AgroGiro</h3>
             <div class="hero-stats">
-                <div class="hero-stat"><strong>Clareza</strong><span>Vendas de forma Honesta e Segura</span></div>
+                <div class="hero-stat"><strong>Clareza</strong><span>Realizar vendas de maneira Honesta e Segura</span></div>
                 <div class="hero-stat"><strong>3 meses</strong><span>Garantia mínima</span></div>
                 <div class="hero-stat"><strong>100%</strong><span>Direto no WhatsApp</span></div>
                 <div class="hero-stat"><strong>Grátis</strong><span>Para anunciar</span></div>
@@ -483,13 +472,12 @@ function gtag_report_conversion(url) {
             let card = document.createElement('article');
             card.className = 'card';
             
-            /* Removido o loading="lazy" para a imagem carregar rápido como no original */
             card.innerHTML = `
                 <div class="carousel">
                     <span class="card-badge">${m.tipo}</span>
                     <div class="carousel-track">
                         <div class="carousel-slide">
-                            <img src="${imagemSrc}" alt="${m.nome}" onerror="this.src='https://via.placeholder.com/800x600/eef2f0/1b4332?text=Foto+Indisponivel'">
+                            <img src="${imagemSrc}" alt="${m.nome}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/800x600/eef2f0/1b4332?text=Foto+Indisponivel'">
                         </div>
                     </div>
                 </div>
