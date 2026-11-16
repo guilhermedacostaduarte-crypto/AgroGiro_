@@ -38,8 +38,8 @@
         .col-galeria { flex: 1.5; min-width: 300px; width: 100%; }
         .col-detalhes { flex: 1; min-width: 300px; width: 100%; position: sticky; top: 90px; }
         
-        /* GALERIA COM SETAS */
-        .galeria-principal { width: 100%; aspect-ratio: 4 / 3; background: #eef2f0; border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e5e7eb; position: relative; }
+        /* GALERIA COM ALTURA TRAVADA E SETAS */
+        .galeria-principal { width: 100%; height: 450px; background: #eef2f0; border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e5e7eb; position: relative; }
         .galeria-principal img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
         
         .galeria-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.92); color: var(--green-dark); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: 0.2s; z-index: 2; opacity: 0; }
@@ -75,12 +75,13 @@
         @media (max-width: 900px) {
             .produto-container { flex-direction: column; gap: 24px; padding: 24px 0; }
             .col-detalhes { position: static; }
-            .galeria-principal { aspect-ratio: 4 / 3; max-height: none; }
+            .galeria-principal { height: 350px; }
             .galeria-btn { opacity: 1; width: 36px; height: 36px; }
         }
         
         @media (max-width: 480px) {
             header { padding: 12px 0; }
+            .galeria-principal { height: 260px; } /* Altura exata para o mobile */
             .especificacoes { grid-template-columns: 1fr; gap: 8px; }
             .contato-box { padding: 20px 16px; }
             .thumb { flex: 0 0 70px; height: 55px; }
@@ -145,7 +146,7 @@
             
             imagensGaleria.forEach((img, index) => {
                 let ativo = index === 0 ? 'ativo' : '';
-                htmlThumbs += `<img src="${img}" class="thumb ${ativo}" id="thumb-${index}" onclick="mudarImagem(${index})" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
+                htmlThumbs += `<img src="${img}" class="thumb ${ativo}" id="thumb-${index}" onclick="mudarImagem(${index})" onerror="this.style.display='none'">`;
             });
         } else {
             htmlImagens = `<div style="padding:40px; color:#999; text-align:center;">Sem fotos disponíveis</div>`;
