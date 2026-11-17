@@ -132,7 +132,7 @@ function gtag_report_conversion(url) {
         .card .info .preco { font-size: 1.35rem; font-weight: 800; color: var(--gold); margin-top: auto; }
         
         .card-footer { padding: 0 16px 16px; }
-        .card .btn-detalhes { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--green-dark); color: #fff; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; transition: var(--transition); width: 100%; }
+        .card .btn-detalhes { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--green-dark); color: #fff; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; transition: var(--transition); width: 100%; cursor: pointer; border: none; }
         .card .btn-detalhes:hover { background: var(--green); }
 
         .paginacao { display: flex; justify-content: center; gap: 8px; margin: 32px 0; flex-wrap: wrap; }
@@ -181,9 +181,59 @@ function gtag_report_conversion(url) {
         footer ul { list-style: none; }
         footer ul li { margin-bottom: 8px; }
 
+        /* ======================================================= */
+        /* ESTILOS DA PÁGINA DE DETALHES DO PRODUTO (UNIFICADO)    */
+        /* ======================================================= */
+        .btn-voltar { color: var(--green-dark); font-weight: 600; display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; transition: 0.2s; cursor: pointer; }
+        .btn-voltar:hover { color: var(--green); }
+
+        .produto-container { display: flex; flex-wrap: wrap; gap: 40px; padding: 40px 0; align-items: flex-start; }
+        .col-galeria { flex: 1.5; min-width: 300px; width: 100%; }
+        .col-detalhes { flex: 1; min-width: 300px; width: 100%; position: sticky; top: 90px; }
+        
+        /* GALERIA COM SETAS */
+        .galeria-principal { width: 100%; aspect-ratio: 4 / 3; background: #eef2f0; border-radius: 12px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #e5e7eb; position: relative; }
+        .galeria-principal img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+        
+        .galeria-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border: none; border-radius: 50%; background: rgba(255,255,255,0.92); color: var(--green-dark); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: 0.2s; z-index: 2; opacity: 0; }
+        .galeria-principal:hover .galeria-btn { opacity: 1; }
+        .galeria-btn:hover { background: #fff; transform: translateY(-50%) scale(1.05); }
+        .galeria-btn.prev { left: 10px; }
+        .galeria-btn.next { right: 10px; }
+        
+        .galeria-thumbs { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+        .galeria-thumbs::-webkit-scrollbar { height: 6px; }
+        .galeria-thumbs::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+        .thumb { flex: 0 0 90px; height: 70px; background: #fff; border-radius: 8px; cursor: pointer; object-fit: contain; opacity: 0.5; transition: 0.2s; border: 2px solid #e5e7eb; padding: 4px; }
+        .thumb:hover, .thumb.ativo { opacity: 1; border-color: var(--green); }
+
+        .detalhes-header h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--green-dark); margin-bottom: 12px; line-height: 1.2; }
+        .preco-box { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--gold); margin-bottom: 24px; }
+        
+        .especificacoes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+        .espec { background: var(--white); padding: 16px; border-radius: 10px; border: 1px solid #e5e7eb; }
+        .espec small { display: block; color: #6b7280; font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .espec strong { font-size: 1.05rem; color: var(--text); word-break: break-word; }
+
+        .contato-box { background: var(--white); padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+        .contato-box h3 { margin-bottom: 16px; color: var(--green-dark); font-size: 1.1rem; text-align: center; }
+        
+        .btn-whats { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; background: var(--whatsapp); color: #fff; padding: 14px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; margin-bottom: 24px; transition: 0.2s; text-align: center; }
+        .btn-whats:hover { background: var(--whatsapp-dark); transform: translateY(-2px); }
+        
+        .vendedor-info { display: flex; flex-direction: column; gap: 12px; color: #4b5563; font-size: 0.95rem; background: #f9fafb; padding: 16px; border-radius: 8px; border: 1px solid #f3f4f6; }
+        .vendedor-info p { display: flex; align-items: center; gap: 12px; margin: 0; }
+        .vendedor-info i { color: var(--green); font-size: 1.1rem; width: 20px; text-align: center; }
+
         @media (max-width: 1024px) {
             .maquinas-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+        @media (max-width: 900px) {
+            .produto-container { flex-direction: column; gap: 24px; padding: 24px 0; }
+            .col-detalhes { position: static; }
+            .galeria-principal { aspect-ratio: 4 / 3; max-height: none; }
+            .galeria-btn { opacity: 1; width: 36px; height: 36px; }
         }
         @media (max-width: 768px) {
             .maquinas-grid { grid-template-columns: 1fr; }
@@ -199,213 +249,664 @@ function gtag_report_conversion(url) {
             .hero-card { margin-top: 10px; }
             .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
         }
+        @media (max-width: 480px) {
+            header { padding: 12px 0; }
+            .especificacoes { grid-template-columns: 1fr; gap: 8px; }
+            .contato-box { padding: 20px 16px; }
+            .thumb { flex: 0 0 70px; height: 55px; }
+        }
     </style>
 </head>
 <body>
 
-<div class="top-bar">
-    <div class="container">
-        <span><i class="fas fa-shield-alt"></i> Máquinas Usadas com procedência verificada</span>
-        <span><i class="fab fa-whatsapp"></i> Resposta em até 30 minutos</span>
+<!-- ======================================================= -->
+<!-- VISÃO 1: PÁGINA PRINCIPAL (CATÁLOGO)                    -->
+<!-- ======================================================= -->
+<div id="paginaCatalogo">
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fas fa-shield-alt"></i> Máquinas Usadas com procedência verificada</span>
+            <span><i class="fab fa-whatsapp"></i> Resposta em até 30 minutos</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo" onclick="voltarParaCatalogo(event)">
+                <div class="logo-icon"><i class="fas fa-tractor"></i></div>
+                <div class="logo-text">
+                    <h1>AgroGiro</h1>
+                    <small>Máquinas agrícolas de confiança</small>
+                </div>
+            </a>
+            <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas." class="header-cta" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas.');">
+                <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> <span>Falar com especialista</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <h2>O equipamento certo para o seu campo, com <span>negociação segura</span></h2>
+                <p class="hero-sub">Compre ou anuncie tratores, colhedoras e implementos. Fale direto com nossa equipe e negocie sem intermediários confusos.</p>
+                
+                <div class="hero-actions">
+                    <a href="#maquinas" class="btn-outline"><i class="fas fa-search"></i> Explorar catálogo</a>
+                    <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F" class="btn-gold" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F');"><i class="fab fa-whatsapp"></i> Anunciar Grátis</a>
+                </div>
+            </div>
+            
+            <div class="hero-card">
+                <h3><i class="fas fa-chart-line"></i>Por que produtores escolhem a AgroGiro</h3>
+                <div class="hero-stats">
+                    <div class="hero-stat"><strong>Clareza</strong><span>Realizar vendas de maneira Honesta e Segura</span></div>
+                    <div class="hero-stat"><strong>3 meses</strong><span>Garantia mínima</span></div>
+                    <div class="hero-stat"><strong>100%</strong><span>Direto no WhatsApp</span></div>
+                    <div class="hero-stat"><strong>Grátis</strong><span>Para anunciar</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="filtros">
+        <div class="container">
+            <div class="filtro-container" id="filtroContainer">
+                <button class="filtro-btn ativo" data-tipo="todos">Todos</button>
+                <button class="filtro-btn" data-tipo="Trator">Tratores</button>
+                <button class="filtro-btn" data-tipo="Colhedoras">Colhedoras</button>
+                <button class="filtro-btn" data-tipo="Implementos">Implementos</button>
+            </div>
+            <div style="width: 100%; max-width: 400px;">
+                <select id="filtroMarca" class="filtro-select">
+                    <option value="todas">Filtrar - Marcas Disponíveis AgroGiro</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="maquinas container" id="maquinas">
+        <div class="section-header">
+            <p class="eyebrow">Catálogo</p>
+            <h2>Encontre sua próxima máquina</h2>
+            <p>Clique em Ver Detalhes para fotos em alta resolução e o contato do vendedor.</p>
+        </div>
+        <div class="maquinas-grid" id="maquinasGrid"></div>
+        <div class="paginacao" id="paginacao"></div>
+    </section>
+
+    <!-- SEÇÃO DE SEGURANÇA -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Segurança na compra</p>
+                <h2>Compre com tranquilidade</h2>
+                <p>Sabemos que investir em maquinário é decisão séria. Por isso, cada etapa foi pensada para você se sentir seguro.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Inspeção antes do anúncio</h3>
+                    <p>Verificamos horas, estado geral antes de publicar qualquer equipamento na plataforma.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-lock"></i></div>
+                    <h3>Negociação direta e clara</h3>
+                    <p>Você conversa com nossa equipe pelo WhatsApp, tira dúvidas, pede mais fotos e combina visita na "Propriedade" sem pressão.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-medal"></i></div>
+                    <h3>Garantia que protege você</h3>
+                    <p>Todas as máquinas contam com garantia mínima de 3 meses. Transparência do primeiro contato à entrega.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Quem já confiou</p>
+                <h2>Depoimentos de clientes</h2>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Comprei um trator pelo AgroGiro e fui super bem atendido. Recebi fotos e vídeo antes de fechar. Máquina em ótimo estado!"</p>
+                    <div class="autor">João Carlos<span>Fazenda Boa Vista — SP</span></div>
+                </div>
+                <div class="depoimento">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Ótima plataforma para vender minhas máquinas usadas. Publicaram rápido e a negociação foi toda pelo WhatsApp, bem prático."</p>
+                    <div class="autor">Maria Aparecida<span>Sítio Esperança — MG</span></div>
+                </div>
+                <div class="depoimento">
+                    <i class="fas fa-quote-left quote"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Negociação transparente, documentação em dia e entrega no prazo. Já indiquei para dois vizinhos do campo."</p>
+                    <div class="autor">Pedro Alves<span>Agropecuária Rio Verde — GO</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE ANUNCIE -->
+    <section class="anuncie">
+        <div class="container">
+            <h2>Venda sua máquina sem complicação - Se Afilie a AgroGiro</h2>
+            <p>Cadastro gratuito, alcance de compradores qualificados e acompanhamento da negociação do início ao fim.</p>
+            <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F" class="btn-anuncie" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F');">
+                <i class="fab fa-whatsapp"></i> Quero anunciar grátis
+            </a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FAQ -->
+    <section class="faq container">
+        <div class="section-header">
+            <p class="eyebrow">Tire suas dúvidas</p>
+            <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-pergunta">Como faço para comprar uma máquina? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-resposta">Navegue pelo catálogo, clique em "Ver Detalhes" para ver todas as fotos e especificações e chame nossa equipe no WhatsApp para tirar dúvidas e fechar negócio.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">As máquinas têm garantia? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-resposta">Sim. Todas passam por verificação de procedência e oferecem garantia mínima de 3 meses. Os detalhes específicos são informados no WhatsApp para cada equipamento.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">Posso pedir mais fotos ou vídeos? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-resposta">Claro! A página da máquina mostra as fotos principais, mas pelo WhatsApp enviamos ângulos adicionais, vídeo do motor funcionando e qualquer detalhe que você precisar ver antes de decidir.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pergunta">Como funciona o anúncio? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-resposta">É gratuito. Envie as informações e fotos da máquina pelo WhatsApp e publicamos na plataforma. Você acompanha os contatos e negocia com nosso suporte.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>AgroGiro</h4>
+                    <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>        
+                </div>
+                <div>
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> (16) 99785-4876</li>
+                        <li><i class="fas fa-envelope"></i> contato.agrogiro@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Seg–Sext, 8h às 17h</li>
+                        <li><i class="fas fa-clock"></i> Sáb, 8h às 13h</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Equipamentos</h4>
+                    <ul>
+                        <li>Tratores</li>
+                        <li>Colhedoras</li>
+                        <li>Implementos</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center;">
+                <p style="margin-bottom: 8px;"><a href="politica.html" style="color: rgba(255,255,255,0.85); text-decoration: underline;">Política de Intermediação e Condições de Venda</a></p>
+                <p>© <span id="ano"></span> AgroGiro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- ======================================================= -->
+<!-- VISÃO 2: PÁGINA DE DETALHES DO PRODUTO                  -->
+<!-- ======================================================= -->
+<div id="paginaProduto" style="display: none;">
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo" onclick="voltarParaCatalogo(event)">
+                <div class="logo-icon"><i class="fas fa-tractor"></i></div>
+                <div class="logo-text">
+                    <h1>AgroGiro</h1>
+                    <small>Máquinas agrícolas de confiança</small>
+                </div>
+            </a>
+            <a href="index.html" class="btn-voltar" onclick="voltarParaCatalogo(event)"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </div>
+    </header>
+
+    <div class="container produto-container" id="conteudoProduto">
+        <div style="width: 100%; text-align: center; padding: 60px 0;">
+            <h2 style="color: var(--green-dark);">Carregando máquina...</h2>
+        </div>
     </div>
 </div>
 
-<header>
-    <div class="container header-inner">
-        <a href="index.html" class="logo">
-            <div class="logo-icon"><i class="fas fa-tractor"></i></div>
-            <div class="logo-text">
-                <h1>AgroGiro</h1>
-                <small>Máquinas agrícolas de confiança</small>
-            </div>
-        </a>
-        <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas." class="header-cta" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20AgroGiro%20sobre%20m%C3%A1quinas%20agr%C3%ADcolas.');">
-            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> <span>Falar com especialista</span>
-        </a>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container hero-grid">
-        <div>
-            <h2>O equipamento certo para o seu campo, com <span>negociação segura</span></h2>
-            <p class="hero-sub">Compre ou anuncie tratores, colhedoras e implementos. Fale direto com nossa equipe e negocie sem intermediários confusos.</p>
-            
-            <div class="hero-actions">
-                <a href="#maquinas" class="btn-outline"><i class="fas fa-search"></i> Explorar catálogo</a>
-                <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F" class="btn-gold" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F');"><i class="fab fa-whatsapp"></i> Anunciar Grátis</a>
-            </div>
-        </div>
-        
-        <div class="hero-card">
-            <h3><i class="fas fa-chart-line"></i>Por que produtores escolhem a AgroGiro</h3>
-            <div class="hero-stats">
-                <div class="hero-stat"><strong>Clareza</strong><span>Realizar vendas de maneira Honesta e Segura</span></div>
-                <div class="hero-stat"><strong>3 meses</strong><span>Garantia mínima</span></div>
-                <div class="hero-stat"><strong>100%</strong><span>Direto no WhatsApp</span></div>
-                <div class="hero-stat"><strong>Grátis</strong><span>Para anunciar</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="filtros">
-    <div class="container">
-        <div class="filtro-container" id="filtroContainer">
-            <button class="filtro-btn ativo" data-tipo="todos">Todos</button>
-            <button class="filtro-btn" data-tipo="Trator">Tratores</button>
-            <button class="filtro-btn" data-tipo="Colhedoras">Colhedoras</button>
-            <button class="filtro-btn" data-tipo="Implementos">Implementos</button>
-        </div>
-        <div style="width: 100%; max-width: 400px;">
-            <select id="filtroMarca" class="filtro-select">
-                <option value="todas">Filtrar - Marcas Disponíveis AgroGiro</option>
-            </select>
-        </div>
-    </div>
-</section>
-
-<section class="maquinas container" id="maquinas">
-    <div class="section-header">
-        <p class="eyebrow">Catálogo</p>
-        <h2>Encontre sua próxima máquina</h2>
-        <p>Clique em Ver Detalhes para fotos em alta resolução e o contato do vendedor.</p>
-    </div>
-    <div class="maquinas-grid" id="maquinasGrid"></div>
-    <div class="paginacao" id="paginacao"></div>
-</section>
-
-<!-- SEÇÃO DE SEGURANÇA -->
-<section class="why-us">
-    <div class="container">
-        <div class="section-header">
-            <p class="eyebrow">Segurança na compra</p>
-            <h2>Compre com tranquilidade</h2>
-            <p>Sabemos que investir em maquinário é decisão séria. Por isso, cada etapa foi pensada para você se sentir seguro.</p>
-        </div>
-        <div class="why-grid">
-            <div class="why-card">
-                <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
-                <h3>Inspeção antes do anúncio</h3>
-                <p>Verificamos horas, estado geral antes de publicar qualquer equipamento na plataforma.</p>
-            </div>
-            <div class="why-card">
-                <div class="icon-wrap"><i class="fas fa-lock"></i></div>
-                <h3>Negociação direta e clara</h3>
-                <p>Você conversa com nossa equipe pelo WhatsApp, tira dúvidas, pede mais fotos e combina visita na "Propriedade" sem pressão.</p>
-            </div>
-            <div class="why-card">
-                <div class="icon-wrap"><i class="fas fa-medal"></i></div>
-                <h3>Garantia que protege você</h3>
-                <p>Todas as máquinas contam com garantia mínima de 3 meses. Transparência do primeiro contato à entrega.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SEÇÃO DE DEPOIMENTOS -->
-<section class="depoimentos">
-    <div class="container">
-        <div class="section-header">
-            <p class="eyebrow">Quem já confiou</p>
-            <h2>Depoimentos de clientes</h2>
-        </div>
-        <div class="depoimentos-grid">
-            <div class="depoimento">
-                <i class="fas fa-quote-left quote"></i>
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>"Comprei um trator pelo AgroGiro e fui super bem atendido. Recebi fotos e vídeo antes de fechar. Máquina em ótimo estado!"</p>
-                <div class="autor">João Carlos<span>Fazenda Boa Vista — SP</span></div>
-            </div>
-            <div class="depoimento">
-                <i class="fas fa-quote-left quote"></i>
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>"Ótima plataforma para vender minhas máquinas usadas. Publicaram rápido e a negociação foi toda pelo WhatsApp, bem prático."</p>
-                <div class="autor">Maria Aparecida<span>Sítio Esperança — MG</span></div>
-            </div>
-            <div class="depoimento">
-                <i class="fas fa-quote-left quote"></i>
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>"Negociação transparente, documentação em dia e entrega no prazo. Já indiquei para dois vizinhos do campo."</p>
-                <div class="autor">Pedro Alves<span>Agropecuária Rio Verde — GO</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SEÇÃO DE ANUNCIE -->
-<section class="anuncie">
-    <div class="container">
-        <h2>Venda sua máquina sem complicação - Se Afilie a AgroGiro</h2>
-        <p>Cadastro gratuito, alcance de compradores qualificados e acompanhamento da negociação do início ao fim.</p>
-        <a href="https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F" class="btn-anuncie" target="_blank" onclick="return gtag_report_conversion('https://wa.me/5516997854876?text=Ol%C3%A1%21%20Gostaria%20de%20anunciar%20minha%20m%C3%A1quina%20na%20AgroGiro%20de%20forma%20gratuita.%20Como%20funciona%3F');">
-            <i class="fab fa-whatsapp"></i> Quero anunciar grátis
-        </a>
-    </div>
-</section>
-
-<!-- SEÇÃO FAQ -->
-<section class="faq container">
-    <div class="section-header">
-        <p class="eyebrow">Tire suas dúvidas</p>
-        <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq-list">
-        <div class="faq-item">
-            <div class="faq-pergunta">Como faço para comprar uma máquina? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-resposta">Navegue pelo catálogo, clique em "Ver Detalhes" para ver todas as fotos e especificações e chame nossa equipe no WhatsApp para tirar dúvidas e fechar negócio.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-pergunta">As máquinas têm garantia? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-resposta">Sim. Todas passam por verificação de procedência e oferecem garantia mínima de 3 meses. Os detalhes específicos são informados no WhatsApp para cada equipamento.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-pergunta">Posso pedir mais fotos ou vídeos? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-resposta">Claro! A página da máquina mostra as fotos principais, mas pelo WhatsApp enviamos ângulos adicionais, vídeo do motor funcionando e qualquer detalhe que você precisar ver antes de decidir.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-pergunta">Como funciona o anúncio? <i class="fas fa-chevron-down"></i></div>
-            <div class="faq-resposta">É gratuito. Envie as informações e fotos da máquina pelo WhatsApp e publicamos na plataforma. Você acompanha os contatos e negocia com nosso suporte.</div>
-        </div>
-    </div>
-</section>
-
-<!-- RODAPÉ -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h4>AgroGiro</h4>
-                <p>Sua plataforma de máquinas agrícolas com foco em transparência, procedência verificada e atendimento humano pelo WhatsApp.</p>        
-            </div>
-            <div>
-                <h4>Contato</h4>
-                <ul>
-                    <li><i class="fab fa-whatsapp"></i> (16) 99785-4876</li>
-                    <li><i class="fas fa-envelope"></i> contato.agrogiro@gmail.com</li>
-                    <li><i class="fas fa-clock"></i> Seg–Sext, 8h às 17h</li>
-                    <li><i class="fas fa-clock"></i> Sáb, 8h às 13h</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Equipamentos</h4>
-                <ul>
-                    <li>Tratores</li>
-                    <li>Colhedoras</li>
-                    <li>Implementos</li>
-                </ul>
-            </div>
-        </div>
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center;">
-            <p style="margin-bottom: 8px;"><a href="politica.html" style="color: rgba(255,255,255,0.85); text-decoration: underline;">Política de Intermediação e Condições de Venda</a></p>
-            <p>© <span id="ano"></span> AgroGiro. Todos os direitos reservados.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="dados.js"></script>
-
+<!-- ======================================================= -->
+<!-- DADOS E SCRIPTS UNIFICADOS                              -->
+<!-- ======================================================= -->
 <script>
+    // Arquivo: dados.js integrado
+    const WHATSAPP = '5516997854876';
+
+    const maquinas = [
+        {
+            id: 1,
+            nome: "Trator John Deere 8270R (Transmissão e motor revisados em 2026) - Único dono",
+            marca: "John Deere",
+            ano: 2018,
+            horas: 18967,
+            preco: 610000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "imagens/JD 8270r-01.jpg.jpg", "imagens/JD 8270r-02.jpg.jpg", "imagens/JD 8270r-03.jpg.jpg",
+                "imagens/JD 8270r-04.jpg.jpg", "imagens/JD 8270r-05.jpg.jpg", "imagens/JD 8270r-06.jpg.jpg",
+                "imagens/JD 8270r-07.jpg.jpg", "imagens/JD 8270r-08.jpg.jpg", "imagens/JD 8270r-09.jpg.jpg",
+                "imagens/JD 8270r-10.jpg.jpg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 2,
+            nome: "Trator Valtra A850 (Único Dono)",
+            marca: "Valtra",
+            ano: 2012,
+            horas: 6500,
+            preco: 110000,
+            local: "Região de Itaporanga-SP",
+            imagens: [
+                "imagens/Valtra A850-2.jpg.jpeg", "imagens/Valtra A850-3.jpg.jpeg",
+                "imagens/Valtra A850-4.jpg.jpeg", "imagens/Valtra A850-6.jpg.jpeg", "imagens/Valtra A850-1.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 3,
+            nome: "Trator Ford 7610 (Transmissão e motor revisados)",
+            marca: "Ford",
+            ano: 1990,
+            preco: 95000,
+            local: "Região de Marília-SP",
+            imagens: ["imagens/Ford7610.jpg.jpeg"],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 4,
+            nome: "Trator TS 110  - New Holland (Com Reversor)",
+            marca: "New Holland",
+            ano: 2004,
+            horas: 11400,
+            preco: 100000,
+            local: "Região de Santa Cruz do Rio Pardo-SP",
+            imagens: [
+                "imagens/TratorTS110-1.jpg.jpeg", "imagens/TratorTS110-2.jpg.jpeg", "imagens/TratorTS110-3.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 5,
+            nome: "Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono",
+            marca: "John Deere",
+            ano: 2017,
+            horas: 3186,
+            preco: 540000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/ColhedoraS440_05.jpg.jpeg", "Cliente Raphael/ColhedoraS440_01.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_02.jpg.jpeg", "Cliente Raphael/ColhedoraS440_03.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_04.jpg.jpeg", "Cliente Raphael/ColhedoraS440_06.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_07.jpg.jpeg", "Cliente Raphael/ColhedoraS440_08.jpg.jpeg",
+                "Cliente Raphael/Plataforma625F_1.jpg.jpeg"
+            ],
+            tipo: "Colhedoras",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 6,
+            nome: "Quadriciclo Honda TRX/420 - Herbicida",
+            marca: "Honda",
+            ano: 2010,
+            horas: 6439,
+            preco: 37000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/Quadriciclo TRX_420_1.jpg.jpeg", "Cliente Raphael/Quadriciclo TRX_420_2.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_3.jpg.jpeg", "Cliente Raphael/Quadriciclo TRX_420_4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 7,
+            nome: "Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões)",
+            marca: "Jacto",
+            ano: 2024,
+            preco: 70000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_1.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_2.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_3.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_4.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_5.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_6.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_7.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_8.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 8,
+            nome: "Plantadora Adubadora de Soja COP CA 9/9",
+            marca: "Tatu Marchesan",
+            ano: 2019,
+            preco: 165000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97291-PLANTADORA ADUBADORA DE SOJA COP CA 99-1.jpg.jpeg",
+                "Cliente Raphael/97291-PLANTADORA ADUBADORA DE SOJA COP CA 99-2.jpg.jpeg",
+                "Cliente Raphael/97291-PLANTADORA ADUBADORA DE SOJA COP CA 99-3.jpg.jpeg",
+                "Cliente Raphael/97291-PLANTADORA ADUBADORA DE SOJA COP CA 99-4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 9,
+            nome: "CARREGADEIRA CBT 8060 4X4",
+            marca: "CBT",
+            ano: 1990,
+            horas: 2477,
+            preco: 110000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_1.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_2.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_3.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_4.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_5.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_6.jpg.jpg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 10,
+            nome: "Plantadeira de Cana TT 8022BT (Automatizada)",
+            marca: "TT do Brasil",
+            ano: 2023,
+            preco: 430000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-1.jpg.jpeg", "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-2.jpg.jpeg",
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-3.jpg.jpeg", "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 11,
+            nome: "Plantadeira de Cana TT 8022 (Automatizada)",
+            marca: "TT do Brasil",
+            ano: 2020,
+            preco: 375000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-1.jpg.jpeg", "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-2.jpg.jpeg",
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-3.jpg.jpeg", "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 12,
+            nome: "Plantadeira de Cana DMB",
+            marca: "DMB",
+            ano: 2009,
+            preco: 270000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_1.jpg.jpeg", "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_2.jpg.jpeg",
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_3.jpg.jpeg", "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 13,
+            nome: "TRANSBORDO SE 10500",
+            marca: "Sermag",
+            ano: 2011,
+            preco: 40000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 1.jpg.jpeg", "Cliente Raphael/97181-TRANSBORDO SE 10500 - 2.jpg.jpeg",
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 3.jpg.jpeg", "Cliente Raphael/97181-TRANSBORDO SE 10500 - 4.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 14,
+            nome: "CARRETA SULCADORA TORTA 150MM",
+            marca: "CARDEROLI",
+            ano: 2023,
+            preco: 130000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_1.jpg .jpeg", "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_2.jpg .jpeg",
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_3.jpg .jpeg", "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_4.jpg .jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 15,
+            nome: "Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm) ",
+            marca: "Valtra",
+            ano: 2012,
+            preco: 110000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/Plantadeira-Valtra-01.jpg.jpg", "imagens/Plantadeira-Valtra-02.jpg.jpg", "imagens/Plantadeira-Valtra-03.jpg.jpg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 16,
+            nome: "DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300",
+            marca: "IPACOL",
+            ano: 2020,
+            preco: 10000,
+            local: "Região de Botucatu-SP",
+            imagens: ["Cliente Raphael/97313-DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300-1.jpg.jpeg"],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 17,
+            nome: "DISTRIBUIDOR DE TORTA DAMASCENO",
+            marca: "DAMASCENO",
+            ano: 2005,
+            preco: 28000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_1.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_2.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_3.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_4.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_5.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_6.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 18,
+            nome: "Arado Aiveca 4 bicos - Tatu Marchesan ",
+            marca: "Tatu Marchesan",
+            ano: 2023,
+            preco: 16000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "Cliente_Douglas/Arado 4 bicos_marchesan_1.jpg.jpeg", "Cliente_Douglas/Arado 4 bicos_marchesan_2.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_3.jpg.jpeg", "Cliente_Douglas/Arado 4 bicos_marchesan_4.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_5.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 19,
+            nome: "Arado Aiveca 3 bicos - Tatu Marchesan ",
+            marca: "Tatu Marchesan",
+            ano: 2023,
+            preco: 14000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "Cliente_Douglas/Arado 3 bicos_marchesan_3.jpg.jpeg", "Cliente_Douglas/Arado 3 bicos_marchesan_2.jpg.jpeg", "Cliente_Douglas/Arado 3 bicos_marchesan_1.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 20,
+            nome: "Arrancadeira de Mandioca e Batata ",
+            marca: "CLK",
+            ano: 2025,
+            preco: 45000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "Cliente_Douglas/Arrancadeira de mandioca_1.jpg.jpeg", "Cliente_Douglas/Arrancadeira de mandioca_2.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_3.jpg.jpeg", "Cliente_Douglas/Arrancadeira de mandioca_4.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_5.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 22,
+            nome: "Trator Valtra A52s (57cv)",
+            marca: "Valtra",
+            ano: 2022,
+            horas: 898,
+            preco: 124000,
+            local: "Região de Itaporanga-SP",
+            imagens: [
+                "imagens/Valtra A52s.01.jpg.jpg", "imagens/Valtra A52s.02.jpg.jpg", "imagens/Valtra A52s.03.jpg.jpg",
+                "imagens/Valtra A52s.04.jpg.jpg", "imagens/Valtra A52s.05.jpg.jpg", "imagens/Valtra A52s.06.jpg.jpg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 23,
+            nome: "Trator Valtra BM 125 (Cabine Original) ",
+            marca: "Valtra",
+            ano: 2013,
+            horas: 9853,
+            preco: 150000,
+            local: "Região de Santa Cruz do Rio Pardo-SP",
+            imagens: [
+                "imagens/Valtra BM125-1.jpg.jpeg", "imagens/Valtra BM125-2.jpg.jpeg", "imagens/Valtra BM125-3.jpg.jpeg",
+                "imagens/Valtra BM125-4.jpg.jpeg", "imagens/Valtra BM125-5.jpg.jpeg", "imagens/Valtra BM125-6.jpg.jpeg",
+                "imagens/Valtra BM125-7.jpg.jpeg", "imagens/Valtra BM125-8.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 24,
+            nome: "Trator Massey Fergunson 6713",
+            marca: "Massey Fergunson",
+            ano: 2020,
+            horas: 6000,
+            preco: 235000,
+            local: "Região de Ibiúna-SP",
+            imagens: [
+                "imagens/MF6713.01.jpg.jpeg", "imagens/MF6713.02.jpg.jpeg", "imagens/MF6713.03.jpg.jpeg",
+                "imagens/MF6713.04.jpg.jpeg", "imagens/MF6713.05.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 25,
+            nome: "Trator Massey Fergunson 290 (Original/3 Alavancas)",
+            marca: "Massey Fergunson",
+            ano: 1994,
+            preco: 90000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF 290-01.jpg.jpg", "imagens/MF 290-02.jpg.jpg", "imagens/MF 290-03.jpg.jpg", "imagens/MF 290-04.jpg.jpg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 26,
+            nome: "PÁ CARREGADEIRA VOLVO LF70",
+            marca: "Volvo",
+            ano: 2013,
+            horas: 20601,
+            preco: 305000,
+            local: "Região de Botucatu-SP",
+            imagens: [
+                "Cliente Raphael/pa_carregaderia_LF70_7.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_6.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_5.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_4.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_3.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_2.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_1.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 27,
+            nome: "Bobcat E35 (Único Dono)",
+            marca: "Bobcat",
+            ano: 2018,
+            horas: 3200,
+            preco: 185000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/BobcatE35-1.jpg.jpeg", "imagens/BobcatE35-2.jpg.jpeg", "imagens/BobcatE35-3.jpg.jpeg",
+                "imagens/BobcatE35-4.jpg.jpeg", "imagens/BobcatE35-5.jpg.jpeg", "imagens/BobcatE35-6.jpg.jpeg",
+                "imagens/BobcatE35-7.jpg.jpeg", "imagens/BobcatE35-8.jpg.jpeg", "imagens/BobcatE35-9.jpg.jpeg"
+            ],
+            tipo: "Implementos",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 28,
+            nome: "Trator Valtra BM110",
+            marca: "Valtra",
+            ano: 2004,
+            horas: 10900,
+            preco: 110000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/Valtra-BM-01.jpg.jpeg", "imagens/Valtra-BM-02.jpg.jpeg", "imagens/Valtra-BM-03.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 29,
+            nome: "Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono)",
+            marca: "Massey Fergunson",
+            ano: 2013,
+            preco: 155000,
+            local: "Região de Marília-SP",
+            imagens: [
+                "imagens/MF 4275-1.jpg.jpeg", "imagens/MF 4275-2.jpg.jpeg", "imagens/MF 4275-3.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        }
+    ];
+
     const ITENS_POR_PAGINA = 12;
     let paginaAtual = 1;
     let filtroTipoAtivo = 'todos';
@@ -415,6 +916,12 @@ function gtag_report_conversion(url) {
     const paginacaoContainer = document.getElementById('paginacao');
     const filtroBotoes = document.querySelectorAll('.filtro-btn');
     const filtroMarcaSelect = document.getElementById('filtroMarca');
+    const paginaCatalogo = document.getElementById('paginaCatalogo');
+    const paginaProduto = document.getElementById('paginaProduto');
+    const containerProduto = document.getElementById('conteudoProduto');
+
+    let imagemAtualIndex = 0;
+    let imagensGaleria = [];
 
     function urlImagemLocal(src) {
         if (!src) return '';
@@ -492,7 +999,7 @@ function gtag_report_conversion(url) {
                     <p class="preco">R$ ${m.preco.toLocaleString('pt-BR')}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="produto.html?id=${m.id}" class="btn-detalhes">
+                    <a href="?id=${m.id}" class="btn-detalhes" onclick="abrirProduto(${m.id}, event)">
                         <i class="fas fa-search"></i> Ver Detalhes
                     </a>
                 </div>`;
@@ -516,7 +1023,145 @@ function gtag_report_conversion(url) {
             paginacaoContainer.appendChild(btn);
         }
     }
+
+    // =======================================================
+    // FUNÇÕES DE EXIBIÇÃO DA PÁGINA DE PRODUTO (UNIFICADA)
+    // =======================================================
+    function mostrarDetalhesProduto(produtoId) {
+        const maquina = maquinas.find(m => m.id === parseInt(produtoId));
+        paginaCatalogo.style.display = 'none';
+        paginaProduto.style.display = 'block';
+        window.scrollTo(0, 0);
+
+        if (!maquina) {
+            containerProduto.innerHTML = `
+                <div style="width: 100%; text-align: center; padding: 60px 20px;">
+                    <h2 style="color: var(--gold-dark); margin-bottom: 20px;">Máquina não encontrada ou já vendida.</h2>
+                    <a href="index.html" class="btn-voltar" onclick="voltarParaCatalogo(event)" style="display: inline-block;">Voltar ao Catálogo</a>
+                </div>
+            `;
+            return;
+        }
+
+        imagemAtualIndex = 0;
+        imagensGaleria = maquina.imagens && maquina.imagens.length > 0 ? maquina.imagens.map(urlImagemLocal) : [];
+        let htmlImagens = '';
+        let htmlThumbs = '';
+        
+        if(imagensGaleria.length > 0) {
+            htmlImagens = `
+                <button class="galeria-btn prev" onclick="navegarGaleria(-1)"><i class="fas fa-chevron-left"></i></button>
+                <img src="${imagensGaleria[0]}" id="imgPrincipal" alt="${maquina.nome}" onerror="this.src='https://via.placeholder.com/800x600/eef2f0/1b4332?text=Foto+Indisponivel'">
+                <button class="galeria-btn next" onclick="navegarGaleria(1)"><i class="fas fa-chevron-right"></i></button>
+            `;
+            
+            imagensGaleria.forEach((img, index) => {
+                let ativo = index === 0 ? 'ativo' : '';
+                htmlThumbs += `<img src="${img}" class="thumb ${ativo}" id="thumb-${index}" onclick="mudarImagem(${index})" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
+            });
+        } else {
+            htmlImagens = `<div style="padding:40px; color:#999; text-align:center;">Sem fotos disponíveis</div>`;
+        }
+
+        let telVendedor = maquina.vendedor ? maquina.vendedor.telefone : '5516997854876';
+        let telLimpo = telVendedor.replace(/\D/g, ''); 
+        if (!telLimpo.startsWith('55')) telLimpo = '55' + telLimpo;
+        
+        let linkWhatsComprar = `https://wa.me/${telLimpo}?text=` + encodeURIComponent(`Olá! Tenho interesse na máquina (ID: ${maquina.id}) ${maquina.nome} por R$ ${maquina.preco.toLocaleString('pt-BR')}. Pode me dar mais detalhes?`);
+
+        containerProduto.innerHTML = `
+            <div class="col-galeria">
+                <div class="galeria-principal">
+                    ${htmlImagens}
+                </div>
+                <div class="galeria-thumbs" id="thumbsContainer">
+                    ${htmlThumbs}
+                </div>
+            </div>
+            
+            <div class="col-detalhes">
+                <div class="detalhes-header">
+                    <h2>${maquina.nome}</h2>
+                    <div class="preco-box">R$ ${maquina.preco.toLocaleString('pt-BR')}</div>
+                </div>
+                
+                <div class="especificacoes">
+                    <div class="espec"><small>Marca</small><strong>${maquina.marca}</strong></div>
+                    <div class="espec"><small>Ano</small><strong>${maquina.ano}</strong></div>
+                    <div class="espec"><small>Horas / Estado</small><strong>${maquina.horas ? maquina.horas + 'h' : 'Consulte'}</strong></div>
+                    <div class="espec"><small>Local / Região</small><strong>${maquina.local ? maquina.local.replace('Região de ', '') : 'Consulte'}</strong></div>
+                </div>
+
+                <div class="contato-box">
+                    <h3>Gostou desta máquina?</h3>
+                    <a href="${linkWhatsComprar}" class="btn-whats" target="_blank" onclick="return gtag_report_conversion('${linkWhatsComprar}');">
+                        <i class="fab fa-whatsapp"></i> Falar sobre esta máquina
+                    </a>
+                    
+                    <div class="vendedor-info">
+                        <p><i class="fas fa-phone-alt"></i> ${telVendedor}</p>
+                        <p><i class="fas fa-envelope"></i> ${maquina.vendedor ? maquina.vendedor.email : 'contato.agrogiro@gmail.com'}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function abrirProduto(id, event) {
+        if (event) event.preventDefault();
+        try {
+            window.history.pushState({ id: id }, '', '?id=' + id);
+        } catch (e) {}
+        mostrarDetalhesProduto(id);
+    }
+
+    function voltarParaCatalogo(event) {
+        if (event) event.preventDefault();
+        try {
+            window.history.pushState({}, '', window.location.pathname);
+        } catch (e) {}
+        paginaProduto.style.display = 'none';
+        paginaCatalogo.style.display = 'block';
+    }
+
+    function mudarImagem(index) {
+        if(index < 0 || index >= imagensGaleria.length) return;
+        imagemAtualIndex = index;
+        
+        let imgPrincipal = document.getElementById('imgPrincipal');
+        if(imgPrincipal) {
+            imgPrincipal.src = imagensGaleria[index];
+            
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('ativo'));
+            let thumbAtivo = document.getElementById(`thumb-${index}`);
+            if(thumbAtivo) {
+                thumbAtivo.classList.add('ativo');
+                thumbAtivo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+    }
     
+    function navegarGaleria(direcao) {
+        let novoIndex = imagemAtualIndex + direcao;
+        
+        if (novoIndex >= imagensGaleria.length) novoIndex = 0;
+        if (novoIndex < 0) novoIndex = imagensGaleria.length - 1;
+        
+        mudarImagem(novoIndex);
+    }
+
+    // Suporte ao botão "Voltar" do navegador ou celular
+    window.addEventListener('popstate', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        if (id) {
+            mostrarDetalhesProduto(id);
+        } else {
+            paginaProduto.style.display = 'none';
+            paginaCatalogo.style.display = 'block';
+        }
+    });
+
     // Interação do FAQ
     document.querySelectorAll('.faq-pergunta').forEach(function(item) {
         item.addEventListener('click', function() {
@@ -527,6 +1172,13 @@ function gtag_report_conversion(url) {
     document.getElementById('ano').textContent = new Date().getFullYear();
     popularMarcas();
     renderizar();
+
+    // Verifica se a URL já abriu com ?id=X direto para uma máquina
+    const urlParamsInicial = new URLSearchParams(window.location.search);
+    const idInicial = urlParamsInicial.get('id');
+    if (idInicial) {
+        mostrarDetalhesProduto(idInicial);
+    }
 </script>
 </body>
 </html>
