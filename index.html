@@ -53,14 +53,23 @@ function gtag_report_conversion(url) {
             --white: #fff;
             --shadow: 0 4px 24px rgba(0,0,0,0.08);
             --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
-            --radius: 12px;
+            --radius: 16px;
             --transition: 0.25s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            padding-bottom: env(safe-area-inset-bottom, 0);
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+        }
         a { text-decoration: none; color: inherit; }
+        img { display: block; max-width: 100%; height: auto; -webkit-user-drag: none; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* Top Bar & Header */
@@ -68,7 +77,7 @@ function gtag_report_conversion(url) {
         .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
         .top-bar span { display: inline-flex; align-items: center; gap: 6px; }
 
-        header { background: var(--white); box-shadow: 0 1px 0 rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; }
+        header { background: var(--white); box-shadow: 0 1px 0 rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 100; padding-top: env(safe-area-inset-top, 0); }
         .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--green), var(--green-dark)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.3rem; }
@@ -99,40 +108,125 @@ function gtag_report_conversion(url) {
         .hero-stat span { font-size: 0.8rem; opacity: 0.85; }
 
         /* Filtros */
-        .filtros { background: var(--white); padding: 20px 0; position: sticky; top: 69px; z-index: 90; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .filtros { background: var(--white); padding: 20px 0; position: sticky; top: 68px; z-index: 90; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         .filtros .container { display: flex; flex-direction: column; gap: 16px; align-items: center; }
         .filtro-container { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; width: 100%; }
+        .filtro-container::-webkit-scrollbar { display: none; }
         .filtro-btn { padding: 10px 20px; border: 2px solid #e5e7eb; background: var(--white); color: var(--text); border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: var(--transition); white-space: nowrap; }
         .filtro-btn:hover { border-color: var(--green); color: var(--green); }
         .filtro-btn.ativo { background: var(--green); border-color: var(--green); color: #fff; }
         .filtro-select { padding: 10px 20px; border: 2px solid #e5e7eb; border-radius: 50px; background: var(--white); font-weight: 600; font-size: 0.9rem; cursor: pointer; color: var(--text); min-width: 250px; text-align: center; outline: none; }
         
-        /* Grid de Máquinas */
+        /* Grid de Máquinas (Estrutura Original Restaurada) */
         .maquinas { padding: 40px 0 80px; }
         .section-header { text-align: center; margin-bottom: 32px; }
         .section-header .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green); font-weight: 700; margin-bottom: 6px; }
         .section-header h2 { font-size: 1.8rem; color: var(--green-dark); margin-bottom: 8px; }
         .section-header p { color: var(--muted); max-width: 560px; margin: 0 auto; font-size: 0.95rem; }
         
-        .maquinas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform var(--transition); border: 1px solid #eef2f0; display: flex; flex-direction: column; }
+        .maquinas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--white); border-radius: var(--radius);
+            overflow: hidden; box-shadow: var(--shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid #eef2f0;
+            display: flex; flex-direction: column;
+        }
         .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 
-        .carousel { position: relative; width: 100%; aspect-ratio: 4 / 3; background-color: #f3f4f6; overflow: hidden; }
-        .carousel-track { display: flex; height: 100%; }
-        .carousel-slide { min-width: 100%; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-        .carousel-slide img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
-        .card-badge { position: absolute; top: 10px; left: 10px; background: var(--green); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; z-index: 2; text-transform: uppercase; }
+        /* CARROSSEL E IMAGENS DA PÁGINA PRINCIPAL (100% ORIGINAL) */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            user-select: none;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.35s ease;
+            will-change: transform;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 44px; height: 44px; border: none; border-radius: 50%;
+            background: rgba(255,255,255,0.92); color: var(--green-dark);
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            opacity: 0; transition: opacity var(--transition), background var(--transition);
+            z-index: 2;
+        }
+        .card:hover .carousel-btn,
+        .carousel:focus-within .carousel-btn { opacity: 1; }
+        .carousel-btn:hover { background: #fff; }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        .carousel-dots {
+            position: absolute; bottom: 10px; left: 50%;
+            transform: translateX(-50%);
+            display: flex; gap: 6px; z-index: 2;
+        }
+        .carousel-dot {
+            width: 7px; height: 7px; border-radius: 50%;
+            border: none; background: rgba(0,0,0,0.3);
+            cursor: pointer; padding: 0; transition: var(--transition);
+        }
+        .carousel-dot.ativo { background: var(--green-dark); width: 20px; border-radius: 4px; }
+        .carousel-counter {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,0.55); color: #fff;
+            font-size: 0.72rem; padding: 3px 8px;
+            border-radius: 20px; z-index: 2;
+        }
+        .card-badge {
+            position: absolute; top: 10px; left: 10px;
+            background: var(--green); color: #fff;
+            font-size: 0.72rem; font-weight: 700;
+            padding: 4px 10px; border-radius: 20px; z-index: 2;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
 
-        .card .info { padding: 16px; flex: 1; display: flex; flex-direction: column; }
-        .card .info h3 { font-size: 1rem; color: var(--green-dark); margin-bottom: 12px; line-height: 1.3; }
-        .card-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 16px; }
-        .card-meta span { background: var(--green-light); border-radius: 8px; padding: 6px; font-size: 0.75rem; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-        .card-meta span strong { display: block; color: var(--green-dark); font-size: 0.85rem; }
-        .card .info .preco { font-size: 1.35rem; font-weight: 800; color: var(--gold); margin-top: auto; }
+        .card .info { padding: 18px 18px 12px; flex: 1; display: flex; flex-direction: column; }
+        .card .info h3 { font-size: 1.05rem; color: var(--green-dark); margin-bottom: 10px; line-height: 1.3; }
+        .card-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+        .card-meta span {
+            background: var(--green-light); border-radius: 8px;
+            padding: 6px 8px; font-size: 0.78rem; text-align: center;
+            display: flex; flex-direction: column; justify-content: center; min-height: 52px; align-items: center;
+        }
+        .card-meta span strong {
+            display: block; color: var(--green-dark); font-size: 0.85rem;
+            line-height: 1.25; word-wrap: break-word; white-space: normal; margin-bottom: 2px;
+        }
+        .card .info .preco { font-size: 1.45rem; font-weight: 800; color: var(--gold); margin-top: auto; }
         
-        .card-footer { padding: 0 16px 16px; }
-        .card .btn-detalhes { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--green-dark); color: #fff; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; transition: var(--transition); width: 100%; cursor: pointer; border: none; }
+        .card-footer { padding: 0 15px 15px; }
+        .card .btn-detalhes { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--green-dark); color: #fff; padding: 14px 16px; border-radius: 12px; font-weight: 700; font-size: 0.95rem; transition: var(--transition); width: 100%; min-height: 52px; cursor: pointer; border: none; }
         .card .btn-detalhes:hover { background: var(--green); }
 
         .paginacao { display: flex; justify-content: center; gap: 8px; margin: 32px 0; flex-wrap: wrap; }
@@ -225,35 +319,78 @@ function gtag_report_conversion(url) {
         .vendedor-info p { display: flex; align-items: center; gap: 12px; margin: 0; }
         .vendedor-info i { color: var(--green); font-size: 1.1rem; width: 20px; text-align: center; }
 
+        /* Tablet */
         @media (max-width: 1024px) {
-            .maquinas-grid { grid-template-columns: repeat(2, 1fr); }
+            .maquinas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
             .hero-grid { grid-template-columns: 1fr; gap: 30px; }
         }
+
+        /* Tablet pequeno */
         @media (max-width: 900px) {
             .produto-container { flex-direction: column; gap: 24px; padding: 24px 0; }
             .col-detalhes { position: static; }
             .galeria-principal { aspect-ratio: 4 / 3; max-height: none; }
             .galeria-btn { opacity: 1; width: 36px; height: 36px; }
+            .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
         }
+
+        /* Celular — iOS e Android */
         @media (max-width: 768px) {
-            .maquinas-grid { grid-template-columns: 1fr; }
-            .filtro-container { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 5px; justify-content: flex-start; -webkit-overflow-scrolling: touch; }
-            .filtro-btn { flex-shrink: 0; }
-            .filtro-select { width: 100%; min-width: auto; }
             .top-bar { display: none; }
             .header-inner { padding: 10px 0; }
             .header-cta span { display: none; }
-            .header-cta { padding: 10px; border-radius: 50%; }
+            .header-cta { width: 44px; height: 44px; padding: 0; justify-content: center; border-radius: 50%; }
             .hero-actions { flex-direction: column; }
             .hero-actions a { width: 100%; justify-content: center; }
             .hero-card { margin-top: 10px; }
-            .why-grid, .depoimentos-grid { grid-template-columns: 1fr; }
         }
+
+        @media (max-width: 640px) {
+            .container { padding: 0 14px; }
+            .maquinas-grid { grid-template-columns: 1fr; gap: 20px; }
+            .carousel {
+                height: 200px;
+                aspect-ratio: auto;
+            }
+            .carousel-btn { opacity: 1; width: 44px; height: 44px; }
+            .card .info h3 { font-size: 1rem; line-height: 1.35; }
+            .card-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+            .card-meta span { font-size: 0.72rem; padding: 5px 6px; min-height: 48px; }
+            .card-meta span strong { font-size: 0.8rem; line-height: 1.3; }
+            .card .info .preco { font-size: 1.35rem; }
+            .card-footer { padding: 0 15px 18px; }
+            .filtros {
+                top: calc(64px + env(safe-area-inset-top, 0));
+                padding: 14px 0;
+            }
+            .filtro-container {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 4px 4px;
+                scrollbar-width: none;
+            }
+            .filtro-btn {
+                flex-shrink: 0;
+                padding: 10px 18px;
+                font-size: 0.84rem;
+                min-height: 44px;
+            }
+            .filtro-select { width: 100%; min-width: auto; }
+        }
+
         @media (max-width: 480px) {
             header { padding: 12px 0; }
             .especificacoes { grid-template-columns: 1fr; gap: 8px; }
             .contato-box { padding: 20px 16px; }
             .thumb { flex: 0 0 70px; height: 55px; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .carousel-btn { opacity: 1; }
+            .card:hover { transform: none; box-shadow: var(--shadow); }
+            .header-cta, .btn-detalhes, .filtro-btn { min-height: 44px; }
         }
     </style>
 </head>
@@ -492,7 +629,6 @@ function gtag_report_conversion(url) {
 <!-- DADOS E SCRIPTS UNIFICADOS                              -->
 <!-- ======================================================= -->
 <script>
-    // Arquivo: dados.js integrado
     const WHATSAPP = '5516997854876';
 
     const maquinas = [
@@ -505,10 +641,60 @@ function gtag_report_conversion(url) {
             preco: 610000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "imagens/JD 8270r-01.jpg.jpg", "imagens/JD 8270r-02.jpg.jpg", "imagens/JD 8270r-03.jpg.jpg",
-                "imagens/JD 8270r-04.jpg.jpg", "imagens/JD 8270r-05.jpg.jpg", "imagens/JD 8270r-06.jpg.jpg",
-                "imagens/JD 8270r-07.jpg.jpg", "imagens/JD 8270r-08.jpg.jpg", "imagens/JD 8270r-09.jpg.jpg",
+                "imagens/JD 8270r-01.jpg.jpg",
+                "imagens/JD 8270r-02.jpg.jpg",
+                "imagens/JD 8270r-03.jpg.jpg",
+                "imagens/JD 8270r-04.jpg.jpg",
+                "imagens/JD 8270r-05.jpg.jpg",
+                "imagens/JD 8270r-06.jpg.jpg",
+                "imagens/JD 8270r-07.jpg.jpg",
+                "imagens/JD 8270r-08.jpg.jpg",
+                "imagens/JD 8270r-09.jpg.jpg",
                 "imagens/JD 8270r-10.jpg.jpg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 21,
+            nome: "Trator Massey Fergunson 4708 (Reversor Eletro-hidráulico - Único dono) ",
+            marca: "Massey Fergunson",
+            ano: 2019,
+            horas: 2520,
+            preco: 150000,
+            local: "Região de Santa Cruz do Rio Pardo-SP",
+            imagens: [
+                "imagens/Massey Fergunson 4708-01.jpg.jpeg",
+                "imagens/Massey Fergunson 4708-02.jpg.jpeg",
+                "imagens/Massey Fergunson 4708-03.jpg.jpeg",
+                "imagens/Massey Fergunson 4708-04.jpg.jpeg"
+            ],
+            tipo: "Trator",
+            vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
+        },
+        {
+            id: 30,
+            nome: "Trator Massey Fergunson 4707 (Tração central - Reversor Eletro-hidráulico - Super Redutor - Único dono) ",
+            marca: "Massey Fergunson",
+            ano: 2023,
+            horas: 1880,
+            preco: 225000,
+            local: "Região de Duartina-SP",
+            imagens: [
+                "imagens/Massey Fergunson 4707-2023-05.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-07.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-08.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-11.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-01.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-02.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-03.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-04.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-06.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-09.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-10.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-12.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-13.jpg.jpeg",
+                "imagens/Massey Fergunson 4707-2023-14.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -522,8 +708,11 @@ function gtag_report_conversion(url) {
             preco: 110000,
             local: "Região de Itaporanga-SP",
             imagens: [
-                "imagens/Valtra A850-2.jpg.jpeg", "imagens/Valtra A850-3.jpg.jpeg",
-                "imagens/Valtra A850-4.jpg.jpeg", "imagens/Valtra A850-6.jpg.jpeg", "imagens/Valtra A850-1.jpg.jpeg"
+                "imagens/Valtra A850-2.jpg.jpeg",
+                "imagens/Valtra A850-3.jpg.jpeg",
+                "imagens/Valtra A850-4.jpg.jpeg",
+                "imagens/Valtra A850-6.jpg.jpeg",
+                "imagens/Valtra A850-1.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -535,7 +724,9 @@ function gtag_report_conversion(url) {
             ano: 1990,
             preco: 95000,
             local: "Região de Marília-SP",
-            imagens: ["imagens/Ford7610.jpg.jpeg"],
+            imagens: [
+                "imagens/Ford7610.jpg.jpeg"
+            ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
         },
@@ -548,7 +739,9 @@ function gtag_report_conversion(url) {
             preco: 100000,
             local: "Região de Santa Cruz do Rio Pardo-SP",
             imagens: [
-                "imagens/TratorTS110-1.jpg.jpeg", "imagens/TratorTS110-2.jpg.jpeg", "imagens/TratorTS110-3.jpg.jpeg"
+                "imagens/TratorTS110-1.jpg.jpeg",
+                "imagens/TratorTS110-2.jpg.jpeg",
+                "imagens/TratorTS110-3.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -562,10 +755,14 @@ function gtag_report_conversion(url) {
             preco: 540000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/ColhedoraS440_05.jpg.jpeg", "Cliente Raphael/ColhedoraS440_01.jpg.jpeg",
-                "Cliente Raphael/ColhedoraS440_02.jpg.jpeg", "Cliente Raphael/ColhedoraS440_03.jpg.jpeg",
-                "Cliente Raphael/ColhedoraS440_04.jpg.jpeg", "Cliente Raphael/ColhedoraS440_06.jpg.jpeg",
-                "Cliente Raphael/ColhedoraS440_07.jpg.jpeg", "Cliente Raphael/ColhedoraS440_08.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_05.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_01.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_02.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_03.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_04.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_06.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_07.jpg.jpeg",
+                "Cliente Raphael/ColhedoraS440_08.jpg.jpeg",
                 "Cliente Raphael/Plataforma625F_1.jpg.jpeg"
             ],
             tipo: "Colhedoras",
@@ -580,8 +777,10 @@ function gtag_report_conversion(url) {
             preco: 37000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/Quadriciclo TRX_420_1.jpg.jpeg", "Cliente Raphael/Quadriciclo TRX_420_2.jpg.jpeg",
-                "Cliente Raphael/Quadriciclo TRX_420_3.jpg.jpeg", "Cliente Raphael/Quadriciclo TRX_420_4.jpg.jpeg"
+                "Cliente Raphael/Quadriciclo TRX_420_1.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_2.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_3.jpg.jpeg",
+                "Cliente Raphael/Quadriciclo TRX_420_4.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -594,10 +793,14 @@ function gtag_report_conversion(url) {
             preco: 70000,
             local: "Região de Marília-SP",
             imagens: [
-                "Cliente_Douglas/Pulverizador Jacto_Condor 800_1.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_2.jpg.jpeg",
-                "Cliente_Douglas/Pulverizador Jacto_Condor 800_3.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_4.jpg.jpeg",
-                "Cliente_Douglas/Pulverizador Jacto_Condor 800_5.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_6.jpg.jpeg",
-                "Cliente_Douglas/Pulverizador Jacto_Condor 800_7.jpg.jpeg", "Cliente_Douglas/Pulverizador Jacto_Condor 800_8.jpg.jpeg"
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_1.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_2.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_3.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_4.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_5.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_6.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_7.jpg.jpeg",
+                "Cliente_Douglas/Pulverizador Jacto_Condor 800_8.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -627,9 +830,12 @@ function gtag_report_conversion(url) {
             preco: 110000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/CarregaderiaCBT8060-2477h_1.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_2.jpg.jpg",
-                "Cliente Raphael/CarregaderiaCBT8060-2477h_3.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_4.jpg.jpg",
-                "Cliente Raphael/CarregaderiaCBT8060-2477h_5.jpg.jpg", "Cliente Raphael/CarregaderiaCBT8060-2477h_6.jpg.jpg"
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_1.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_2.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_3.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_4.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_5.jpg.jpg",
+                "Cliente Raphael/CarregaderiaCBT8060-2477h_6.jpg.jpg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -642,8 +848,10 @@ function gtag_report_conversion(url) {
             preco: 430000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-1.jpg.jpeg", "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-2.jpg.jpeg",
-                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-3.jpg.jpeg", "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-4.jpg.jpeg"
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-1.jpg.jpeg",
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-2.jpg.jpeg",
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-3.jpg.jpeg",
+                "Cliente Raphael/97319-PLANTADEIRA CANA TT 8022BT-4.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -656,8 +864,10 @@ function gtag_report_conversion(url) {
             preco: 375000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-1.jpg.jpeg", "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-2.jpg.jpeg",
-                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-3.jpg.jpeg", "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-4.jpg.jpeg"
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-1.jpg.jpeg",
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-2.jpg.jpeg",
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-3.jpg.jpeg",
+                "Cliente Raphael/97311-PLANTADEIRA DE CANA  TT 8022-4.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -670,8 +880,10 @@ function gtag_report_conversion(url) {
             preco: 270000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_1.jpg.jpeg", "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_2.jpg.jpeg",
-                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_3.jpg.jpeg", "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_4.jpg.jpeg"
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_1.jpg.jpeg",
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_2.jpg.jpeg",
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_3.jpg.jpeg",
+                "Cliente Raphael/97150-PLANTADEIRA DE CANA DMB_4.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -684,8 +896,10 @@ function gtag_report_conversion(url) {
             preco: 40000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 1.jpg.jpeg", "Cliente Raphael/97181-TRANSBORDO SE 10500 - 2.jpg.jpeg",
-                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 3.jpg.jpeg", "Cliente Raphael/97181-TRANSBORDO SE 10500 - 4.jpg.jpeg"
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 1.jpg.jpeg",
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 2.jpg.jpeg",
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 3.jpg.jpeg",
+                "Cliente Raphael/97181-TRANSBORDO SE 10500 - 4.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -698,8 +912,10 @@ function gtag_report_conversion(url) {
             preco: 130000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_1.jpg .jpeg", "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_2.jpg .jpeg",
-                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_3.jpg .jpeg", "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_4.jpg .jpeg"
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_1.jpg .jpeg",
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_2.jpg .jpeg",
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_3.jpg .jpeg",
+                "Cliente Raphael/97122-CARRETA SULCADORA TORTA150MM_4.jpg .jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -712,7 +928,9 @@ function gtag_report_conversion(url) {
             preco: 110000,
             local: "Região de Marília-SP",
             imagens: [
-                "imagens/Plantadeira-Valtra-01.jpg.jpg", "imagens/Plantadeira-Valtra-02.jpg.jpg", "imagens/Plantadeira-Valtra-03.jpg.jpg"
+                "imagens/Plantadeira-Valtra-01.jpg.jpg",
+                "imagens/Plantadeira-Valtra-02.jpg.jpg",
+                "imagens/Plantadeira-Valtra-03.jpg.jpg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -724,7 +942,9 @@ function gtag_report_conversion(url) {
             ano: 2020,
             preco: 10000,
             local: "Região de Botucatu-SP",
-            imagens: ["Cliente Raphael/97313-DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300-1.jpg.jpeg"],
+            imagens: [
+                "Cliente Raphael/97313-DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300-1.jpg.jpeg"
+            ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
         },
@@ -736,9 +956,12 @@ function gtag_report_conversion(url) {
             preco: 28000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_1.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_2.jpg.jpeg",
-                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_3.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_4.jpg.jpeg",
-                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_5.jpg.jpeg", "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_6.jpg.jpeg"
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_1.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_2.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_3.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_4.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_5.jpg.jpeg",
+                "Cliente Raphael/97078-CARRETA DISTR TORTA DAMASCENO_6.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -751,8 +974,10 @@ function gtag_report_conversion(url) {
             preco: 16000,
             local: "Região de Marília-SP",
             imagens: [
-                "Cliente_Douglas/Arado 4 bicos_marchesan_1.jpg.jpeg", "Cliente_Douglas/Arado 4 bicos_marchesan_2.jpg.jpeg",
-                "Cliente_Douglas/Arado 4 bicos_marchesan_3.jpg.jpeg", "Cliente_Douglas/Arado 4 bicos_marchesan_4.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_1.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_2.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_3.jpg.jpeg",
+                "Cliente_Douglas/Arado 4 bicos_marchesan_4.jpg.jpeg",
                 "Cliente_Douglas/Arado 4 bicos_marchesan_5.jpg.jpeg"
             ],
             tipo: "Implementos",
@@ -766,7 +991,9 @@ function gtag_report_conversion(url) {
             preco: 14000,
             local: "Região de Marília-SP",
             imagens: [
-                "Cliente_Douglas/Arado 3 bicos_marchesan_3.jpg.jpeg", "Cliente_Douglas/Arado 3 bicos_marchesan_2.jpg.jpeg", "Cliente_Douglas/Arado 3 bicos_marchesan_1.jpg.jpeg"
+                "Cliente_Douglas/Arado 3 bicos_marchesan_3.jpg.jpeg",
+                "Cliente_Douglas/Arado 3 bicos_marchesan_2.jpg.jpeg",
+                "Cliente_Douglas/Arado 3 bicos_marchesan_1.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -779,8 +1006,10 @@ function gtag_report_conversion(url) {
             preco: 45000,
             local: "Região de Marília-SP",
             imagens: [
-                "Cliente_Douglas/Arrancadeira de mandioca_1.jpg.jpeg", "Cliente_Douglas/Arrancadeira de mandioca_2.jpg.jpeg",
-                "Cliente_Douglas/Arrancadeira de mandioca_3.jpg.jpeg", "Cliente_Douglas/Arrancadeira de mandioca_4.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_1.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_2.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_3.jpg.jpeg",
+                "Cliente_Douglas/Arrancadeira de mandioca_4.jpg.jpeg",
                 "Cliente_Douglas/Arrancadeira de mandioca_5.jpg.jpeg"
             ],
             tipo: "Implementos",
@@ -795,8 +1024,12 @@ function gtag_report_conversion(url) {
             preco: 124000,
             local: "Região de Itaporanga-SP",
             imagens: [
-                "imagens/Valtra A52s.01.jpg.jpg", "imagens/Valtra A52s.02.jpg.jpg", "imagens/Valtra A52s.03.jpg.jpg",
-                "imagens/Valtra A52s.04.jpg.jpg", "imagens/Valtra A52s.05.jpg.jpg", "imagens/Valtra A52s.06.jpg.jpg"
+                "imagens/Valtra A52s.01.jpg.jpg",
+                "imagens/Valtra A52s.02.jpg.jpg",
+                "imagens/Valtra A52s.03.jpg.jpg",
+                "imagens/Valtra A52s.04.jpg.jpg",
+                "imagens/Valtra A52s.05.jpg.jpg",
+                "imagens/Valtra A52s.06.jpg.jpg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -810,9 +1043,14 @@ function gtag_report_conversion(url) {
             preco: 150000,
             local: "Região de Santa Cruz do Rio Pardo-SP",
             imagens: [
-                "imagens/Valtra BM125-1.jpg.jpeg", "imagens/Valtra BM125-2.jpg.jpeg", "imagens/Valtra BM125-3.jpg.jpeg",
-                "imagens/Valtra BM125-4.jpg.jpeg", "imagens/Valtra BM125-5.jpg.jpeg", "imagens/Valtra BM125-6.jpg.jpeg",
-                "imagens/Valtra BM125-7.jpg.jpeg", "imagens/Valtra BM125-8.jpg.jpeg"
+                "imagens/Valtra BM125-1.jpg.jpeg",
+                "imagens/Valtra BM125-2.jpg.jpeg",
+                "imagens/Valtra BM125-3.jpg.jpeg",
+                "imagens/Valtra BM125-4.jpg.jpeg",
+                "imagens/Valtra BM125-5.jpg.jpeg",
+                "imagens/Valtra BM125-6.jpg.jpeg",
+                "imagens/Valtra BM125-7.jpg.jpeg",
+                "imagens/Valtra BM125-8.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -826,8 +1064,11 @@ function gtag_report_conversion(url) {
             preco: 235000,
             local: "Região de Ibiúna-SP",
             imagens: [
-                "imagens/MF6713.01.jpg.jpeg", "imagens/MF6713.02.jpg.jpeg", "imagens/MF6713.03.jpg.jpeg",
-                "imagens/MF6713.04.jpg.jpeg", "imagens/MF6713.05.jpg.jpeg"
+                "imagens/MF6713.01.jpg.jpeg",
+                "imagens/MF6713.02.jpg.jpeg",
+                "imagens/MF6713.03.jpg.jpeg",
+                "imagens/MF6713.04.jpg.jpeg",
+                "imagens/MF6713.05.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -840,7 +1081,10 @@ function gtag_report_conversion(url) {
             preco: 90000,
             local: "Região de Marília-SP",
             imagens: [
-                "imagens/MF 290-01.jpg.jpg", "imagens/MF 290-02.jpg.jpg", "imagens/MF 290-03.jpg.jpg", "imagens/MF 290-04.jpg.jpg"
+                "imagens/MF 290-01.jpg.jpg",
+                "imagens/MF 290-02.jpg.jpg",
+                "imagens/MF 290-03.jpg.jpg",
+                "imagens/MF 290-04.jpg.jpg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -854,9 +1098,12 @@ function gtag_report_conversion(url) {
             preco: 305000,
             local: "Região de Botucatu-SP",
             imagens: [
-                "Cliente Raphael/pa_carregaderia_LF70_7.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_6.jpg.jpeg",
-                "Cliente Raphael/pa_carregaderia_LF70_5.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_4.jpg.jpeg",
-                "Cliente Raphael/pa_carregaderia_LF70_3.jpg.jpeg", "Cliente Raphael/pa_carregaderia_LF70_2.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_7.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_6.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_5.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_4.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_3.jpg.jpeg",
+                "Cliente Raphael/pa_carregaderia_LF70_2.jpg.jpeg",
                 "Cliente Raphael/pa_carregaderia_LF70_1.jpg.jpeg"
             ],
             tipo: "Implementos",
@@ -871,9 +1118,15 @@ function gtag_report_conversion(url) {
             preco: 185000,
             local: "Região de Marília-SP",
             imagens: [
-                "imagens/BobcatE35-1.jpg.jpeg", "imagens/BobcatE35-2.jpg.jpeg", "imagens/BobcatE35-3.jpg.jpeg",
-                "imagens/BobcatE35-4.jpg.jpeg", "imagens/BobcatE35-5.jpg.jpeg", "imagens/BobcatE35-6.jpg.jpeg",
-                "imagens/BobcatE35-7.jpg.jpeg", "imagens/BobcatE35-8.jpg.jpeg", "imagens/BobcatE35-9.jpg.jpeg"
+                "imagens/BobcatE35-1.jpg.jpeg",
+                "imagens/BobcatE35-2.jpg.jpeg",
+                "imagens/BobcatE35-3.jpg.jpeg",
+                "imagens/BobcatE35-4.jpg.jpeg",
+                "imagens/BobcatE35-5.jpg.jpeg",
+                "imagens/BobcatE35-6.jpg.jpeg",
+                "imagens/BobcatE35-7.jpg.jpeg",
+                "imagens/BobcatE35-8.jpg.jpeg",
+                "imagens/BobcatE35-9.jpg.jpeg"
             ],
             tipo: "Implementos",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -887,7 +1140,9 @@ function gtag_report_conversion(url) {
             preco: 110000,
             local: "Região de Marília-SP",
             imagens: [
-                "imagens/Valtra-BM-01.jpg.jpeg", "imagens/Valtra-BM-02.jpg.jpeg", "imagens/Valtra-BM-03.jpg.jpeg"
+                "imagens/Valtra-BM-01.jpg.jpeg",
+                "imagens/Valtra-BM-02.jpg.jpeg",
+                "imagens/Valtra-BM-03.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -900,7 +1155,9 @@ function gtag_report_conversion(url) {
             preco: 155000,
             local: "Região de Marília-SP",
             imagens: [
-                "imagens/MF 4275-1.jpg.jpeg", "imagens/MF 4275-2.jpg.jpeg", "imagens/MF 4275-3.jpg.jpeg"
+                "imagens/MF 4275-1.jpg.jpeg",
+                "imagens/MF 4275-2.jpg.jpeg",
+                "imagens/MF 4275-3.jpg.jpeg"
             ],
             tipo: "Trator",
             vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
@@ -919,14 +1176,96 @@ function gtag_report_conversion(url) {
     const paginaCatalogo = document.getElementById('paginaCatalogo');
     const paginaProduto = document.getElementById('paginaProduto');
     const containerProduto = document.getElementById('conteudoProduto');
+    const PLACEHOLDER_ANGLES = ['Vista frontal', 'Vista lateral', 'Detalhe'];
 
     let imagemAtualIndex = 0;
     let imagensGaleria = [];
 
-    function urlImagemLocal(src) {
+    function baseUrl() {
+        var path = window.location.pathname;
+        if (path.endsWith('.html')) {
+            return window.location.origin + path.substring(0, path.lastIndexOf('/') + 1);
+        }
+        if (!path.endsWith('/')) path += '/';
+        return window.location.origin + path;
+    }
+
+    function urlImagem(src) {
         if (!src) return '';
-        if (src.startsWith('http')) return src;
-        return src;
+        if (src.indexOf('http://') === 0 || src.indexOf('https://') === 0) return src;
+        var limpo = src.replace(/^\.\//, '');
+        if (window.location.protocol === 'file:') return limpo;
+        return encodeURI(baseUrl() + limpo).replace(/#/g, '%23');
+    }
+
+    function obterImagens(m) {
+        if (Array.isArray(m.imagens) && m.imagens.length > 0) return m.imagens;
+        if (m.imagem) return [m.imagem];
+        return PLACEHOLDER_ANGLES.map(function(angulo) {
+            return 'https://via.placeholder.com/600x400/2d6a4f/ffffff?text=' + encodeURIComponent(angulo);
+        });
+    }
+
+    function criarCarousel(id, imagens, nome, tipo) {
+        var slides = imagens.map(function(src, i) {
+            var caminho = urlImagem(src);
+            var lazyAttr = i === 0 ? '' : ' loading="lazy" decoding="async"';
+            return '<div class="carousel-slide"><img src="' + caminho + '" alt="' + nome + ' Usado à Venda AgroGiro — foto ' + (i + 1) + '"' + lazyAttr + ' style="width: 100% !important; height: 100% !important; max-height: 100% !important; object-fit: contain !important; background-color: #f4f4f4;" onerror="this.onerror=null;this.src=\'data:image/svg+xml,' + encodeURIComponent('<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'><rect fill=\'%23f3f4f6\' width=\'600\' height=\'400\'/><text x=\'50%\' y=\'50%\' text-anchor=\'middle\' fill=\'%231b4332\' font-family=\'sans-serif\' font-size=\'18\'>Foto indisponível</text></svg>') + '\'"></div>';
+        }).join('');
+
+        var dots = imagens.length > 1
+            ? '<div class="carousel-dots">' + imagens.map(function(_, i) {
+                return '<button class="carousel-dot' + (i === 0 ? ' ativo' : '') + '" data-index="' + i + '" aria-label="Foto ' + (i + 1) + '"></button>';
+            }).join('') + '</div>'
+            : '';
+
+        var nav = imagens.length > 1
+            ? '<button class="carousel-btn prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>' +
+              '<button class="carousel-btn next" aria-label="Próxima foto"><i class="fas fa-chevron-right"></i></button>' +
+              '<span class="carousel-counter">1 / ' + imagens.length + '</span>'
+            : '';
+
+        return '<div class="carousel" data-carousel="' + id + '" tabindex="0">' +
+            '<span class="card-badge">' + tipo + '</span>' +
+            '<div class="carousel-track">' + slides + '</div>' +
+            nav + dots +
+            '</div>';
+    }
+
+    function initCarousel(el) {
+        if (!el) return;
+        var track = el.querySelector('.carousel-track');
+        var slides = el.querySelectorAll('.carousel-slide');
+        var dots = el.querySelectorAll('.carousel-dot');
+        var counter = el.querySelector('.carousel-counter');
+        var prev = el.querySelector('.carousel-btn.prev');
+        var next = el.querySelector('.carousel-btn.next');
+        if (!slides.length || slides.length === 1 || !prev || !next) return;
+
+        var index = 0;
+        var startX = 0;
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            dots.forEach(function(d, j) { d.classList.toggle('ativo', j === index); });
+            if (counter) counter.textContent = (index + 1) + ' / ' + slides.length;
+        }
+
+        prev.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index - 1); });
+        next.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(index + 1); });
+        dots.forEach(function(d) {
+            d.addEventListener('click', function(e) {
+                e.preventDefault(); e.stopPropagation();
+                goTo(parseInt(d.dataset.index, 10));
+            });
+        });
+
+        el.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+        el.addEventListener('touchend', function(e) {
+            var diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(index + (diff > 0 ? 1 : -1));
+        }, { passive: true });
     }
 
     function popularMarcas() {
@@ -974,21 +1313,15 @@ function gtag_report_conversion(url) {
             return;
         }
 
-        paginaItens.forEach(m => {
-            let imagemSrc = m.imagens && m.imagens.length > 0 ? urlImagemLocal(m.imagens[0]) : '';
+        paginaItens.forEach((m, idx) => {
+            let imagens = obterImagens(m);
+            let carouselId = 'c-' + paginaAtual + '-' + idx;
             let card = document.createElement('article');
             card.className = 'card';
             
-            card.innerHTML = `
-                <div class="carousel">
-                    <span class="card-badge">${m.tipo}</span>
-                    <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <img src="${imagemSrc}" alt="${m.nome}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/800x600/eef2f0/1b4332?text=Foto+Indisponivel'">
-                        </div>
-                    </div>
-                </div>
-                <div class="info">
+            card.innerHTML =
+                criarCarousel(carouselId, imagens, m.nome, m.tipo) +
+                `<div class="info">
                     <h3>${m.nome}</h3>
                     <div class="card-meta">
                         <span><strong>${m.marca}</strong>Marca</span>
@@ -1004,6 +1337,7 @@ function gtag_report_conversion(url) {
                     </a>
                 </div>`;
             grid.appendChild(card);
+            initCarousel(card.querySelector('.carousel'));
         });
 
         renderizarPaginacao(totalPaginas);
@@ -1044,7 +1378,7 @@ function gtag_report_conversion(url) {
         }
 
         imagemAtualIndex = 0;
-        imagensGaleria = maquina.imagens && maquina.imagens.length > 0 ? maquina.imagens.map(urlImagemLocal) : [];
+        imagensGaleria = maquina.imagens && maquina.imagens.length > 0 ? maquina.imagens.map(urlImagem) : [];
         let htmlImagens = '';
         let htmlThumbs = '';
         
