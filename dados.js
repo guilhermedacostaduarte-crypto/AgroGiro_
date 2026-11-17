@@ -293,20 +293,6 @@ const maquinas = [
         vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
     },
     {
-        id: 21,
-        nome: "Trator John Deere 6100J - Syncroplus (Único dono) ",
-        marca: "John Deere",
-        ano: 2017,
-        horas: 7400,
-        preco: 145000,
-        local: "Região de Itaporanga-SP",
-        imagens: [
-            "imagens/JD6100j.01.jpg.jpg", "imagens/JD6100j.02.jpg.jpg", "imagens/JD6100j.03.jpg.jpg", "imagens/JD6100j.04.jpg.jpg"
-        ],
-        tipo: "Trator",
-        vendedor: { telefone: "16 99785-4876", email: "contato.agrogiro@gmail.com" }
-    },
-    {
         id: 22,
         nome: "Trator Valtra A52s (57cv)",
         marca: "Valtra",
