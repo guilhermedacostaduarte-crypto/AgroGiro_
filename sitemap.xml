@@ -1,15 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Principal -->
   <url>
     <loc>https://agrogiro-multmarcas.com.br/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Política de Intermediação -->
   <url>
     <loc>https://agrogiro-multmarcas.com.br/politica.html</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <!-- Máquinas do Catálogo (31 anúncios ativos) -->
+  <url>
+    <!-- Trator John Deere 8270R -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=1</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Valtra BH 194 HiTech -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=32</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Massey Ferguson 4708 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=21</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Massey Ferguson 4707 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=30</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Pulverizador Uniport 3030 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=31</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Valtra A850 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=2</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Ford 7610 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=3</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator TS 110 New Holland -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=4</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Colheitadeira John Deere S440 + Plataforma 625F -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=5</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Pulverizador Jacto Condor 800 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=7</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Plantadora Adubadora de Soja COP CA 9/9 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=8</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Carregadeira CBT 8060 4x4 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=9</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Plantadeira de Cana TT 8022BT -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=10</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Plantadeira de Cana TT 8022 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=11</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Plantadeira de Cana DMB -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=12</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Transbordo SE 10500 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=13</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Carreta Sulcadora Torta 150mm -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=14</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Plantadeira Valtra Hitech 11 linhas -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=15</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Distribuidor de Fertilizantes Ipacol DFD 1300 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=16</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Distribuidor de Torta Damasceno -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=17</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Arado Aiveca 4 bicos - Tatu Marchesan -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=18</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Arado Aiveca 3 bicos - Tatu Marchesan -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=19</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Arrancadeira de Mandioca e Batata - CLK -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=20</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Valtra A52s -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=22</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Valtra BM 125 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=23</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Massey Ferguson 6713 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=24</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Massey Ferguson 290 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=25</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Pá Carregadeira Volvo LF70 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=26</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Bobcat E35 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=27</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator Valtra BM110 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=28</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <!-- Trator MF 4275 -->
+    <loc>https://agrogiro-multmarcas.com.br/?id=29</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
