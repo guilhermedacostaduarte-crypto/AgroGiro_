@@ -3,7 +3,7 @@
   <channel>
     <title>AgroGiro - Máquinas Agrícolas Usadas</title>
     <link>https://agrogiro-multmarcas.com.br</link>
-    <description>Catálogo de Tratores, Colhedoras e Implementos agrícolas usados com procedência verificada e negociação direta pelo WhatsApp.</description>
+    <description>Catálogo de Tratores, Colhedoras e Implementos agrícolas usados com procedência verificada e negociação direta pelo WhatsApp em todo o Brasil.</description>
 
     <!-- Trator John Deere 8270R (Transmissão e motor revisados em 2026) - Único dono (ID: 1) -->
     <item>
@@ -30,12 +30,38 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Valtra BH 194 HiTech (Único dono) (ID: 32) -->
+    <!-- Pulverizador Uniport 2500 Star - 24 metros de barra (Único dono) (ID: 2) -->
     <item>
-      <g:id>AGROGIRO-32</g:id>
+      <g:id>AGROGIRO-2</g:id>
+      <g:title><![CDATA[Pulverizador Uniport 2500 Star - 24 metros de barra (Único dono)]]></g:title>
+      <g:description><![CDATA[Pulverizador Uniport 2500 Star - 24 metros de barra (Único dono). Máquina agrícola usada (Implementos), marca Jacto, ano 2013. 2200 horas trabalhadas. Localizada na Região de Tangará da Serra-MT. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=2</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-01.jpeg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-02.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-03.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-04.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-05.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-06.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-07.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-08.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-09.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-10.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%202500-11.jpeg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>420000.00 BRL</g:price>
+      <g:brand><![CDATA[Jacto]]></g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>112</g:google_product_category>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Pulverizadores Usados]]></g:product_type>
+    </item>
+
+    <!-- Trator Valtra BH 194 HiTech (Único dono) (ID: 3) -->
+    <item>
+      <g:id>AGROGIRO-3</g:id>
       <g:title><![CDATA[Trator Valtra BH 194 HiTech (Único dono)]]></g:title>
       <g:description><![CDATA[Trator Valtra BH 194 HiTech (Único dono). Máquina agrícola usada (Trator), marca Valtra, ano 2019. 3800 horas trabalhadas. Localizada na Região de Piraju-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=32</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=3</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BH%20194-04.jpeg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BH%20194-05.jpeg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BH%20194-03.jpeg.jpeg</g:additional_image_link>
@@ -50,12 +76,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Massey Ferguson 4708 (Reversor Eletro-hidráulico - Único dono) (ID: 21) -->
+    <!-- Trator Massey Ferguson 4708 (Reversor Eletro-hidráulico - Único dono) (ID: 4) -->
     <item>
-      <g:id>AGROGIRO-21</g:id>
+      <g:id>AGROGIRO-4</g:id>
       <g:title><![CDATA[Trator Massey Ferguson 4708 (Reversor Eletro-hidráulico - Único dono)]]></g:title>
       <g:description><![CDATA[Trator Massey Ferguson 4708 (Reversor Eletro-hidráulico - Único dono). Máquina agrícola usada (Trator), marca Massey Ferguson, ano 2019. 2520 horas trabalhadas. Localizada na Região de Santa Cruz do Rio Pardo-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=21</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=4</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204708-01.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204708-02.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204708-03.jpg.jpeg</g:additional_image_link>
@@ -70,12 +96,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Massey Ferguson 4707 (Tração central - Reversor Eletro-hidráulico - Super Redutor - Único dono) (ID: 30) -->
+    <!-- Trator Massey Ferguson 4707 (Tração central - Reversor Eletro-hidráulico - Super Redutor - Único dono) (ID: 5) -->
     <item>
-      <g:id>AGROGIRO-30</g:id>
+      <g:id>AGROGIRO-5</g:id>
       <g:title><![CDATA[Trator Massey Ferguson 4707 (Tração central - Reversor Eletro-hidráulico - Super Redutor - Único dono)]]></g:title>
       <g:description><![CDATA[Trator Massey Ferguson 4707 (Tração central - Reversor Eletro-hidráulico - Super Redutor - Único dono). Máquina agrícola usada (Trator), marca Massey Ferguson, ano 2023. 1880 horas trabalhadas. Localizada na Região de Duartina-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=30</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=5</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204707-2023-05.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204707-2023-07.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Massey%20Fergunson%204707-2023-08.jpg.jpeg</g:additional_image_link>
@@ -96,12 +122,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Pulverizador Uniport 3030 - 32 metros de barra (Sistema Bico a Bico) (ID: 31) -->
+    <!-- Pulverizador Uniport 3030 - 32 metros de barra (Sistema Bico a Bico) (ID: 6) -->
     <item>
-      <g:id>AGROGIRO-31</g:id>
+      <g:id>AGROGIRO-6</g:id>
       <g:title><![CDATA[Pulverizador Uniport 3030 - 32 metros de barra (Sistema Bico a Bico)]]></g:title>
       <g:description><![CDATA[Pulverizador Uniport 3030 - 32 metros de barra (Sistema Bico a Bico). Máquina agrícola usada (Implementos), marca Jacto, ano 2021. 3000 horas trabalhadas. Localizada na Região de Inubia Paulista-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=31</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=6</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%203030-01.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%203030-02.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Uniport%203030-03.jpg.jpeg</g:additional_image_link>
@@ -115,12 +141,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Pulverizadores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Valtra A850 (Único Dono) (ID: 2) -->
+    <!-- Trator Valtra A850 (Único Dono) (ID: 7) -->
     <item>
-      <g:id>AGROGIRO-2</g:id>
+      <g:id>AGROGIRO-7</g:id>
       <g:title><![CDATA[Trator Valtra A850 (Único Dono)]]></g:title>
       <g:description><![CDATA[Trator Valtra A850 (Único Dono). Máquina agrícola usada (Trator), marca Valtra, ano 2012. 6500 horas trabalhadas. Localizada na Região de Itaporanga-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=2</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=7</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A850-2.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A850-3.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A850-4.jpg.jpeg</g:additional_image_link>
@@ -135,12 +161,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Ford 7610 (Transmissão e motor revisados) (ID: 3) -->
+    <!-- Trator Ford 7610 (Transmissão e motor revisados) (ID: 8) -->
     <item>
-      <g:id>AGROGIRO-3</g:id>
+      <g:id>AGROGIRO-8</g:id>
       <g:title><![CDATA[Trator Ford 7610 (Transmissão e motor revisados)]]></g:title>
       <g:description><![CDATA[Trator Ford 7610 (Transmissão e motor revisados). Máquina agrícola usada (Trator), marca Ford, ano 1990. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=3</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=8</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Ford7610.jpg.jpeg</g:image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
@@ -151,12 +177,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator TS 110 - New Holland (Com Reversor) (ID: 4) -->
+    <!-- Trator TS 110  - New Holland (Com Reversor) (ID: 9) -->
     <item>
-      <g:id>AGROGIRO-4</g:id>
-      <g:title><![CDATA[Trator TS 110 - New Holland (Com Reversor)]]></g:title>
-      <g:description><![CDATA[Trator TS 110 - New Holland (Com Reversor). Máquina agrícola usada (Trator), marca New Holland, ano 2004. 11400 horas trabalhadas. Localizada na Região de Santa Cruz do Rio Pardo-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=4</g:link>
+      <g:id>AGROGIRO-9</g:id>
+      <g:title><![CDATA[Trator TS 110  - New Holland (Com Reversor)]]></g:title>
+      <g:description><![CDATA[Trator TS 110  - New Holland (Com Reversor). Máquina agrícola usada (Trator), marca New Holland, ano 2004. 11400 horas trabalhadas. Localizada na Região de Santa Cruz do Rio Pardo-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=9</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/TratorTS110-3.jpg.jpeg</g:additional_image_link>
@@ -169,12 +195,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono (ID: 5) -->
+    <!-- Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono (ID: 10) -->
     <item>
-      <g:id>AGROGIRO-5</g:id>
+      <g:id>AGROGIRO-10</g:id>
       <g:title><![CDATA[Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono]]></g:title>
       <g:description><![CDATA[Colheitadeira John Deere S440 + Plataforma de Corte 625F - 25 Pés (Colhedora de Soja) - Único dono. Máquina agrícola usada (Colhedoras), marca John Deere, ano 2017. 3186 horas trabalhadas. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=5</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=10</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/ColhedoraS440_05.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/ColhedoraS440_01.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/ColhedoraS440_02.jpg.jpeg</g:additional_image_link>
@@ -193,12 +219,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Colheitadeiras e Colhedoras Usadas]]></g:product_type>
     </item>
 
-    <!-- Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões) (ID: 7) -->
+    <!-- Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões) (ID: 11) -->
     <item>
-      <g:id>AGROGIRO-7</g:id>
+      <g:id>AGROGIRO-11</g:id>
       <g:title><![CDATA[Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões)]]></g:title>
       <g:description><![CDATA[Pulverizador Jacto Condor 800 - Barra de 14 metros (Elétrico eletrônico, 4 sessões). Máquina agrícola usada (Implementos), marca Jacto, ano 2024. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=7</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=11</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Pulverizador%20Jacto_Condor%20800_1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Pulverizador%20Jacto_Condor%20800_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Pulverizador%20Jacto_Condor%20800_3.jpg.jpeg</g:additional_image_link>
@@ -216,12 +242,56 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Pulverizadores Usados]]></g:product_type>
     </item>
 
-    <!-- Plantadora Adubadora de Soja COP CA 9/9 (ID: 8) -->
+    <!-- Distribuidor de Adubo e Calcário - Tatu DCA2 7500 - Esteira 80cm (Único dono) (ID: 12) -->
     <item>
-      <g:id>AGROGIRO-8</g:id>
+      <g:id>AGROGIRO-12</g:id>
+      <g:title><![CDATA[Distribuidor de Adubo e Calcário - Tatu DCA2 7500 - Esteira 80cm (Único dono)]]></g:title>
+      <g:description><![CDATA[Distribuidor de Adubo e Calcário - Tatu DCA2 7500 - Esteira 80cm (Único dono). Máquina agrícola usada (Implementos), marca Tatu Marchesan, ano 2018. Localizada na Região de Coromandel-MG. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=12</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-01.jpeg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-02.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-03.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-04.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-05.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-06.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Distribuidor%20tatu%207500-07.jpeg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>35000.00 BRL</g:price>
+      <g:brand><![CDATA[Tatu Marchesan]]></g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>112</g:google_product_category>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Distribuidores de Adubo e Calcário Usados]]></g:product_type>
+    </item>
+
+    <!-- Escarificador Piccin EPCR 300 - 11 hastes (ID: 13) -->
+    <item>
+      <g:id>AGROGIRO-13</g:id>
+      <g:title><![CDATA[Escarificador Piccin EPCR 300 - 11 hastes]]></g:title>
+      <g:description><![CDATA[Escarificador Piccin EPCR 300 - 11 hastes. Máquina agrícola usada (Implementos), marca Piccin, ano 2017. Localizada na Região de Coromandel-MG. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=13</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.01.jpeg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.02.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.03.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.04.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.05.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.06.jpeg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Escarificador%20piccin.07.jpeg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>55000.00 BRL</g:price>
+      <g:brand><![CDATA[Piccin]]></g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>112</g:google_product_category>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Preparo de Solo Usados]]></g:product_type>
+    </item>
+
+    <!-- Plantadora Adubadora de Soja COP CA 9/9 (ID: 14) -->
+    <item>
+      <g:id>AGROGIRO-14</g:id>
       <g:title><![CDATA[Plantadora Adubadora de Soja COP CA 9/9]]></g:title>
       <g:description><![CDATA[Plantadora Adubadora de Soja COP CA 9/9. Máquina agrícola usada (Implementos), marca Tatu Marchesan, ano 2019. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=8</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=14</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97291-PLANTADORA%20ADUBADORA%20DE%20SOJA%20COP%20CA%2099-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97291-PLANTADORA%20ADUBADORA%20DE%20SOJA%20COP%20CA%2099-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97291-PLANTADORA%20ADUBADORA%20DE%20SOJA%20COP%20CA%2099-3.jpg.jpeg</g:additional_image_link>
@@ -235,12 +305,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
-    <!-- Carregadeira CBT 8060 4x4 (ID: 9) -->
+    <!-- CARREGADEIRA CBT 8060 4X4 (ID: 15) -->
     <item>
-      <g:id>AGROGIRO-9</g:id>
-      <g:title><![CDATA[Carregadeira CBT 8060 4x4]]></g:title>
-      <g:description><![CDATA[Carregadeira CBT 8060 4x4. Máquina agrícola usada (Implementos), marca CBT, ano 1990. 2477 horas trabalhadas. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=9</g:link>
+      <g:id>AGROGIRO-15</g:id>
+      <g:title><![CDATA[CARREGADEIRA CBT 8060 4X4]]></g:title>
+      <g:description><![CDATA[CARREGADEIRA CBT 8060 4X4. Máquina agrícola usada (Implementos), marca CBT, ano 1990. 2477 horas trabalhadas. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=15</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_1.jpg.jpg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_2.jpg.jpg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/CarregaderiaCBT8060-2477h_3.jpg.jpg</g:additional_image_link>
@@ -256,12 +326,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Plantadeira de Cana TT 8022BT (Automatizada) (ID: 10) -->
+    <!-- Plantadeira de Cana TT 8022BT (Automatizada) (ID: 16) -->
     <item>
-      <g:id>AGROGIRO-10</g:id>
+      <g:id>AGROGIRO-16</g:id>
       <g:title><![CDATA[Plantadeira de Cana TT 8022BT (Automatizada)]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana TT 8022BT (Automatizada). Máquina agrícola usada (Implementos), marca TT do Brasil, ano 2023. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=10</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=16</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97319-PLANTADEIRA%20CANA%20TT%208022BT-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97319-PLANTADEIRA%20CANA%20TT%208022BT-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97319-PLANTADEIRA%20CANA%20TT%208022BT-3.jpg.jpeg</g:additional_image_link>
@@ -275,12 +345,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
-    <!-- Plantadeira de Cana TT 8022 (Automatizada) (ID: 11) -->
+    <!-- Plantadeira de Cana TT 8022 (Automatizada) (ID: 17) -->
     <item>
-      <g:id>AGROGIRO-11</g:id>
+      <g:id>AGROGIRO-17</g:id>
       <g:title><![CDATA[Plantadeira de Cana TT 8022 (Automatizada)]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana TT 8022 (Automatizada). Máquina agrícola usada (Implementos), marca TT do Brasil, ano 2020. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=11</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=17</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97311-PLANTADEIRA%20DE%20CANA%20%20TT%208022-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97311-PLANTADEIRA%20DE%20CANA%20%20TT%208022-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97311-PLANTADEIRA%20DE%20CANA%20%20TT%208022-3.jpg.jpeg</g:additional_image_link>
@@ -294,12 +364,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
-    <!-- Plantadeira de Cana DMB (ID: 12) -->
+    <!-- Plantadeira de Cana DMB (ID: 18) -->
     <item>
-      <g:id>AGROGIRO-12</g:id>
+      <g:id>AGROGIRO-18</g:id>
       <g:title><![CDATA[Plantadeira de Cana DMB]]></g:title>
       <g:description><![CDATA[Plantadeira de Cana DMB. Máquina agrícola usada (Implementos), marca DMB, ano 2009. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=12</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=18</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97150-PLANTADEIRA%20DE%20CANA%20DMB_1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97150-PLANTADEIRA%20DE%20CANA%20DMB_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97150-PLANTADEIRA%20DE%20CANA%20DMB_3.jpg.jpeg</g:additional_image_link>
@@ -313,12 +383,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
-    <!-- Transbordo SE 10500 (ID: 13) -->
+    <!-- TRANSBORDO SE 10500 (ID: 19) -->
     <item>
-      <g:id>AGROGIRO-13</g:id>
-      <g:title><![CDATA[Transbordo SE 10500]]></g:title>
-      <g:description><![CDATA[Transbordo SE 10500. Máquina agrícola usada (Implementos), marca Sermag, ano 2011. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=13</g:link>
+      <g:id>AGROGIRO-19</g:id>
+      <g:title><![CDATA[TRANSBORDO SE 10500]]></g:title>
+      <g:description><![CDATA[TRANSBORDO SE 10500. Máquina agrícola usada (Implementos), marca Sermag, ano 2011. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=19</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%201.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%202.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97181-TRANSBORDO%20SE%2010500%20-%203.jpg.jpeg</g:additional_image_link>
@@ -332,12 +402,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Carreta Sulcadora Torta 150mm (ID: 14) -->
+    <!-- CARRETA SULCADORA TORTA 150MM (ID: 20) -->
     <item>
-      <g:id>AGROGIRO-14</g:id>
-      <g:title><![CDATA[Carreta Sulcadora Torta 150mm]]></g:title>
-      <g:description><![CDATA[Carreta Sulcadora Torta 150mm. Máquina agrícola usada (Implementos), marca Carderoli, ano 2023. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=14</g:link>
+      <g:id>AGROGIRO-20</g:id>
+      <g:title><![CDATA[CARRETA SULCADORA TORTA 150MM]]></g:title>
+      <g:description><![CDATA[CARRETA SULCADORA TORTA 150MM. Máquina agrícola usada (Implementos), marca CARDEROLI, ano 2023. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=20</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_1.jpg%20.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_2.jpg%20.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97122-CARRETA%20SULCADORA%20TORTA150MM_3.jpg%20.jpeg</g:additional_image_link>
@@ -345,18 +415,18 @@
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>130000.00 BRL</g:price>
-      <g:brand><![CDATA[Carderoli]]></g:brand>
+      <g:brand><![CDATA[CARDEROLI]]></g:brand>
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm) (ID: 15) -->
+    <!-- Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm) (ID: 21) -->
     <item>
-      <g:id>AGROGIRO-15</g:id>
+      <g:id>AGROGIRO-21</g:id>
       <g:title><![CDATA[Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm)]]></g:title>
       <g:description><![CDATA[Plantadeira Valtra Hitech 11 linhas - Espaçamento 0,6m (60cm). Máquina agrícola usada (Implementos), marca Valtra, ano 2012. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=15</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=21</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira-Valtra-01.jpg.jpg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira-Valtra-02.jpg.jpg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira-Valtra-03.jpg.jpg</g:additional_image_link>
@@ -369,28 +439,28 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
-    <!-- Distribuidor de Fertilizantes Ipacol DFD 1300 (ID: 16) -->
+    <!-- DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300 (ID: 22) -->
     <item>
-      <g:id>AGROGIRO-16</g:id>
-      <g:title><![CDATA[Distribuidor de Fertilizantes Ipacol DFD 1300]]></g:title>
-      <g:description><![CDATA[Distribuidor de Fertilizantes Ipacol DFD 1300. Máquina agrícola usada (Implementos), marca Ipacol, ano 2020. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=16</g:link>
+      <g:id>AGROGIRO-22</g:id>
+      <g:title><![CDATA[DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300]]></g:title>
+      <g:description><![CDATA[DISTRIBUIDOR DE FERTILIZANTES IPACOL DFD 1300. Máquina agrícola usada (Implementos), marca IPACOL, ano 2020. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=22</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97313-DISTRIBUIDOR%20DE%20FERTILIZANTES%20IPACOL%20DFD%201300-1.jpg.jpeg</g:image_link>
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>10000.00 BRL</g:price>
-      <g:brand><![CDATA[Ipacol]]></g:brand>
+      <g:brand><![CDATA[IPACOL]]></g:brand>
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
-      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Distribuidores de Adubo e Calcário Usados]]></g:product_type>
     </item>
 
-    <!-- Distribuidor de Torta Damasceno (ID: 17) -->
+    <!-- DISTRIBUIDOR DE TORTA DAMASCENO (ID: 23) -->
     <item>
-      <g:id>AGROGIRO-17</g:id>
-      <g:title><![CDATA[Distribuidor de Torta Damasceno]]></g:title>
-      <g:description><![CDATA[Distribuidor de Torta Damasceno. Máquina agrícola usada (Implementos), marca Damasceno, ano 2005. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=17</g:link>
+      <g:id>AGROGIRO-23</g:id>
+      <g:title><![CDATA[DISTRIBUIDOR DE TORTA DAMASCENO]]></g:title>
+      <g:description><![CDATA[DISTRIBUIDOR DE TORTA DAMASCENO. Máquina agrícola usada (Implementos), marca DAMASCENO, ano 2005. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=23</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/97078-CARRETA%20DISTR%20TORTA%20DAMASCENO_3.jpg.jpeg</g:additional_image_link>
@@ -400,18 +470,18 @@
       <g:condition>used</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>28000.00 BRL</g:price>
-      <g:brand><![CDATA[Damasceno]]></g:brand>
+      <g:brand><![CDATA[DAMASCENO]]></g:brand>
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
-      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Distribuidores de Adubo e Calcário Usados]]></g:product_type>
     </item>
 
-    <!-- Arado Aiveca 4 bicos - Tatu Marchesan (ID: 18) -->
+    <!-- Arado Aiveca 4 bicos - Tatu Marchesan (ID: 24) -->
     <item>
-      <g:id>AGROGIRO-18</g:id>
+      <g:id>AGROGIRO-24</g:id>
       <g:title><![CDATA[Arado Aiveca 4 bicos - Tatu Marchesan]]></g:title>
       <g:description><![CDATA[Arado Aiveca 4 bicos - Tatu Marchesan. Máquina agrícola usada (Implementos), marca Tatu Marchesan, ano 2023. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=18</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=24</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%204%20bicos_marchesan_1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%204%20bicos_marchesan_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%204%20bicos_marchesan_3.jpg.jpeg</g:additional_image_link>
@@ -423,15 +493,15 @@
       <g:brand><![CDATA[Tatu Marchesan]]></g:brand>
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
-      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Preparo de Solo Usados]]></g:product_type>
     </item>
 
-    <!-- Arado Aiveca 3 bicos - Tatu Marchesan (ID: 19) -->
+    <!-- Arado Aiveca 3 bicos - Tatu Marchesan (ID: 25) -->
     <item>
-      <g:id>AGROGIRO-19</g:id>
+      <g:id>AGROGIRO-25</g:id>
       <g:title><![CDATA[Arado Aiveca 3 bicos - Tatu Marchesan]]></g:title>
       <g:description><![CDATA[Arado Aiveca 3 bicos - Tatu Marchesan. Máquina agrícola usada (Implementos), marca Tatu Marchesan, ano 2023. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=19</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=25</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%203%20bicos_marchesan_3.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%203%20bicos_marchesan_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arado%203%20bicos_marchesan_1.jpg.jpeg</g:additional_image_link>
@@ -441,15 +511,15 @@
       <g:brand><![CDATA[Tatu Marchesan]]></g:brand>
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
-      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Preparo de Solo Usados]]></g:product_type>
     </item>
 
-    <!-- Arrancadeira de Mandioca e Batata (ID: 20) -->
+    <!-- Arrancadeira de Mandioca e Batata (ID: 26) -->
     <item>
-      <g:id>AGROGIRO-20</g:id>
+      <g:id>AGROGIRO-26</g:id>
       <g:title><![CDATA[Arrancadeira de Mandioca e Batata]]></g:title>
       <g:description><![CDATA[Arrancadeira de Mandioca e Batata. Máquina agrícola usada (Implementos), marca CLK, ano 2025. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=20</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=26</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arrancadeira%20de%20mandioca_1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arrancadeira%20de%20mandioca_2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente_Douglas/Arrancadeira%20de%20mandioca_3.jpg.jpeg</g:additional_image_link>
@@ -464,12 +534,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Valtra A52s (57cv) (ID: 22) -->
+    <!-- Trator Valtra A52s (57cv) (ID: 27) -->
     <item>
-      <g:id>AGROGIRO-22</g:id>
+      <g:id>AGROGIRO-27</g:id>
       <g:title><![CDATA[Trator Valtra A52s (57cv)]]></g:title>
       <g:description><![CDATA[Trator Valtra A52s (57cv). Máquina agrícola usada (Trator), marca Valtra, ano 2022. 898 horas trabalhadas. Localizada na Região de Itaporanga-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=22</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=27</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A52s.01.jpg.jpg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A52s.02.jpg.jpg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20A52s.03.jpg.jpg</g:additional_image_link>
@@ -485,12 +555,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Valtra BM 125 (Cabine Original) (ID: 23) -->
+    <!-- Trator Valtra BM 125 (Cabine Original) (ID: 28) -->
     <item>
-      <g:id>AGROGIRO-23</g:id>
+      <g:id>AGROGIRO-28</g:id>
       <g:title><![CDATA[Trator Valtra BM 125 (Cabine Original)]]></g:title>
       <g:description><![CDATA[Trator Valtra BM 125 (Cabine Original). Máquina agrícola usada (Trator), marca Valtra, ano 2013. 9853 horas trabalhadas. Localizada na Região de Santa Cruz do Rio Pardo-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=23</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=28</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra%20BM125-3.jpg.jpeg</g:additional_image_link>
@@ -508,12 +578,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Massey Ferguson 6713 (ID: 24) -->
+    <!-- Trator Massey Ferguson 6713 (ID: 29) -->
     <item>
-      <g:id>AGROGIRO-24</g:id>
+      <g:id>AGROGIRO-29</g:id>
       <g:title><![CDATA[Trator Massey Ferguson 6713]]></g:title>
       <g:description><![CDATA[Trator Massey Ferguson 6713. Máquina agrícola usada (Trator), marca Massey Ferguson, ano 2020. 6000 horas trabalhadas. Localizada na Região de Ibiúna-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=24</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=29</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/MF6713.01.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF6713.02.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF6713.03.jpg.jpeg</g:additional_image_link>
@@ -528,12 +598,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Massey Ferguson 290 (Original/3 Alavancas) (ID: 25) -->
+    <!-- Trator Massey Ferguson 290 (Original/3 Alavancas) (ID: 30) -->
     <item>
-      <g:id>AGROGIRO-25</g:id>
+      <g:id>AGROGIRO-30</g:id>
       <g:title><![CDATA[Trator Massey Ferguson 290 (Original/3 Alavancas)]]></g:title>
       <g:description><![CDATA[Trator Massey Ferguson 290 (Original/3 Alavancas). Máquina agrícola usada (Trator), marca Massey Ferguson, ano 1994. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=25</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=30</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/MF%20290-01.jpg.jpg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF%20290-02.jpg.jpg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF%20290-03.jpg.jpg</g:additional_image_link>
@@ -547,12 +617,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Pá Carregadeira Volvo LF70 (ID: 26) -->
+    <!-- PÁ CARREGADEIRA VOLVO LF70 (ID: 31) -->
     <item>
-      <g:id>AGROGIRO-26</g:id>
-      <g:title><![CDATA[Pá Carregadeira Volvo LF70]]></g:title>
-      <g:description><![CDATA[Pá Carregadeira Volvo LF70. Máquina agrícola usada (Implementos), marca Volvo, ano 2013. 20601 horas trabalhadas. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=26</g:link>
+      <g:id>AGROGIRO-31</g:id>
+      <g:title><![CDATA[PÁ CARREGADEIRA VOLVO LF70]]></g:title>
+      <g:description><![CDATA[PÁ CARREGADEIRA VOLVO LF70. Máquina agrícola usada (Implementos), marca Volvo, ano 2013. 20601 horas trabalhadas. Localizada na Região de Botucatu-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=31</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_7.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_6.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/Cliente%20Raphael/pa_carregaderia_LF70_5.jpg.jpeg</g:additional_image_link>
@@ -569,12 +639,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Bobcat E35 (Único Dono) (ID: 27) -->
+    <!-- Bobcat E35 (Único Dono) (ID: 32) -->
     <item>
-      <g:id>AGROGIRO-27</g:id>
+      <g:id>AGROGIRO-32</g:id>
       <g:title><![CDATA[Bobcat E35 (Único Dono)]]></g:title>
       <g:description><![CDATA[Bobcat E35 (Único Dono). Máquina agrícola usada (Implementos), marca Bobcat, ano 2018. 3200 horas trabalhadas. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=27</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=32</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/BobcatE35-3.jpg.jpeg</g:additional_image_link>
@@ -593,12 +663,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas Usados]]></g:product_type>
     </item>
 
-    <!-- Trator Valtra BM110 (ID: 28) -->
+    <!-- Trator Valtra BM110 (ID: 33) -->
     <item>
-      <g:id>AGROGIRO-28</g:id>
+      <g:id>AGROGIRO-33</g:id>
       <g:title><![CDATA[Trator Valtra BM110]]></g:title>
       <g:description><![CDATA[Trator Valtra BM110. Máquina agrícola usada (Trator), marca Valtra, ano 2004. 10900 horas trabalhadas. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=28</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=33</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra-BM-01.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra-BM-02.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Valtra-BM-03.jpg.jpeg</g:additional_image_link>
@@ -611,12 +681,12 @@
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
     </item>
 
-    <!-- Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono) (ID: 29) -->
+    <!-- Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono) (ID: 34) -->
     <item>
-      <g:id>AGROGIRO-29</g:id>
+      <g:id>AGROGIRO-34</g:id>
       <g:title><![CDATA[Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono)]]></g:title>
       <g:description><![CDATA[Trator MF 4275 - Lâmina e concha com bomba independente (Único Dono). Máquina agrícola usada (Trator), marca Massey Ferguson, ano 2013. 3400 horas trabalhadas. Localizada na Região de Marília-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
-      <g:link>https://agrogiro-multmarcas.com.br/?id=29</g:link>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=34</g:link>
       <g:image_link>https://agrogiro-multmarcas.com.br/imagens/MF%204275-1.jpg.jpeg</g:image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF%204275-2.jpg.jpeg</g:additional_image_link>
       <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/MF%204275-3.jpg.jpeg</g:additional_image_link>
@@ -627,6 +697,31 @@
       <g:identifier_exists>no</g:identifier_exists>
       <g:google_product_category>112</g:google_product_category>
       <g:product_type><![CDATA[Máquinas Agrícolas > Tratores Usados]]></g:product_type>
+    </item>
+
+    <!-- Plantadeira Fankhauser 5030 9 linhas - 45cm (Micron Instalado) (ID: 35) -->
+    <item>
+      <g:id>AGROGIRO-35</g:id>
+      <g:title><![CDATA[Plantadeira Fankhauser 5030 9 linhas - 45cm (Micron Instalado)]]></g:title>
+      <g:description><![CDATA[Plantadeira Fankhauser 5030 9 linhas - 45cm (Micron Instalado). Máquina agrícola usada (Implementos), marca Fankhauser, ano 2008. Localizada na Região de Espiríto Santo do Turvo-SP. Veja fotos reais, vídeo e negocie direto pelo WhatsApp na AgroGiro.]]></g:description>
+      <g:link>https://agrogiro-multmarcas.com.br/?id=35</g:link>
+      <g:image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-06.jpg.jpeg</g:image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-07.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-08.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-09.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-10.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-01.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-02.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-03.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-04.jpg.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://agrogiro-multmarcas.com.br/imagens/Plantadeira%20Fankhauser%205030%209%20linhas-05.jpg.jpeg</g:additional_image_link>
+      <g:condition>used</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>53000.00 BRL</g:price>
+      <g:brand><![CDATA[Fankhauser]]></g:brand>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:google_product_category>112</g:google_product_category>
+      <g:product_type><![CDATA[Máquinas Agrícolas > Implementos Agrícolas > Plantadeiras Usadas]]></g:product_type>
     </item>
 
   </channel>
