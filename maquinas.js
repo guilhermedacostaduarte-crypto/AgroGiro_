@@ -748,5 +748,60 @@ const maquinas = [
             "telefone": "16 99785-4876",
             "email": "contato.agrogiro@gmail.com"
         }
+    },
+    {
+        "id": 36,
+        "nome": "Distribuidor de Adubo e Calcário - Tatu DCA2 7500 - Esteira 80cm (Único dono)",
+        "marca": "Tatu Marchesan",
+        "ano": 2013,
+        "preco": 30000,
+        "local": "Região de Quatá-SP",
+        "imagens": [
+            "imagens/Distribuidor tatu 7500-2013-02.jpg.jpeg",
+            "imagens/Distribuidor tatu 7500-2013-03.jpg.jpeg",
+            "imagens/Distribuidor tatu 7500-2013-04.jpg.jpeg",
+            "imagens/Distribuidor tatu 7500-2013-05.jpg.jpeg",
+            "imagens/Distribuidor tatu 7500-2013-06.jpg.jpeg",
+            "imagens/Distribuidor tatu 7500-2013-01.jpg.jpeg"
+        ],
+        "tipo": "Implementos",
+        "vendedor": {
+            "telefone": "16 99785-4876",
+            "email": "contato.agrogiro@gmail.com"
+        }
+    },
+    {
+        "id": 37,
+        "nome": "Afofador Duplo de Mandioca",
+        "marca": "Arados Tupã",
+        "ano": 2019/2020,
+        "preco": 33000,
+        "local": "Região de Quatá-SP",
+        "imagens": [
+            "imagens/Afofador-01.jpg.jpeg",
+            "imagens/Afofador-02.jpg.jpeg"
+        ],
+        "tipo": "Implementos",
+        "vendedor": {
+            "telefone": "16 99785-4876",
+            "email": "contato.agrogiro@gmail.com"
+        }
+    },
+    {
+        "id": 38,
+        "nome": "Roçadeira Dupla Tatu",
+        "marca": "Tatu Marchesan",
+        "ano": 2020,
+        "preco": 34000,
+        "local": "Região de Quatá-SP",
+        "imagens": [
+            "imagens/Roçadeiradupla-01.jpg.jpeg"
+        ],
+        "tipo": "Implementos",
+        "vendedor": {
+            "telefone": "16 99785-4876",
+            "email": "contato.agrogiro@gmail.com"
+        }
     }
+
 ];
