@@ -805,7 +805,7 @@ const maquinas = [
     },
     {
         "id": 39,
-        "nome": "Pulverizador Jacto Advance 3000 (GPS LB1100 e Corte de Seção - Cardan Grande Angular",
+        "nome": "Pulverizador Jacto Advance 3000 - 24 metros de barra (GPS LB1100 e Corte de Seção - Cardan Grande Angular",
         "marca": "Jacto",
         "ano": 2017,
         "preco": 112000,
