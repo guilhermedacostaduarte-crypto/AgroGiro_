@@ -802,6 +802,25 @@ const maquinas = [
             "telefone": "16 99785-4876",
             "email": "contato.agrogiro@gmail.com"
         }
+    },
+    {
+        "id": 39,
+        "nome": "Pulverizador Jacto Advance 3000 (GPS LB1100 e Corte de Seção - Cardan Grande Angular",
+        "marca": "Jacto",
+        "ano": 2017,
+        "preco": 112000,
+        "local": "Região de Itapeva-SP",
+        "imagens": [
+            "imagens/Puverizador Jacto Advance 3000-01.jpg.jpeg",
+	    "imagens/Puverizador Jacto Advance 3000-02.jpg.jpeg",
+	    "imagens/Puverizador Jacto Advance 3000-03.jpg.jpeg",
+	    "imagens/Puverizador Jacto Advance 3000-04.jpg.jpeg"
+        ],
+        "tipo": "Implementos",
+        "vendedor": {
+            "telefone": "16 99785-4876",
+            "email": "contato.agrogiro@gmail.com"
+        }
     }
-
+    
 ];
